@@ -1,4 +1,4 @@
-<nav class="bg-white border-gray-200 dark:bg-white dark:border-gray-200 sticky top-0 z-50">
+<nav class="bg-white border-gray-200 dark:bg-white dark:border-gray-200 fixed top-0 z-50 w-full">
     <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
             <img src="{{asset('images/biodiversity_logo.png')}}" class="h-8 border-none" alt="NBRCC Logo" />

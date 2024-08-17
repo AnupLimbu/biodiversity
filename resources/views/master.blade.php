@@ -24,12 +24,75 @@
 
                 if (targetElement) {
                     targetElement.scrollIntoView({
-                        behavior: 'smooth' // Scroll smoothly
+                        behavior: 'smooth', // Scroll smoothly
+                        block: 'start'
                     });
+                    //fixing offset error due to navbar
+                    setTimeout(() => {
+                        window.scrollBy(0, 6);
+                    }, 500);
                 }
             });
         });
     });
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const fadeInLeftElements = document.querySelectorAll('.fade-in-left');
+        const fadeInRightElements = document.querySelectorAll('.fade-in-right');
+
+        const options = {
+            root: null, // Use the viewport as the root
+            rootMargin: '0px',
+            threshold: 0.7 // Trigger when 70% of the element is visible
+        };
+
+        const handleIntersect = (entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target); // Stop observing once visible
+                }
+            });
+        };
+
+        const observer = new IntersectionObserver(handleIntersect, options);
+
+        fadeInLeftElements.forEach(element => {
+            observer.observe(element);
+        });
+
+        fadeInRightElements.forEach(element => {
+            observer.observe(element);
+        });
+    });
+
+    function isElementInViewport(el) {
+        const rect = el.getBoundingClientRect();
+        return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+    }
+
+    function checkVisibility() {
+        const parent = document.querySelector('#banner');
+        const child = document.querySelector('.arrow');
+
+        if (parent && child) {
+            if (isElementInViewport(parent)) {
+                child.style.display = 'block';
+            } else {
+                child.style.display = 'none';
+            }
+        }
+    }
+
+    // Check visibility on load and resize
+    window.addEventListener('load', checkVisibility);
+    window.addEventListener('resize', checkVisibility);
+    window.addEventListener('scroll', checkVisibility);
 </script>
 
 </html>
