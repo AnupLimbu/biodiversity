@@ -4,12 +4,13 @@ export default {
       "./resources/**/*.blade.php",
       "./resources/**/*.js",
       "./resources/**/*.css",
+      "./node_modules/tw-elements/js/**/*.js"
   ],
   theme: {
     extend: {},
   },
   plugins: [
-
+      require("tw-elements/plugin.cjs")
   ],
 }
 
