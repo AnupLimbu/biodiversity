@@ -17,9 +17,9 @@ use App\Http\Controllers\UserController;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+    Route::get('/', function () {
+     return view('sub-pages/home/index');
+    });
 
 
 
