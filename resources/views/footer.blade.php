@@ -2,7 +2,7 @@
         <div class="max-w-screen-xl mx-auto  grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4" style="color: white">
             <div style="width:100%; display: flex; flex-direction: column;padding: 10px;align-items: center">
                 <img src="  {{asset('images/biodiversity_logo.png')}}" alt="" style="margin-top: -59px;">
-                <p class="" style="text-align: center">
+                <p class="" style="text-align: center;margin-top: -55px;">
                     Create a world where the diversity of life on Earth is preserved, protected, and valued
                 </p>
             </div>
