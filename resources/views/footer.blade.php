@@ -40,17 +40,23 @@
                 <ul style="display: flex; flex-direction: column; gap: 25px">
                     <li style="display: flex;  gap: 10px">
                         <i class="fa-solid fa-location-dot"></i>
-                        <p  style="margin-top: -3px">Chandragiri Municipality-14, Kathmandu 44619, Nepal</p>
+                        <p  style="margin-top: -3px">Kadaghari -13 , Kathmandu Nepal</p>
                     </li>
                     <li style="display: flex;  gap: 10px">
                         <i class="fa-solid fa-phone-volume"></i>
-                        <p  style="margin-top: -3px"><a href="#">+977-98xxxxxxxx,&nbsp;&nbsp;+977-98xxxxxxxx</a></p>
+                        <p  style="margin-top: -3px"><a href="#">+977-9844073512</a></p>
                     </li>
                     <li style="display: flex;  gap: 10px">
                         <i class="fa-regular fa-envelope-open"></i>
-                        <p  style="margin-top: -3px"><a href="mailto:info@conservationhimalaya.org" style="text-decoration: underline">info@conservationhimalaya.org</a></p>
+                        <p  style="margin-top: -3px">
+                            <a href="mailto:info@nbrcc.org.np" style="text-decoration: underline">info@conservationhimalaya.org</a>,
+                            <a href="mailto:nbrccnepal@gmail.com" style="text-decoration: underline">nbrccnepal@gmail.com</a>
+                        </p>
                     </li>
-
+                    <li style="display: flex;  gap: 10px">
+                        <i class="fa-regular fa-envelope-open"></i>
+                        <p  style="margin-top: -3px">P.O. Box No 24824, Sundhara, Kathmandu</p>
+                    </li>
                 </ul>
             </div>
         </div>
