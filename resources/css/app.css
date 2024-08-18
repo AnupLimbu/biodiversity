@@ -69,15 +69,18 @@
     transform: translateX(0);
 }
 
-@keyframes rotateCarousel {
-    0% {
-        transform: translateX(0%);
-    }
-    100% {
-        transform: translateX(-100%);
-    }
+.enlarged-image {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
 }
 
-.carousel-wrapper {
-    animation: rotateCarousel 20s linear infinite;
+.enlarged-image:hover {
+    transform: scale(1.05); /* Scale up by 5% */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add shadow with blur and offset */
+}
+
+.hero-bg {
+    background-image: url('https://source.unsplash.com/1600x900/?nature,nepal');
+    background-size: cover;
+    background-position: center;
 }

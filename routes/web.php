@@ -20,6 +20,9 @@ use App\Http\Controllers\UserController;
 Route::get('/', function () {
     return view('sub-pages/home/index');
 });
+Route::get('/about-us', function () {
+    return view('sub-pages/about-us/index');
+});
 
     Route::group(['middleware'=>"auth",'prefix' => 'admin/products', 'as' => 'products.'], function(){
     Route::get('/', [ProductController::class, 'index'])->name('index');
