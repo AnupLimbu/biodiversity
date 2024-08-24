@@ -29,10 +29,10 @@
                     <div id="dropdownNavbar" class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-white dark:divide-gray-200">
                         <ul class="py-2 text-sm text-black dark:text-black" aria-labelledby="dropdownLargeButton">
                             <li>
-                                <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-200 hover:text-green-700 dark:hover:text-green-500">Advisors</a>
+                                <a href="/advisors" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-200 hover:text-green-700 dark:hover:text-green-500">Advisors</a>
                             </li>
                             <li>
-                                <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-200 hover:text-green-700 dark:hover:text-green-500">Team</a>
+                                <a href="/teams" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-200 hover:text-green-700 dark:hover:text-green-500">Team</a>
                             </li>
                         </ul>
 

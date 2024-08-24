@@ -28,6 +28,13 @@ Route::get('/about-us', function () {
     return view('sub-pages/about-us/index');
 });
 
+Route::get('/teams', function () {
+    return view('sub-pages/our-teams/team');
+});
+
+Route::get('/advisors', function () {
+    return view('sub-pages/our-teams/advisor');
+});
 
 
     Route::get('/admin/dashboard', function () {
