@@ -3,7 +3,10 @@ import 'flowbite';
 import {
     Carousel,
 } from "tw-elements";
+import $ from "jquery";
 
 
 
-const carousel = new Carousel(document.getElementById('my-tooltip'));
+$(document).ready(function () {
+
+})

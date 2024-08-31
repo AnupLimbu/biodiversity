@@ -1,66 +1,91 @@
-<nav class="bg-white border-gray-200 dark:bg-white dark:border-gray-200 fixed top-0 z-50 w-full">
-    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-        <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
-            <img src="{{asset('images/biodiversity_logo.png')}}" class="h-8 border-none" alt="NBRCC Logo" />
-            <span class="self-center text-2xl font-semibold whitespace-nowrap text-black dark:text-black">NBRCC</span>
-        </a>
-        <button data-collapse-toggle="navbar-dropdown" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-200 dark:focus:ring-gray-300" aria-controls="navbar-dropdown" aria-expanded="false">
-            <span class="sr-only">Open main menu</span>
-            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+<style>
+    .navbar-link{
+        font-family:sans-serif !important;
+        font-size: 18px ;
+        color: #282727;
+    }
+
+    .dropdown-link2:hover{
+        background-color: #8cccc1;
+    }
+    .dropdown-link:hover{
+        background-color: #c3e3b7;
+    }
+
+    .secondary-button{
+        padding: 10px;
+        background-color: #7cbbb0;
+        color: white;
+    }
+
+    button:hover{
+        filter: brightness(105%);
+    }
+</style>
+
+<nav class="p-4 fixed w-full backdrop-blur-2xl bg-transparent">
+    <div class="container mx-auto flex justify-between items-center">
+        <a href="#" class="text-gray-800 text-3xl font-semibold">BRCS</a>
+        <button class="text-gray-800 md:hidden" id="hamburgerButton">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
             </svg>
         </button>
-        <div class="hidden w-full md:block md:w-auto" id="navbar-dropdown">
-            <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-white md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-white md:dark:bg-white dark:border-gray-200">
-                <li>
-                    <a href="/" class="block py-2 px-3 text-black bg-gray-200 rounded md:bg-transparent md:text-black md:p-0 md:dark:text-black hover:text-green-700 dark:bg-gray-200 md:dark:bg-transparent dark:hover:text-green-500" aria-current="page">Home</a>
-                </li>
-                <li>
-                    <a href="/about-us" class="block py-2 px-3 text-black bg-gray-200 rounded md:bg-transparent md:text-black md:p-0 md:dark:text-black hover:text-green-700 dark:bg-gray-200 md:dark:bg-transparent dark:hover:text-green-500" aria-current="page">About Us</a>
-                </li>
-                <li>
-                    <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="flex items-center justify-between w-full py-2 px-3 text-black rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-green-700 md:p-0 md:w-auto dark:text-black md:dark:hover:text-green-500 dark:focus:text-black dark:border-gray-200 dark:hover:bg-gray-200 md:dark:hover:bg-transparent">
-                        Our Team
-                        <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
-                        </svg>
-                    </button>
-                    <!-- Dropdown menu -->
-                    <div id="dropdownNavbar" class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-white dark:divide-gray-200">
-                        <ul class="py-2 text-sm text-black dark:text-black" aria-labelledby="dropdownLargeButton">
-                            <li>
-                                <a href="/advisors" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-200 hover:text-green-700 dark:hover:text-green-500">Advisors</a>
-                            </li>
-                            <li>
-                                <a href="/teams" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-200 hover:text-green-700 dark:hover:text-green-500">Team</a>
-                            </li>
-                        </ul>
 
+
+        <div class="hidden md:flex md:items-center">
+            <a href="#" class="text-gray-800 px-4 py-2 navbar-link ">Home</a>
+            <a href="#" class="text-gray-800 px-4 py-2 navbar-link ">About Us</a>
+            <div class="relative parent">
+                <a href="#" class="navbar-link flex justify-between md:inline-flex p-4 items-center space-x-2">
+                    <span>Projects</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 fill-current pt-1" viewBox="0 0 24 24"><path d="M0 7.33l2.829-2.83 9.175 9.339 9.167-9.339 2.829 2.83-11.996 12.17z"/></svg>
+                </a>
+                <ul class="child transition duration-300 md:absolute top-full right-0 md:w-48 bg-white md:shadow-lg md:rounded-b ">
+                    <li>
+                        <a href="#" class="block px-4 py-2 text-gray-700 dropdown-link"><span class="p-1">Conservation</span></a>
+
+                    </li>
+                    <li>
+                        <a href="#" class="block px-4 py-2 text-gray-700 dropdown-link "><span class="p-1">Research</span></a>
+                    </li>
+                </ul>
+            </div>
+            <a href="#" class="text-gray-800 px-4 py-2 navbar-link ">Contact Us</a>
+        </div>
+
+
+        <div id="mobileMenu" class="fixed inset-0 bg-opacity-75 z-50 hidden md:hidden backdrop-blur-2xl">
+            <div class="relative bg-white w-64 h-full p-4 h-screen"   style="background-color: #7cbbb0">
+
+                <div class="flex flex-col">
+                    <div class="flex justify-content-between">
+                        <a href="#" class="text-gray-800 text-lg pt-2 navbar-link">Home</a>
+
+                        <button class="absolute pt-2 top-4 right-4 text-gray-800" id="closeMobileMenu">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                            </svg>
+                        </button>
                     </div>
-                </li>
-                <li>
-                    <button id="projectDropdownNavbarLink" data-dropdown-toggle="projectDropdownNavbar" class="flex items-center justify-between w-full py-2 px-3 text-black rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-green-700 md:p-0 md:w-auto dark:text-black md:dark:hover:text-green-500 dark:focus:text-black dark:border-gray-200 dark:hover:bg-gray-200 md:dark:hover:bg-transparent">
+                    <a href="#" class="text-gray-800 text-lg navbar-link">About Us</a>
+                    <button class="text-gray-800 text-lg navbar-link dropdown-toggle text-left ">
                         Projects
-                        <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+                        <svg class="w-4 h-4 inline-block ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                         </svg>
                     </button>
-                    <!-- Dropdown menu -->
-                    <div id="projectDropdownNavbar" class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-white dark:divide-gray-200">
-                        <ul class="py-2 text-sm text-black dark:text-black" aria-labelledby="dropdownLargeButton">
-                            <li>
-                                <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-200 hover:text-green-700 dark:hover:text-green-500">Conservation</a>
-                            </li>
-                            <li>
-                                <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-200 hover:text-green-700 dark:hover:text-green-500">Research</a>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
-                <li>
-                    <a href="/contact-us" class="block py-2 px-3 text-black rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-green-700 md:p-0 dark:text-black md:dark:hover:text-green-500 dark:hover:bg-gray-200 dark:hover:text-green-500 md:dark:hover:bg-transparent">Contact</a>
-                </li>
-            </ul>
+                    <ul class="dropdown-menu hidden">
+                        <li>
+                            <a href="#" class="block px-4 pt-1 text-sm text-gray-700 dropdown-link2"><span class="p-1">Conservation</span></a>
+
+                        </li>
+                        <li>
+                            <a href="#" class="block px-4 pt-1 text-sm text-gray-700 dropdown-link2"><span class="p-1">Research</span></a>
+                        </li>
+                    </ul>
+                    <a href="#" class="text-gray-800 text-lg navbar-link">Contact Us</a>
+            </div>
         </div>
     </div>
 </nav>

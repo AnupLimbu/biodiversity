@@ -22,6 +22,9 @@
     <meta property="og:description" content="" />
     <link rel="shortcut icon" href="" />
     <link rel="canonical" href="" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 {{--    SEO DATA--}}
     @vite(['resources/css/app.css','resources/js/app.js'])
 </head>
@@ -33,87 +36,51 @@
     @include('footer')
 </body>
 <script>
-    document.addEventListener('DOMContentLoaded', () => {
-        // Get all links with the data-scroll-to attribute
-        document.querySelectorAll('[data-scroll-to]').forEach(link => {
-            link.addEventListener('click', (e) => {
-                e.preventDefault(); // Prevent default link behavior
+    document.addEventListener('DOMContentLoaded', function() {
+        // Toggle dropdown visibility
+        function toggleDropdown(event) {
+            event.stopPropagation(); // Prevent the click from closing the menu immediately
+            const dropdownMenu = this.nextElementSibling;
 
-                // Get the target ID from the data-scroll-to attribute
-                const targetId = link.getAttribute('data-scroll-to');
-                const targetElement = document.getElementById(targetId);
+            dropdownMenu.toggle('hidden');
 
-                if (targetElement) {
-                    targetElement.scrollIntoView({
-                        behavior: 'smooth', // Scroll smoothly
-                        block: 'start'
-                    });
-                    //fixing offset error due to navbar
-                    setTimeout(() => {
-                        window.scrollBy(0, 6);
-                    }, 500);
-                }
-            });
-        });
-    });
-
-    document.addEventListener('DOMContentLoaded', () => {
-        const fadeInLeftElements = document.querySelectorAll('.fade-in-left');
-        const fadeInRightElements = document.querySelectorAll('.fade-in-right');
-
-        const options = {
-            root: null, // Use the viewport as the root
-            rootMargin: '0px',
-            threshold: 0.7 // Trigger when 70% of the element is visible
-        };
-
-        const handleIntersect = (entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                    observer.unobserve(entry.target); // Stop observing once visible
-                }
-            });
-        };
-
-        const observer = new IntersectionObserver(handleIntersect, options);
-
-        fadeInLeftElements.forEach(element => {
-            observer.observe(element);
-        });
-
-        fadeInRightElements.forEach(element => {
-            observer.observe(element);
-        });
-    });
-
-    function isElementInViewport(el) {
-        const rect = el.getBoundingClientRect();
-        return (
-            rect.top >= 0 &&
-            rect.left >= 0 &&
-            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-        );
-    }
-
-    function checkVisibility() {
-        const parent = document.querySelector('#banner');
-        const child = document.querySelector('.arrow');
-
-        if (parent && child) {
-            if (isElementInViewport(parent)) {
-                child.style.display = 'block';
-            } else {
-                child.style.display = 'none';
-            }
         }
-    }
 
-    // Check visibility on load and resize
-    window.addEventListener('load', checkVisibility);
-    window.addEventListener('resize', checkVisibility);
-    window.addEventListener('scroll', checkVisibility);
+        // Toggle mobile menu visibility
+        document.getElementById('hamburgerButton').addEventListener('click', function() {
+            document.getElementById('mobileMenu').classList.toggle('hidden');
+        });
+
+        // Close mobile menu
+        document.getElementById('closeMobileMenu').addEventListener('click', function() {
+            document.getElementById('mobileMenu').classList.add('hidden');
+        });
+
+        // Handle mobile dropdowns
+        document.querySelectorAll('.dropdown-toggle').forEach(button => {
+            button.addEventListener('click', function(event) {
+                event.stopPropagation(); // Prevent the click from closing the menu immediately
+                const dropdownMenu = this.nextElementSibling;
+                if (dropdownMenu) {
+                    dropdownMenu.classList.toggle('hidden');
+                }
+            });
+        });
+
+        // Close all dropdowns and mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            document.querySelectorAll('.dropdown-menu').forEach(menu => {
+                if (!menu.previousElementSibling.contains(event.target) && !menu.contains(event.target)) {
+                    menu.classList.add('hidden');
+                }
+            });
+            // Close mobile menu if clicking outside of it
+            if (!document.getElementById('hamburgerButton').contains(event.target) &&
+                !document.getElementById('mobileMenu').contains(event.target)) {
+                document.getElementById('mobileMenu').classList.add('hidden');
+            }
+        });
+    });
 </script>
 
 </html>
