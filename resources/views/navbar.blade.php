@@ -23,7 +23,7 @@
     }
 </style>
 
-<nav class="p-4 fixed w-full backdrop-blur-2xl bg-transparent">
+<nav class="p-4 fixed w-full backdrop-blur-2xl bg-transparent" style="z-index: 25!important;">
     <div class="container mx-auto flex justify-between items-center">
         <a href="#" class="text-gray-800 text-3xl font-semibold">BRCS</a>
         <button class="text-gray-800 md:hidden" id="hamburgerButton">
@@ -34,7 +34,7 @@
 
 
         <div class="hidden md:flex md:items-center">
-            <a href="#" class="text-gray-800 px-4 py-2 navbar-link ">Home</a>
+            <a href="/" class="text-gray-800 px-4 py-2 navbar-link ">Home</a>
             <a href="#" class="text-gray-800 px-4 py-2 navbar-link ">About Us</a>
             <div class="relative parent">
                 <a href="#" class="navbar-link flex justify-between md:inline-flex p-4 items-center space-x-2">
@@ -51,7 +51,8 @@
                     </li>
                 </ul>
             </div>
-            <a href="#" class="text-gray-800 px-4 py-2 navbar-link ">Contact Us</a>
+            <a href="/teams" class="text-gray-800 px-4 py-2 navbar-link ">Team Member</a>
+            <a href="/contact-us" class="text-gray-800 px-4 py-2 navbar-link ">Contact Us</a>
         </div>
 
 

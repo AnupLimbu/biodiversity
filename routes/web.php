@@ -23,6 +23,10 @@ Route::get('/', function () {
 Route::get('/contact-us', function () {
     return view('sub-pages/contact-us/index');
 });
+Route::get('/contact_us', function (\Illuminate\Http\Request $request) {
+   dd($request->all());
+});
+
 
 Route::get('/about-us', function () {
     return view('sub-pages/about-us/index');
