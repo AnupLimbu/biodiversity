@@ -1,7 +1,5 @@
 @extends('master')
 @section('content')
-    <div style="background-color: #abcea0; height: 100px;">
-    </div>
         <section class="container mx-auto  max-w-screen-xl bg-white ">
             <section class="bg-white ">
                 <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-6">

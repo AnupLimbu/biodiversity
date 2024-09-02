@@ -1,7 +1,7 @@
 @extends('master')
 
 @section('content')
-    <div style="background-color: #abcea0; height: 100px;">
+    <div style="background-color: #abcea0; height: 67px;">
     </div>
     <div class="min-h-[600px]" style="background-color: #abcea0;">
         <div class="container mx-auto py-4">

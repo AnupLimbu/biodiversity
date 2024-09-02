@@ -28,7 +28,7 @@
 {{--    SEO DATA--}}
     @vite(['resources/css/app.css','resources/js/app.js'])
 </head>
-<body >
+<body>
     @include('navbar')
     <main>
         @yield('content')

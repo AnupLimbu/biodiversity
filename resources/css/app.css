@@ -8,6 +8,7 @@ body{
 .home-img{
     /*height:300px;*/
 }
+
 @media only screen and (min-width: 768px){
 
     .home-img{
@@ -28,7 +29,16 @@ body{
     }
 }
 
+.slanted-background {
 
+    overflow: hidden;
+    background-color: #abcea0; /* Background color or image */
+
+}
+
+.slanted-background::before {
+
+}
 /*.mission{*/
 /*    background-image: url(../../public/images/bg/bg1.jpg);*/
 /*}*/
