@@ -44,6 +44,16 @@
 
                 <div class="lg:col-span-2 bg-[#ABCEA0] rounded-lg sm:p-10 p-4 z-10 max-lg:-order-1 max-lg:mb-8">
                     <h2 class="text-3xl text-white text-center font-bold mb-6">Contact us</h2>
+                    @if(isset($message) && $message =='success')
+                        <div id="contactus_message">
+                            <h5 style="color: forestgreen"  class="text-center font-bold mb-6">Thank you for contacting us ! we will get back to you soon!</h5>
+                        </div>
+                    @endif
+                    @if(isset($message) && $message =='failed')
+                        <div id="contactus_message">
+                        <h5 style="color: forestgreen" class="text-center font-bold mb-6">Thank you for contacting us ! we will get back to you soon!</h5>
+                        </div>
+                    @endif
                     <form  action="/contact_us" method="GET" >
                         <div class="max-w-md mx-auto space-y-3">
                             <input type='text' placeholder='Name' name="name"
@@ -55,7 +65,7 @@
                             <textarea placeholder='Message' rows="6" name="message"
                                       class="w-full bg-gray-100 rounded-lg px-6 text-sm pt-3 outline-none" required></textarea>
                             <button type='submit'
-                                    class="text-gray-800 w-full relative bg-yellow-400 hover:bg-yellow-500 font-semibold rounded-lg text-sm px-6 py-3 !mt-6">
+                                    class="text-gray-800 w-full relative bg-[#7CBBB0] hover:bg-[#7CBBB0] font-semibold rounded-lg text-sm px-6 py-3 !mt-6">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" fill='currentColor' class="mr-2 inline" viewBox="0 0 548.244 548.244">
                                     <path fill-rule="evenodd" d="M392.19 156.054 211.268 281.667 22.032 218.58C8.823 214.168-.076 201.775 0 187.852c.077-13.923 9.078-26.24 22.338-30.498L506.15 1.549c11.5-3.697 24.123-.663 32.666 7.88 8.542 8.543 11.577 21.165 7.879 32.666L390.89 525.906c-4.258 13.26-16.575 22.261-30.498 22.338-13.923.076-26.316-8.823-30.728-22.032l-63.393-190.153z" clip-rule="evenodd" data-original="#000000" />
                                 </svg>
@@ -68,7 +78,7 @@
         </div>
 
         <hr class="mt-10 mb-10">
-        <h3 class="font-bold leading-7 text-gray-900 text-center text-3xl text-uppercase bg-[#abcea0] p-2">Locate Us</h3>
+        <h3 class="font-bold leading-7 text-gray-900 text-center text-3xl text-uppercase p-2">Locate Us</h3>
         <div class="relative w-full h-96 mt-10 mb-10">
             <iframe class="absolute top-0 left-0 w-full h-full"
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.0010918795497!2d85.3190764868161!3d27.717252563642383!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb19007679e1c1%3A0xe8b6e5240c7f2ad9!2sKadaghari!5e0!3m2!1sen!2snp!4v1723967824101!5m2!1sen!2snp"

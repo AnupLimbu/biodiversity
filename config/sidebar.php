@@ -1,6 +1,5 @@
 <?php
-$current_route="request()->getRequestUri()";
-
+ $current_route = $_SERVER['REQUEST_URI']??'';
 return [
   'Product' =>
   [
@@ -33,11 +32,11 @@ return [
       ],
     ],
   ],
-  'Category' =>
+  'ContactUs' =>
   [
     'icon' => 'fa-brands fa-product-hunt',
     'route' => '',
-    'title' => 'Category',
+    'title' => 'ContactUs',
     'class' => '',
     'visibility' => true,
     'permission' => true,
@@ -47,22 +46,52 @@ return [
       'create' =>
       [
         'icon' => 'fa-solid fa-plus',
-        'route' => '/admin/categories/create',
-        'title' => 'Add Category',
+        'route' => '/admin/contact_us/create',
+        'title' => 'Add ContactUs',
         'visibility' => true,
         'permission' => true,
-        'active' => '$current_route == "/admin/categories/create"',
+        'active' => '$current_route == "/admin/contact_us/create"',
       ],
       'index' =>
       [
         'icon' => 'fa-solid fa-list',
-        'route' => '/admin/categories',
-        'title' => 'List Categories',
+        'route' => '/admin/contact_us',
+        'title' => 'List Contacts',
         'visibility' => true,
         'permission' => true,
         'active' => false,
       ],
     ],
-  ],
+  ],'Team' =>
+        [
+            'icon' => 'fa-brands fa-product-hunt',
+            'route' => '',
+            'title' => 'Team',
+            'class' => '',
+            'visibility' => true,
+            'permission' => true,
+            'active' =>$current_route=="/admin/teams/create" || $current_route=="/admin/teams" ,
+            'sub_link' =>
+                [
+                    'create' =>
+                        [
+                            'icon' => 'fa-solid fa-plus',
+                            'route' => '/admin/teams/create',
+                            'title' => 'Add Team',
+                            'visibility' => true,
+                            'permission' => true,
+                            'active' => $current_route == "/admin/teams/create",
+                        ],
+                    'index' =>
+                        [
+                            'icon' => 'fa-solid fa-list',
+                            'route' => '/admin/teams',
+                            'title' => 'List Teams',
+                            'visibility' => true,
+                            'permission' => true,
+                            'active' => $current_route=="/admin/teams",
+                        ],
+                ],
+        ],
   '[solid_auto_generated_sidebar]' => NULL,
 ];

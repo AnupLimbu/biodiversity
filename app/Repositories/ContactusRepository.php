@@ -1,11 +1,11 @@
 <?php
 namespace App\Repositories;
-use App\Models\Category;
+use App\Models\ContactUs;
 
-class CategoryRepository extends SolidBaseRepository
+class ContactusRepository extends SolidBaseRepository
 {
      protected $model;
-    public function __construct(Category $model)
+    public function __construct(ContactUs $model)
     {
         $this->model = $model;
     }

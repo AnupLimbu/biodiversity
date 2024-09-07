@@ -1,8 +1,9 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\TeamController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\ContactUsController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\UserController;
@@ -24,7 +25,15 @@ Route::get('/contact-us', function () {
     return view('sub-pages/contact-us/index');
 });
 Route::get('/contact_us', function (\Illuminate\Http\Request $request) {
-   dd($request->all());
+    try {
+        $request->validate(['name' => 'required', 'message' => 'required']);
+        \App\Models\ContactUs::create($request->all());
+        $message='success';
+        return view('sub-pages/contact-us/index', compact('message'));
+    }catch (\Exception $exception){
+        $message='failed';
+        return view('sub-pages/contact-us/index',compact('message'));
+    }
 });
 
 
@@ -33,7 +42,8 @@ Route::get('/about-us', function () {
 });
 
 Route::get('/teams', function () {
-    return view('sub-pages/our-teams/team');
+    $teams =  (\App\Models\Team::orderBy('order', 'DESC')->get());
+    return view('sub-pages/our-teams/team', compact('teams'));
 });
 
 Route::get('/advisors', function () {
@@ -41,7 +51,7 @@ Route::get('/advisors', function () {
 });
 
 
-    Route::get('/admin/dashboard', function () {
+    Route::get('/admin', function () {
     return view('backend.admin.dashboard');
     })->middleware(['auth'])->name('dashboard');
     Route::middleware('auth')->group(function () {
@@ -59,14 +69,15 @@ Route::get('/advisors', function () {
     Route::post('/', [ProductController::class, 'store'])->name('store');
     Route::patch('{id}', [ProductController::class, 'update'])->name('update');
     });
-    Route::group(['middleware'=>"auth",'prefix' => 'admin/categories', 'as' => 'categories.'], function(){
-    Route::get('/', [CategoryController::class, 'index'])->name('index');
-    Route::get('list', [CategoryController::class, 'getList'])->name('list');
-    Route::get('create', [CategoryController::class, 'create'])->name('create');
-    Route::get('{id}/edit', [CategoryController::class, 'edit'])->name('edit');
-    Route::get('{id}/show', [CategoryController::class, 'show'])->name('show');
-    Route::post('/', [CategoryController::class, 'store'])->name('store');
-    Route::patch('{id}', [CategoryController::class, 'update'])->name('update');
+    Route::group(['middleware'=>"auth",'prefix' => 'admin/contact_us', 'as' => 'contact_us.'], function(){
+    Route::get('/', [ContactUsController::class, 'index'])->name('index');
+    Route::get('list', [ContactUsController::class, 'getList'])->name('list');
+    Route::get('create', [ContactUsController::class, 'create'])->name('create');
+    Route::get('{id}/edit', [ContactUsController::class, 'edit'])->name('edit');
+    Route::get('{id}/show', [ContactUsController::class, 'show'])->name('show');
+    Route::post('/', [ContactUsController::class, 'store'])->name('store');
+    Route::patch('{id}', [ContactUsController::class, 'update'])->name('update');
+    Route::delete('{id}', [ContactUsController::class, 'destroy'])->name('destroy');
     });
 
 
@@ -92,4 +103,14 @@ Route::get('/advisors', function () {
         Route::put('{id}', [RoleController::class, 'update'])->name('update');
     });
 
+Route::group(['middleware'=>"auth",'prefix' => 'admin/teams', 'as' => 'teams.'], function(){
+    Route::get('/', [TeamController::class, 'index'])->name('index');
+    Route::get('list', [TeamController::class, 'getList'])->name('list');
+    Route::get('create', [TeamController::class, 'create'])->name('create');
+    Route::get('{id}/edit', [TeamController::class, 'edit'])->name('edit');
+    Route::get('{id}/show', [TeamController::class, 'show'])->name('show');
+    Route::post('/', [TeamController::class, 'store'])->name('store');
+    Route::get  ('{id}/delete', [TeamController::class, 'destroy'])->name('destroy');
+    Route::put('{id}', [TeamController::class, 'update'])->name('update');
+});
 require __DIR__.'/auth.php';

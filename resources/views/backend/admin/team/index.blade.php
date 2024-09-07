@@ -1,24 +1,31 @@
 @extends('backend.master')
 @section('title')
-    Category | index
+    Team | index
 @stop
 @section('breadcum')
-    @include('backend.admin.includes.breadcum',['heading'=>"Category","sub_heading"=>'index'])
+    @include('backend.admin.includes.breadcum',['heading'=>"Team","sub_heading"=>'index'])
 @stop
 @section('content')
     @include("backend.admin.includes.errors")
     <div class="row ">
+
             <div class="col-12 text-right mb-2">
-                <a href="{{ route('categories.create') }}" class="btn btn-primary" > Add Category</a>
+                <a href="{{ route('teams.create') }}" class="btn btn-primary" > Add Team</a>
             </div>
         <div class="col-12">
             <table class="table table-bordered datatable">
                 <thead>
                 <tr>
-                    <th width="10px">S.N</th>
-                    
+                    <th width="2%">S.N</th>
+                    <th width="10%">Name</th>
+                    <th width="10%">Description</th>
+                    <th width="10%">Designation</th>
+                    <th width="10%">Social Links</th>
+                    <th width="2%">Order</th>
+                    <th width="2%">Image</th>
                     <th width="10%">Action</th>
                 </tr>
+
                 </thead>
                 <tbody>
                 </tbody>
@@ -35,7 +42,7 @@
          order: [[0, 'desc']],
          ajax:{
             method: 'GET',
-            url: "{{ route('categories.list') }}",
+            url: "{{ route('teams.list') }}",
             data: function(d) {
                d.startDate = '';
                d.endDate = '';
@@ -44,7 +51,14 @@
             },
             columns: [
                 {data: 'DT_RowIndex', name: 'DT_RowIndex'},
-                
+                {data: 'name', name: 'DT_RowIndex'},
+                {data: 'description', name: 'description'},
+                {data: 'designation', name: 'designation'},
+                {data: 'social_links', name: 'social_links'},
+                {data: 'order', name: 'order'},
+                {data: 'image', name: 'image', render:function(data, row){
+                    return data?'<img src='+data+' alt="" style=" height: 100px; width: 100px; ">':'';
+                    }},
                 {data: 'action', name: 'action'},
             ]
         });
@@ -53,5 +67,5 @@
             $("[name='DataTables_Table_0_length']").css("margin-right", "10px");
         });
 </script>
-@include("backend.admin.category.script")
+@include("backend.admin.team.script")
 @endpush

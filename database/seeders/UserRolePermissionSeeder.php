@@ -22,7 +22,7 @@ class UserRolePermissionSeeder extends Seeder
             $user_permission=['user-view', 'user-create','user-edit','user-delete'];
             $permission_permission=['permission-view', 'permission-create','permission-edit','permission-delete'];
             $blog_permission=['product-view', 'product-create','product-edit','product-delete'];
-            $category_permission=['category-view', 'category-create','category-edit','category-delete'];
+            $category_permission=['contact-view', 'contact-create','contact-edit','contact-delete'];
             $allPermissions= array_merge($roles_permission, $user_permission, $permission_permission,$blog_permission,$category_permission);
             foreach ($allPermissions as $role) {
                 if(!DB::table('permissions')->where('name', $role)->exists()) {

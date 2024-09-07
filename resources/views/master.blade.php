@@ -81,6 +81,15 @@
             }
         });
     });
+   let contactus_message= document.getElementById('contactus_message');
+    setTimeout(function () {
+        contactus_message.style.display='none'
+    }, 5000)
+    function deleteModel(){
+        if(confirm("Do you want to delete it?")) {
+            this.form.submit();
+        } else { return false; }
+    }
 </script>
 
 </html>
