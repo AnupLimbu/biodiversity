@@ -20,6 +20,7 @@
                     <th width="10%">Name</th>
                     <th width="10%">Description</th>
                     <th width="10%">Designation</th>
+                    <th width="10%">Type</th>
                     <th width="10%">Social Links</th>
                     <th width="2%">Order</th>
                     <th width="2%">Image</th>
@@ -54,6 +55,9 @@
                 {data: 'name', name: 'DT_RowIndex'},
                 {data: 'description', name: 'description'},
                 {data: 'designation', name: 'designation'},
+                {data: 'type', name: 'type', render:function(data, row){
+                        return data[0].toUpperCase() + data.slice(1);
+                    }},
                 {data: 'social_links', name: 'social_links'},
                 {data: 'order', name: 'order'},
                 {data: 'image', name: 'image', render:function(data, row){

@@ -22,6 +22,7 @@ class CreateTeamsTable extends Migration
             $table->text('facebook_link')->nullable();
             $table->text('instagram_link')->nullable();
             $table->text('order')->nullable();
+            $table->enum('type',['team',"advisor","staff","volunteer"])->nullable();
             $table->string('image')->nullable()->default('/images/teams/default.png');
             $table->timestamps();
         });
