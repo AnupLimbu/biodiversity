@@ -1,7 +1,7 @@
 @extends('master')
 
 @section('content')
-    <div style="background-color: #abcea0; height: 67px;">
+    <div  class="navbar-filler" style="background-color: #abcea0;">
     </div>
     <div class="min-h-[600px]" style="background-color: #abcea0;">
         <div class="container mx-auto py-4">
@@ -14,7 +14,7 @@
                     <p class="text-lg">BRCS is a non-governmental organization based on Nepal.
                         We are focused on research and conservation of biodiversity.</p>
                     <br>
-                    <button class="secondary-button text-center">Learn more</button>
+                    <a href="/about-us" class="secondary-button text-center">Learn more</a>
                 </div>
                 <!-- Image -->
                 <div class="md:w-1/2 py-4">
@@ -29,7 +29,7 @@
             <h2 class="text-5xl font-extrabold text-center text-green-800 mb-12">
                 Our Mission
             </h2>
-            <p class="text-xl text-gray-800 mb-10 leading-relaxed text-center mx-auto max-w-3xl">
+            <p class="text-xl text-gray-800 mb-10 leading-relaxed text-center mx-auto ">
                 At <span class="font-semibold text-green-700">BRCS</span>, our mission is to celebrate, protect, and nurture the rich tapestry of life that graces our planet. We believe that every species, from the tiniest insect to the grandest mammal, plays a vital role in the intricate web of biodiversity that sustains our world.
             </p>
             <div class="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
@@ -41,7 +41,7 @@
                         </svg>
                     </div>
                     <h3 class="text-2xl font-bold text-green-700 mb-4 group-hover:text-green-800">Preserving Ecosystems</h3>
-                    <p class="text-gray-600 group-hover:text-gray-800">
+                    <p class="text-gray-600 group-hover:text-gray-800 text-justify">
                         Protecting the delicate balance of nature by conserving habitats and ensuring the resilience of our planet’s diverse ecosystems.
                     </p>
                 </div>
@@ -52,7 +52,7 @@
                         </svg>
                     </div>
                     <h3 class="text-2xl font-bold text-green-700 mb-4 group-hover:text-green-800">Empowering Communities</h3>
-                    <p class="text-gray-600 group-hover:text-gray-800">
+                    <p class="text-gray-600 group-hover:text-gray-800 text-justify">
                         Engaging with local communities to promote sustainable practices and environmental stewardship.
                     </p>
                 </div>
@@ -63,7 +63,7 @@
                         </svg>
                     </div>
                     <h3 class="text-2xl font-bold text-green-700 mb-4 group-hover:text-green-800">Advancing Knowledge</h3>
-                    <p class="text-gray-600 group-hover:text-gray-800">
+                    <p class="text-gray-600 group-hover:text-gray-800 text-justify">
                         Supporting research and education to increase awareness and understanding of biodiversity’s critical importance.
                     </p>
                 </div>
@@ -74,14 +74,12 @@
                         </svg>
                     </div>
                     <h3 class="text-2xl font-bold text-green-700 mb-4 group-hover:text-green-800">Fostering Harmony</h3>
-                    <p class="text-gray-600 group-hover:text-gray-800">
+                    <p class="text-gray-600 group-hover:text-gray-800 text-justify">
                         Encouraging a harmonious coexistence between humanity and nature, where every life form is valued and protected.
                     </p>
                 </div>
             </div>
-            <p class="text-xl text-gray-800 mt-12 leading-relaxed text-center mx-auto max-w-3xl">
-                Join us on this journey to create a thriving, vibrant world where biodiversity flourishes, and every living being finds its place in the grand mosaic of life. Together, we can make a difference—one species, one habitat, and one heart at a time.
-            </p>
+
         </div>
     </section>
 

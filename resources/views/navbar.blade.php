@@ -18,7 +18,7 @@
         color: white;
     }
 
-    button:hover{
+    a:hover,button:hover{
         filter: brightness(105%);
     }
 </style>

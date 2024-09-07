@@ -1,6 +1,10 @@
 {
+  "public/images/bg/banner.jpg": {
+    "file": "assets/banner-Bx1zFhOe.jpg",
+    "src": "public/images/bg/banner.jpg"
+  },
   "resources/css/app.css": {
-    "file": "assets/app-BaDZALI1.css",
+    "file": "assets/app-CcKrt-jH.css",
     "src": "resources/css/app.css",
     "isEntry": true
   },

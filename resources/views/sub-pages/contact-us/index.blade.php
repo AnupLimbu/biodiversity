@@ -1,6 +1,6 @@
 @extends('master')
 @section('content')
-    <div style="background-color: #abcea0; height: 67px;">
+    <div class="navbar-filler" style="background-color: #abcea0;">
     </div>
     <section class="container mx-auto mt-16  max-w-screen-xl min-h-[600px] position-relative" >
 {{--        <h1 class="font-bold pt-16 leading-7 text-gray-900 text-center text-3xl text-uppercase ">Contact Us</h1>--}}

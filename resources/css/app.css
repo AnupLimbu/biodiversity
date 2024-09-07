@@ -8,7 +8,23 @@ body{
 .home-img{
     /*height:300px;*/
 }
+.navbar-filler{
+    height: 67px;
+}
 
+.hero-text
+{
+    font-size: 40px;
+}
+@media only screen and (max-width: 768px){
+    .navbar-filler{
+        height: 40px;
+    }
+    .hero-text
+    {
+        font-size: 30px;
+    }
+}
 @media only screen and (min-width: 768px){
 
     .home-img{
@@ -29,16 +45,10 @@ body{
     }
 }
 
-.slanted-background {
-
-    overflow: hidden;
-    background-color: #abcea0; /* Background color or image */
-
+.parallax {
+    background-image: url('../../public/images/bg/banner.jpg');
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat; /* Prevents repeating the image */
 }
-
-.slanted-background::before {
-
-}
-/*.mission{*/
-/*    background-image: url(../../public/images/bg/bg1.jpg);*/
-/*}*/
