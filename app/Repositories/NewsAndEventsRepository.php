@@ -61,7 +61,7 @@ class NewsAndEventsRepository extends SolidBaseRepository
             'file_size' => $file_size,
             'event_start_date' => $type=='event'?$request->get('event_start_date'):null,
             'event_end_date' =>  $type=='event'?$request->get('event_end_date'):null,
-            'published_date'=>Carbon::now()->format('Y_m_d')
+            'published_date'=>Carbon::now()->format('Y-m-d')
 
         ]);
     }

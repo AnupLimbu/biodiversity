@@ -45,7 +45,7 @@
                             </svg>
                         </button>
                     </div>
-                    <a href="#" class="text-gray-800 text-lg navbar-link">About Us</a>
+                    <a href="/about-us" class="text-gray-800 text-lg navbar-link">About Us</a>
                     <button class="text-gray-800 text-lg navbar-link dropdown-toggle text-left ">
                         Projects
                         <svg class="w-4 h-4 inline-block ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -61,8 +61,9 @@
                             <a href="#" class="block px-4 pt-1 text-sm text-gray-700 dropdown-link2"><span class="p-1">Research</span></a>
                         </li>
                     </ul>
+                    <a href="/teams" class="text-gray-800 text-lg navbar-link">Team Member</a>
                     <a href="/news-and-events" class="text-gray-800 text-lg navbar-link">News & Events</a>
-                    <a href="#" class="text-gray-800 text-lg navbar-link">Contact Us</a>
+                    <a href="/contact-us" class="text-gray-800 text-lg navbar-link">Contact Us</a>
             </div>
         </div>
     </div>
