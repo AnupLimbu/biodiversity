@@ -20,7 +20,8 @@
 
                 <!-- About Us Details -->
                 <div class="md:w-1/2 md:pl-8">
-                    <h2 class="text-2xl font-bold mb-4 text-gray-800">Our Story</h2>
+                    <h2 class="text-4xl font-bold mb-4 text-center text-gray-800">Our Story</h2>
+
                     <p class="text-gray-700 mb-4 text-justify text-lg">
                         Founded in 2XXX, BRC Society emerged from a shared passion for the environment and a commitment to reversing the tide of biodiversity loss. What began as a small group of dedicated individuals has grown into a vibrant organization with a global impact.
                         Our journey is driven by the belief that every species plays a crucial role in maintaining the balance of our ecosystems, and that collective action is essential for meaningful change.
@@ -34,10 +35,12 @@
 
     </div>
     <!-- What We Do Section -->
-    <section class="py-16 bg-green-100">
+    <section class="py-16 bg-[#e9f4f6]">
         <div class="container mx-auto">
             <div class="text-center mb-12">
-                <h2 class="text-4xl font-bold mb-4">What We Do</h2>
+                <h2 class="text-4xl font-extrabold text-center text-green-800 mb-12">
+                    What we do
+                </h2>
             </div>
             <div class="flex flex-wrap -mx-4">
                 <!-- Initiative 1 -->
@@ -73,14 +76,14 @@
             </div>
         </div>
     </section>
-    <section class="parallax h-[400px] flex items-center justify-center text-center">
+    <section class="parallax h-[425px] flex items-center justify-center text-center">
         <div class="container mx-auto ">
             <div class="p-6">
-                <h1 class="text-4xl font-bold mb-4">Join us on this journey to create a thriving, vibrant world where biodiversity flourishes, and every living being finds its place in the grand mosaic of life.</h1>
+                <h1 class="hero-sm-text font-bold mb-4">Join us on this journey to create a thriving, vibrant world where biodiversity flourishes, and every living being finds its place in the grand mosaic of life.</h1>
                 <p class="text-lg">Together, we can make a difference—one species, one habitat, and one heart at a time.</p>
 
             </div>
-            <p class="text-lg  pt-4"><a href="/about-us" class="secondary-button text-center text-xl rounded-lg "><span class="p-8">Donate</span></a></p>
+            <p class="text-lg pt-4"><a href="/about-us" class="secondary-button text-center text-xl rounded-lg "><span class="p-8">Support Us</span></a></p>
         </div>
     </section>
 

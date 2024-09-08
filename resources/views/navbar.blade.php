@@ -1,28 +1,3 @@
-<style>
-    .navbar-link{
-        font-family:sans-serif !important;
-        font-size: 18px ;
-        color: #282727;
-    }
-
-    .dropdown-link2:hover{
-        background-color: #8cccc1;
-    }
-    .dropdown-link:hover{
-        background-color: #c3e3b7;
-    }
-
-    .secondary-button{
-        padding: 10px;
-        background-color: #7cbbb0;
-        color: white;
-    }
-
-    a:hover,button:hover{
-        filter: brightness(105%);
-    }
-</style>
-
 <nav class="p-1 fixed w-full backdrop-blur-2xl bg-transparent" style="z-index: 25!important;">
     <div class="container mx-auto flex justify-between items-center">
         <a href="#" class="text-gray-800 text-3xl font-semibold">BRCS</a>
@@ -52,6 +27,7 @@
                 </ul>
             </div>
             <a href="/teams" class="text-gray-800 px-4 py-2 navbar-link ">Team Member</a>
+            <a href="/news-and-events" class="text-gray-800 px-4 py-2 navbar-link ">News & Events</a>
             <a href="/contact-us" class="text-gray-800 px-4 py-2 navbar-link ">Contact Us</a>
         </div>
 
@@ -85,6 +61,7 @@
                             <a href="#" class="block px-4 pt-1 text-sm text-gray-700 dropdown-link2"><span class="p-1">Research</span></a>
                         </li>
                     </ul>
+                    <a href="/news-and-events" class="text-gray-800 text-lg navbar-link">News & Events</a>
                     <a href="#" class="text-gray-800 text-lg navbar-link">Contact Us</a>
             </div>
         </div>

@@ -48,5 +48,8 @@
             input  {
                 border-radius: 0px;
             }
+            .hidden{
+                display: none !important;
+            }
         </style>
 </head>
