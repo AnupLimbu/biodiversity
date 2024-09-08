@@ -2,11 +2,11 @@
 @section('content')
     <div class="navbar-filler" style="background-color: #abcea0;">
     </div>
-    <section class="container mx-auto mt-16  max-w-screen-xl min-h-[600px] position-relative" >
+    <section class="container mx-auto mt-16  min-h-[600px] position-relative" >
 {{--        <h1 class="font-bold pt-16 leading-7 text-gray-900 text-center text-3xl text-uppercase ">Contact Us</h1>--}}
 {{--        <p class="text-center pb-10 text-gray-600"> We are always interested in hearing from people who share love for nature and community.--}}
 {{--        </p>--}}
-        <div class="font-[sans-serif]  max-w-6xl mx-auto relative bg-white rounded-lg py-6">
+        <div class="font-[sans-serif] mx-auto relative bg-white rounded-lg py-6">
             <div class="grid lg:grid-cols-3 items-center">
                 <div class="grid sm:grid-cols-2 gap-4 z-20 relative lg:left-16 max-lg:px-4">
                     <div class="flex flex-col items-center justify-center rounded-lg w-full h-44 p-4 text-center bg-white shadow-[0_2px_10px_-3px_rgba(6,81,237,0.3)]">
