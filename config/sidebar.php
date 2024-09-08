@@ -93,5 +93,36 @@ return [
                         ],
                 ],
         ],
+    'News&Events' =>
+  [
+    'icon' => 'fa-brands fa-product-hunt',
+    'route' => '',
+    'title' => 'NewsAndEvents',
+    'class' => '',
+    'visibility' => true,
+    'permission' => true,
+    'active' => false,
+    'sub_link' =>
+    [
+      'create' =>
+      [
+        'icon' => 'fa-solid fa-plus',
+        'route' => '/admin/news-and-events/create',
+        'title' => 'Add News & Events',
+        'visibility' => true,
+        'permission' => true,
+        'active' => '$current_route == "/admin/news-and-events/create"',
+      ],
+      'index' =>
+      [
+        'icon' => 'fa-solid fa-list',
+        'route' => '/admin/news-and-events',
+        'title' => 'List News & Events',
+        'visibility' => true,
+        'permission' => true,
+        'active' => false,
+      ],
+    ],
+  ],
   '[solid_auto_generated_sidebar]' => NULL,
 ];

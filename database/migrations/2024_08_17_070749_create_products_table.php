@@ -22,9 +22,9 @@ class CreateProductsTable extends Migration
 			$table->float("stock_quantity")->nullable();
 			$table->unsignedBigInteger("user_id")->nullable();
 			$table->foreign("user_id")->references("id")->on("users");
-			$table->unsignedBigInteger("category_id");
-			$table->foreign("category_id")->references("id")->on("categories");
-			
+//			$table->unsignedBigInteger("category_id");
+//			$table->foreign("category_id")->references("id")->on("categories");
+
             $table->timestamps();
         });
     }

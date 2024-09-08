@@ -5,26 +5,39 @@
 body{
     font-family: "Inter", sans-serif;
 }
+
 .home-img{
     /*height:300px;*/
 }
+
 .navbar-filler{
     height: 67px;
+}
+
+.hero-sm-text
+{
+    font-size: 35px;
 }
 
 .hero-text
 {
     font-size: 40px;
 }
+
 @media only screen and (max-width: 768px){
     .navbar-filler{
         height: 40px;
+    }
+    .hero-sm-text
+    {
+        font-size: 20px;
     }
     .hero-text
     {
         font-size: 30px;
     }
 }
+
 @media only screen and (min-width: 768px){
 
     .home-img{
@@ -52,3 +65,28 @@ body{
     background-size: cover;
     background-repeat: no-repeat; /* Prevents repeating the image */
 }
+
+.navbar-link{
+    font-family:sans-serif !important;
+    font-size: 18px ;
+    color: #282727;
+}
+
+.dropdown-link2:hover{
+    background-color: #8cccc1;
+}
+
+.dropdown-link:hover{
+    background-color: #c3e3b7;
+}
+
+.secondary-button{
+    padding: 10px;
+    background-color: #7cbbb0;
+    color: white;
+}
+
+a:hover,button:hover{
+    filter: brightness(105%);
+}
+
