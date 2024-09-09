@@ -1,11 +1,11 @@
 <?php
  $current_route = $_SERVER['REQUEST_URI']??'';
 return [
-  'Product' =>
+  'Project' =>
   [
     'icon' => 'fa-brands fa-product-hunt',
     'route' => '',
-    'title' => 'Product',
+    'title' => 'Project',
     'class' => '',
     'visibility' => true,
     'permission' => true,
@@ -15,17 +15,17 @@ return [
       'create' =>
       [
         'icon' => 'fa-solid fa-plus',
-        'route' => '/admin/products/create',
-        'title' => 'Add Product',
+        'route' => '/admin/projects/create',
+        'title' => 'Add Project',
         'visibility' => true,
         'permission' => true,
-        'active' => '$current_route == "/admin/products/create"',
+        'active' => '$current_route == "/admin/projects/create"',
       ],
       'index' =>
       [
         'icon' => 'fa-solid fa-list',
-        'route' => '/admin/products',
-        'title' => 'List Products',
+        'route' => '/admin/projects',
+        'title' => 'List Projects',
         'visibility' => true,
         'permission' => true,
         'active' => false,
@@ -34,7 +34,7 @@ return [
   ],
   'ContactUs' =>
   [
-    'icon' => 'fa-brands fa-product-hunt',
+    'icon' => 'fa-solid fa-address-book',
     'route' => '',
     'title' => 'ContactUs',
     'class' => '',
@@ -64,7 +64,7 @@ return [
     ],
   ],'Team' =>
         [
-            'icon' => 'fa-brands fa-product-hunt',
+            'icon' => 'fa-solid fa-user-plus',
             'route' => '',
             'title' => 'Team',
             'class' => '',
@@ -93,36 +93,67 @@ return [
                         ],
                 ],
         ],
+    'Download' =>
+        [
+            'icon' => 'fa-brands fa-product-hunt',
+            'route' => '',
+            'title' => 'Download',
+            'class' => '',
+            'visibility' => false,
+            'permission' => true,
+            'active' => false,
+            'sub_link' =>
+                [
+                    'create' =>
+                        [
+                            'icon' => 'fa-solid fa-plus',
+                            'route' => '/admin/downloads/create',
+                            'title' => 'Add Download',
+                            'visibility' => true,
+                            'permission' => true,
+                            'active' => '$current_route == "/admin/downloads/create"',
+                        ],
+                    'index' =>
+                        [
+                            'icon' => 'fa-solid fa-list',
+                            'route' => '/admin/downloads',
+                            'title' => 'List Downloads',
+                            'visibility' => true,
+                            'permission' => true,
+                            'active' => false,
+                        ],
+                ],
+        ],
     'News&Events' =>
-  [
-    'icon' => 'fa-brands fa-product-hunt',
-    'route' => '',
-    'title' => 'NewsAndEvents',
-    'class' => '',
-    'visibility' => true,
-    'permission' => true,
-    'active' => false,
-    'sub_link' =>
-    [
-      'create' =>
-      [
-        'icon' => 'fa-solid fa-plus',
-        'route' => '/admin/news-and-events/create',
-        'title' => 'Add News & Events',
-        'visibility' => true,
-        'permission' => true,
-        'active' => '$current_route == "/admin/news-and-events/create"',
-      ],
-      'index' =>
-      [
-        'icon' => 'fa-solid fa-list',
-        'route' => '/admin/news-and-events',
-        'title' => 'List News & Events',
-        'visibility' => true,
-        'permission' => true,
-        'active' => false,
-      ],
-    ],
-  ],
+        [
+            'icon' => 'fa-brands fa-product-hunt',
+            'route' => '',
+            'title' => 'NewsAndEvents',
+            'class' => '',
+            'visibility' => true,
+            'permission' => true,
+            'active' => false,
+            'sub_link' =>
+                [
+                    'create' =>
+                        [
+                            'icon' => 'fa-solid fa-plus',
+                            'route' => '/admin/news-and-events/create',
+                            'title' => 'Add News & Events',
+                            'visibility' => true,
+                            'permission' => true,
+                            'active' => '$current_route == "/admin/news-and-events/create"',
+                        ],
+                    'index' =>
+                        [
+                            'icon' => 'fa-solid fa-list',
+                            'route' => '/admin/news-and-events',
+                            'title' => 'List News & Events',
+                            'visibility' => true,
+                            'permission' => true,
+                            'active' => false,
+                        ],
+                ],
+        ],
   '[solid_auto_generated_sidebar]' => NULL,
 ];

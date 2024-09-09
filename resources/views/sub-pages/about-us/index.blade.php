@@ -83,7 +83,7 @@
                 <p class="text-lg">Together, we can make a difference—one species, one habitat, and one heart at a time.</p>
 
             </div>
-            <p class="text-lg pt-4"><a href="/about-us" class="secondary-button text-center text-xl rounded-lg "><span class="p-8">Support Us</span></a></p>
+            <p class="text-lg pt-4"><a href="/support_us" class="secondary-button text-center text-xl rounded-lg "><span class="p-8">Support Us</span></a></p>
         </div>
     </section>
 

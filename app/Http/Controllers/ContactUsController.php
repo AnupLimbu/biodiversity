@@ -17,6 +17,7 @@ class ContactUsController extends Controller
     protected $repository;
     protected $view_path="backend.admin.contact.";
     protected $model;
+    protected $route_prefix= "contact_us";
 
 
     public function __construct()
@@ -43,40 +44,26 @@ class ContactUsController extends Controller
         $contacts=DB::table('contact_us')->get();
              return Datatables::of($contacts)
                     ->addIndexColumn()
-                    ->addColumn('action', function($category){
-                        return $this->actionButtons($category);
+                    ->addColumn('action', function($contacts){
+                        return $this->generateActionButtons($contacts);
                     })
                     ->rawColumns(['action'])
                     ->make(true);
     }
-        public function actionButtons($category){
-             $is_auth_id=(Auth::id()==$category->id)?true:false;
-            $actionBtns='';
-                 $show_btn = '<a href="'.route("contact_us.show", $category->id).'" class="actions btn btn-sm btn-info" data-tooltip="true" title="Show">
+    public function generateActionButtons($model){
+        $show_btn = '<a href="'.route($this->route_prefix.".show", $model->id).'" class="actions btn btn-sm btn-info" data-tooltip="true" title="Show">
                     <i class="far fa-eye" aria-hidden="true"></i></a>';
-               //   if(!$is_auth_id)  }}
-                 // {
-                      $delete_btn= '<form style="display:inline" action="'. route('contact_us.destroy' , $category->id ).'" method="POST">
+        $delete_btn= '<form style="display:inline" action="'. route($this->route_prefix.'.destroy' , $model->id ).'" method="POST">
                                     '.csrf_field(). method_field("DELETE").'
                                     <button class="btn btn-danger btn-sm delete-asset" title="delete" onclick="deleteModel()">
                                     <i class="fas fa-trash" aria-hidden="true"></i>
                                 </button>
 
                                     </form>';
-                      $edit_btn= '<a href="/" class="actions btn btn-sm btn-warning" data-tooltip="true" title="Edit">
+        $edit_btn= '<a href="'.route($this->route_prefix.'.edit', $model->id).'" class="actions btn btn-sm btn-warning" data-tooltip="true" title="Edit">
                     <i class="fas fa-pencil-alt" aria-hidden="true"></i></a>';
-                  //}else{
-                    //  $delete_btn ='';
-                    //  $edit_btn='';
-                  //}
-                $actionBtns = '
-                    <nobr>
-                        '.$show_btn.' '.$edit_btn.' '.$delete_btn.'
-                    </nobr>
-                    ';
-                return $actionBtns;
-        }
-
+      return'<nobr>'.$show_btn.' '.$edit_btn.' '.$delete_btn.'</nobr>';
+    }
     public function show($id)
     {
          $contact=$this->repository->getById($id);
@@ -143,7 +130,7 @@ class ContactUsController extends Controller
             if(\request()->expectsJson()){
               return response()->json([]);
             }
-            return redirect()->route('contact_us.index')->with('success','ContactUs deleted successfully.');
+            return redirect()->route($this->route_prefix.'.index')->with('success','ContactUs deleted successfully.');
           } catch (\Exception $e) {
              DB::rollback();
              return redirect()->back()->withInput()->with('failed', 'Failed to delete ContactUs : '.$e->getMessage());

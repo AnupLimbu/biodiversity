@@ -1,0 +1,58 @@
+@extends('master')
+
+@section('content')
+    <div class="navbar-filler  bg-[#abcea0]">
+    </div>
+{{--    <section class="bg-white py-6 sm:py-8 lg:py-12">--}}
+@php($pro_type=isset($projects)?'All':(isset($ongoing)?'Ongoing':'Completed'))
+@php($projects=$projects??$ongoing??$completed)
+        <section class="pt-20 py-6 sm:py-8 lg:py-12 pb-10 lg:pt-[120px] lg:pb-20    ">
+            <div class="container mx-auto">
+                <div class="flex flex-wrap justify-center -mx-4">
+                    <div class="w-full px-4">
+                        <div class="mx-auto mb-[60px] max-w-[510px] text-center lg:mb-20">
+                         <span class="block mb-2 text-lg font-semibold text-primary">
+                         Our Projects
+                        </span>
+                            <h2
+                                class="mb-4 text-3xl font-bold text-dark sm:text-4xl md:text-[40px]     "
+                            >
+                                Our {{$pro_type}} Projects
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-wrap  ">
+                @foreach($projects as $project)
+                        <div class="w-full px-4 md:w-1/2 lg:w-1/3">
+                            <div class="w-full mb-10">
+                                <div class="mb-8 overflow-hidden rounded">
+                                    <img
+                                        src="{{$project->image}}"
+                                        alt="image"
+                                        class="w-full"
+                                    />
+                                </div>
+                                <div>
+                          <span
+                             class="inline-block px-4 py-1 mb-5 text-xs font-semibold leading-loose text-center  rounded bg-primary"
+                          >
+                          {{\Carbon\Carbon::make($project->created_at)->toDateString()}}
+                        </span>
+                                    <h3>
+                                        <a
+                                            href="{{'/projects/'.$project->id}}"
+                                            class="inline-block mb-4 text-xl font-semibold text-dark  hover:text-primary sm:text-2xl lg:text-xl xl:text-2xl"
+                                        >
+                                           {{$project->title}}
+                                        </a>
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+
+                @endforeach
+                </div>
+            </div>
+        </section>
+@endsection

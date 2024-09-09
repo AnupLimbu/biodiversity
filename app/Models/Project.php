@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Product extends Model
+class Project extends Model
 {
     use HasFactory;
 
@@ -14,10 +14,9 @@ class Product extends Model
          *
          * @var array<int, string>
          */
-    protected $table = 'products';
-    protected $fillable = ['name','description','price','stock_quantity','category_id'];
+    protected $table = 'projects';
+    protected $fillable = ['title','start_date','end_date','status','image','description'];
     protected $hidden= [];
     protected $casts= [];
     protected $with= [];
-
 }

@@ -1,10 +1,11 @@
 <?php
 
+use App\Http\Controllers\DownloadController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\TeamController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContactUsController;
-use App\Http\Controllers\ProductController;
+use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\UserController;
 /*
@@ -18,42 +19,57 @@ use App\Http\Controllers\UserController;
 |
 */
 
-Route::get('/', function () {
-    return view('sub-pages/home/index');
+
+Route::group(['prefix' => '/', 'as' => ''],function(){
+    Route::get('/', function () {return view('sub-pages/home/index');});
+    Route::get('/contact-us', function () { return view('sub-pages/contact-us/index');});
+    Route::get('/news-and-events', [\App\Http\Controllers\NewsAndEventsController::class, 'webView']);
+    Route::get('/contact_us', function (\Illuminate\Http\Request $request) {
+        try {
+            $request->validate(['name' => 'required', 'message' => 'required']);
+            \App\Models\ContactUs::create($request->all());
+            $message='success';
+            return view('sub-pages/contact-us/index', compact('message'));
+        }catch (\Exception $exception){
+            $message='failed';
+            return view('sub-pages/contact-us/index',compact('message'));
+        }
+    });
+    Route::get('/about-us', function () {return view('sub-pages/about-us/index');});
+
+    Route::get('/teams', function () {
+        $teams =  (\App\Models\Team::where('type','team')->orderBy('order', 'DESC')->get());
+        $advisor =  (\App\Models\Team::where('type','advisor')->orderBy('order', 'DESC')->get());
+        $staff =  (\App\Models\Team::where('type','staff')->orderBy('order', 'DESC')->get());
+        $volunteer =  (\App\Models\Team::where('type','volunteer')->orderBy('order', 'DESC')->get());
+        return view('sub-pages/our-teams/team', compact('teams','volunteer','advisor','staff'));
+    });
+    Route::get('/advisors', function () {
+        return view('sub-pages/our-teams/advisor');
+    });
+    Route::get('/support_us', function () {
+        return view('sub-pages/support_us/index');
+    });
+    Route::group(['prefix' => 'projects', 'as' => 'project.'], function (){
+        Route::get('/', function () {
+            $projects =  (\App\Models\Project::orderBy('created_at', 'DESC')->get());
+            return view('sub-pages/projects/index', compact('projects'));
+        });
+        Route::get('/ongoing', function () {
+            $ongoing =  (\App\Models\Project::orderBy('created_at', 'DESC')->where('status','on-going')->get());
+            return view('sub-pages/projects/index', compact('ongoing'));
+        });
+        Route::get('/completed', function () {
+            $completed =  (\App\Models\Project::orderBy('created_at', 'DESC')->where('status','completed')->get());
+            return view('sub-pages/projects/index', compact('completed'));
+        });
+        Route::get('/{id}', function ($id) {
+            $project =  (\App\Models\Project::where('id', $id)->first());
+            $projects =  (\App\Models\Project::where('id','!=',$project->id)->orderBy('created_at', 'DESC')->limit(4)->get());
+            return view('sub-pages/projects/show', compact('project','projects'));
+        });
+    });
 });
-
-Route::get('/contact-us', function () {
-    return view('sub-pages/contact-us/index');
-});
-
-Route::get('/news-and-events', [\App\Http\Controllers\NewsAndEventsController::class, 'webView']);
-
-Route::get('/contact_us', function (\Illuminate\Http\Request $request) {
-    try {
-        $request->validate(['name' => 'required', 'message' => 'required']);
-        \App\Models\ContactUs::create($request->all());
-        $message='success';
-        return view('sub-pages/contact-us/index', compact('message'));
-    }catch (\Exception $exception){
-        $message='failed';
-        return view('sub-pages/contact-us/index',compact('message'));
-    }
-});
-
-
-Route::get('/about-us', function () {
-    return view('sub-pages/about-us/index');
-});
-
-Route::get('/teams', function () {
-    $teams =  (\App\Models\Team::orderBy('order', 'DESC')->get());
-    return view('sub-pages/our-teams/team', compact('teams'));
-});
-
-Route::get('/advisors', function () {
-    return view('sub-pages/our-teams/advisor');
-});
-
 
 Route::get('/admin', function () {
     return view('backend.admin.dashboard');
@@ -67,20 +83,21 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::group(['middleware'=>"auth",'prefix' => 'admin/products', 'as' => 'products.'], function(){
-    Route::get('/', [ProductController::class, 'index'])->name('index');
-    Route::get('list', [ProductController::class, 'getList'])->name('list');
-    Route::get('create', [ProductController::class, 'create'])->name('create');
-    Route::get('{id}/edit', [ProductController::class, 'edit'])->name('edit');
-    Route::get('{id}/show', [ProductController::class, 'show'])->name('show');
-    Route::post('/', [ProductController::class, 'store'])->name('store');
-    Route::patch('{id}', [ProductController::class, 'update'])->name('update');
-});
+    Route::group(['middleware'=>"auth",'prefix' => 'admin/projects', 'as' => 'projects.'], function(){
+    Route::get('/', [ProjectController::class, 'index'])->name('index');
+    Route::get('list', [ProjectController::class, 'getList'])->name('list');
+    Route::get('create', [ProjectController::class, 'create'])->name('create');
+    Route::get('{id}/edit', [ProjectController::class, 'edit'])->name('edit');
+    Route::get('{id}/show', [ProjectController::class, 'show'])->name('show');
+    Route::post('/', [ProjectController::class, 'store'])->name('store');
+    Route::patch('{id}', [ProjectController::class, 'update'])->name('update');
+    Route::delete('{id}/delete', [ProjectController ::class, 'destroy'])->name('destroy');
 
-Route::group(['middleware'=>"auth",'prefix' => 'admin/contact_us', 'as' => 'contact_us.'], function(){
+    });
+    Route::group(['middleware'=>"auth",'prefix' => 'admin/contact_us', 'as' => 'contact_us.'], function(){
     Route::get('/', [ContactUsController::class, 'index'])->name('index');
     Route::get('list', [ContactUsController::class, 'getList'])->name('list');
-    Route::get('create', [ContactUsController::class, 'create'])->name('create');
+//    Route::get('create', [ContactUsController::class, 'create'])->name('create');
     Route::get('{id}/edit', [ContactUsController::class, 'edit'])->name('edit');
     Route::get('{id}/show', [ContactUsController::class, 'show'])->name('show');
     Route::post('/', [ContactUsController::class, 'store'])->name('store');
@@ -121,4 +138,14 @@ Route::group(['middleware'=>"auth",'prefix' => 'admin/teams', 'as' => 'teams.'],
     Route::put('{id}', [TeamController::class, 'update'])->name('update');
 });
 
+Route::group(['middleware'=>"auth",'prefix' => 'admin/downloads', 'as' => 'downloads.'], function(){
+    Route::get('/', [DownloadController::class, 'index'])->name('index');
+    Route::get('list', [DownloadController::class, 'getList'])->name('list');
+    Route::get('create', [DownloadController::class, 'create'])->name('create');
+    Route::get('{id}/edit', [DownloadController::class, 'edit'])->name('edit');
+    Route::get('{id}/show', [DownloadController::class, 'show'])->name('show');
+    Route::post('/', [DownloadController::class, 'store'])->name('store');
+    Route::get  ('{id}/delete', [DownloadController::class, 'destroy'])->name('destroy');
+    Route::put('{id}', [DownloadController::class, 'update'])->name('update');
+});
 require __DIR__.'/auth.php';

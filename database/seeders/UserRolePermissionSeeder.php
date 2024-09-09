@@ -8,7 +8,6 @@ use Illuminate\Support\Facades\DB;
 use Spatie\Permission\Models\Role;
 use Illuminate\Support\Facades\Hash;
 use Spatie\Permission\Models\Permission;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
 class UserRolePermissionSeeder extends Seeder
 {
@@ -21,7 +20,7 @@ class UserRolePermissionSeeder extends Seeder
             $roles_permission=['role-view', 'role-create','role-edit','role-delete'];
             $user_permission=['user-view', 'user-create','user-edit','user-delete'];
             $permission_permission=['permission-view', 'permission-create','permission-edit','permission-delete'];
-            $blog_permission=['product-view', 'product-create','product-edit','product-delete'];
+            $blog_permission=['project-view', 'project-create','project-edit','project-delete'];
             $category_permission=['contact-view', 'contact-create','contact-edit','contact-delete'];
             $news_and_events_permission=['contact-view', 'contact-create','contact-edit','contact-delete'];
             $allPermissions= array_merge($roles_permission, $user_permission, $permission_permission,$blog_permission,$category_permission,$news_and_events_permission);

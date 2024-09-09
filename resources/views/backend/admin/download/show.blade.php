@@ -1,9 +1,9 @@
 @extends('backend.master')
 @section('title')
-    Product | show
+    Download | show
 @stop
 @section('breadcum')
-    @include('backend.admin.includes.breadcum',['heading'=>"Product","sub_heading"=>'show'])
+    @include('backend.admin.includes.breadcum',['heading'=>"Download","sub_heading"=>'show'])
 @stop
 @section('content')
     @include("backend.admin.includes.errors")
@@ -17,6 +17,6 @@
 <script type="text/javascript">
 
 </script>
-@include("backend.admin.product.script")
+@include("backend.admin.download.script")
 @endpush
 

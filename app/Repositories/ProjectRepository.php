@@ -1,11 +1,11 @@
 <?php
 namespace App\Repositories;
-use App\Models\Product;
+use App\Models\Project;
 
-class ProductRepository extends SolidBaseRepository
+class ProjectRepository extends SolidBaseRepository
 {
      protected $model;
-    public function __construct(Product $model)
+    public function __construct(Project $model)
     {
         $this->model = $model;
     }

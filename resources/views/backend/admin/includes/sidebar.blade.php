@@ -1,9 +1,9 @@
-@php($is_dashboard=request()->getRequestUri() =='/admin/dashboard'?true:false)
+@php($is_dashboard=request()->getRequestUri() =='/admin'?true:false)
 @php($open_menu=$is_dashboard?'menu-open':'menu-close')
 @php($active=$is_dashboard?'active':'')
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <a href="/admin/dashboard" class="brand-link">
+    <a href="/admin" class="brand-link">
         <img src="{{ asset('/admin_resources/image/dummy_logo.jpg') }}" alt="Logo" class="brand-image img-circle elevation-3" style="height: 33px;width: 33px;opacity: 1">
         <span class="brand-text font-weight-light">Daraaz</span>
     </a>
@@ -73,54 +73,6 @@
                     </li>
                     @endif
                 @endforeach
-                 <li class="nav-header">SETTINGS</li>
-                   <li class="nav-item">
-                    <a href="#" class="nav-link" >
-                        <i class="nav-icon fa-solid fa-users"></i>
-                        <p>
-                            User Management
-                            <i class="fas fa-angle-left right"></i>
-                        </p>
-                    </a>
-                     <ul class="nav nav-treeview">
-                       <li class="nav-item ml-3" >
-                        <a href="/admin/users/" class="nav-link">
-                            <i class="nav-icon fa-solid fa-user  mr-2"></i>
-                         <p>Users</p>
-                         </a>
-                      </li>
-                        <li class="nav-item ml-3" >
-                            <a href="/admin/roles/" class="nav-link">
-                                <i class="nav-icon fa-solid fa-user  mr-2"></i>
-                                <p>Roles</p>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link" >
-                        <i class="nav-icon fa-solid fa-gear"></i>
-                        <p>
-                            Application Setting
-                            <i class="fas fa-angle-left right"></i>
-                        </p>
-                    </a>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item ml-3" >
-                            <a href="/" class="nav-link">
-                                <i class="fa-solid fa-f mr-2"></i>
-                                <p>Frontend</p>
-                            </a>
-                        </li>
-                        <li class="nav-item ml-3" >
-                            <a href="/" class="nav-link">
-                                <i class="fa-solid fa-a mr-2"></i>
-                                <p>Admin Panel</p>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-
             </ul>
         </nav>
     </div>

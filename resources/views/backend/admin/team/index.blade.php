@@ -55,9 +55,7 @@
                 {data: 'name', name: 'DT_RowIndex'},
                 {data: 'description', name: 'description'},
                 {data: 'designation', name: 'designation'},
-                {data: 'type', name: 'type', render:function(data, row){
-                        return data[0].toUpperCase() + data.slice(1);
-                    }},
+                {data: 'type', name: 'type'},
                 {data: 'social_links', name: 'social_links'},
                 {data: 'order', name: 'order'},
                 {data: 'image', name: 'image', render:function(data, row){

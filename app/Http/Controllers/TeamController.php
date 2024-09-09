@@ -104,6 +104,13 @@ class TeamController extends Controller
       try {
             DB::beginTransaction();
             $attributes= $request->only($this->model->getFillable());
+            if ($request->file('image')){
+              $imageName = time().'.'.$request->image->getClientOriginalExtension();
+              $attributes['image']=asset('/storage/images')."/".$imageName;
+              $image = $request->file('image');
+              $imageName = time() . '.' . $image->getClientOriginalExtension();
+              $image->storeAs('images', $imageName, 'public');
+            }
             $this->repository->create($attributes);
             DB::commit();
             if($request->expectsJson()){

@@ -1,15 +1,15 @@
 @extends('backend.master')
 @section('title')
-    Product | index
+    Download | index
 @stop
 @section('breadcum')
-    @include('backend.admin.includes.breadcum',['heading'=>"Product","sub_heading"=>'index'])
+    @include('backend.admin.includes.breadcum',['heading'=>"Download","sub_heading"=>'index'])
 @stop
 @section('content')
     @include("backend.admin.includes.errors")
     <div class="row ">
             <div class="col-12 text-right mb-2">
-                <a href="{{ route('products.create') }}" class="btn btn-primary" > Add Product</a>
+                <a href="{{ route('downloads.create') }}" class="btn btn-primary" > Add Download</a>
             </div>
         <div class="col-12">
             <table class="table table-bordered datatable">
@@ -35,7 +35,7 @@
          order: [[0, 'desc']],
          ajax:{
             method: 'GET',
-            url: "{{ route('products.list') }}",
+            url: "{{ route('downloads.list') }}",
             data: function(d) {
                d.startDate = '';
                d.endDate = '';
@@ -53,5 +53,5 @@
             $("[name='DataTables_Table_0_length']").css("margin-right", "10px");
         });
 </script>
-@include("backend.admin.product.script")
+@include("backend.admin.download.script")
 @endpush
