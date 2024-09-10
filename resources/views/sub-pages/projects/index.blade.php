@@ -6,16 +6,16 @@
 {{--    <section class="bg-white py-6 sm:py-8 lg:py-12">--}}
 @php($pro_type=isset($projects)?'All':(isset($ongoing)?'Ongoing':'Completed'))
 @php($projects=$projects??$ongoing??$completed)
-        <section class="pt-20 py-6 sm:py-8 lg:py-12 pb-10 lg:pt-[120px] lg:pb-20    ">
+        <section class="pt-20 py-6 sm:py-8 lg:py-12 pb-10 lg:pb-20">
             <div class="container mx-auto">
-                <div class="flex flex-wrap justify-center -mx-4">
-                    <div class="w-full px-4">
-                        <div class="mx-auto mb-[60px] max-w-[510px] text-center lg:mb-20">
+                <div class="flex flex-wrap justify-center ">
+                    <div class="w-full ">
+                        <div class="mx-auto max-w-[510px] text-center ">
                          <span class="block mb-2 text-lg font-semibold text-primary">
                          Our Projects
                         </span>
                             <h2
-                                class="mb-4 text-3xl font-bold text-dark sm:text-4xl md:text-[40px]     "
+                                class="text-4xl font-extrabold text-center text-green-800 mb-12 "
                             >
                                 Our {{$pro_type}} Projects
                             </h2>

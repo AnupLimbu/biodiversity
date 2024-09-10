@@ -1,58 +1,61 @@
 @extends('master')
-
 @section('content')
-    <div class="navbar-filler  bg-[#abcea0]">
+    <div class="navbar-filler" style="background-color: #abcea0;">
     </div>
-{{--    <section class="bg-white py-6 sm:py-8 lg:py-12">--}}
-@php($pro_type=isset($projects)?'All':(isset($ongoing)?'Ongoing':'Completed'))
-@php($projects=$projects??$ongoing??$completed)
-        <section class="pt-20 py-6 sm:py-8 lg:py-12 pb-10 lg:pt-[120px] lg:pb-20    ">
-            <div class="container mx-auto">
-                <div class="flex flex-wrap justify-center -mx-4">
-                    <div class="w-full px-4">
-                        <div class="mx-auto mb-[60px] max-w-[510px] text-center lg:mb-20">
-                         <span class="block mb-2 text-lg font-semibold text-primary">
-                         Our Projects
-                        </span>
-                            <h2
-                                class="mb-4 text-3xl font-bold text-dark sm:text-4xl md:text-[40px]     "
-                            >
-                                Our {{$pro_type}} Projects
-                            </h2>
+    <section class="container mx-auto mt-16  min-h-[600px]" >
+        <div class="font-[sans-serif] mx-auto relative  rounded-lg py-6 flex  lg:justify-end md:justify-center bg-[#ABCEA0] mb-10" style=" background-position: center;background-repeat: no-repeat;background-size: cover;background-image: url('{{asset('storage/snapedit_1725978745114.jpeg')}}'); ">
+            <div class="lg:w-1/2 md:w-full">
+                <div class="lg:col-span-2 rounded-lg sm:p-10 p-4 z-10 max-lg:-order-1 max-lg:mb-8"  >
+                    <div class=" max-w-2xl shadow overflow-hidden sm:rounded-lg" style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
+                        <div class="px-4 py-5 sm:px-6  " style="background-color: #e9f8f8">
+                            <h2 class="text-2xl  text-center font-bold mb-1 text-green-800 underline">Support Us</h2>
+                            <h3 class="text-lg  leading-6 font-medium text-green-800 text-center ">
+                                Donations Information
+                            </h3>
+                        </div>
+                        <div class="border-t border-gray-200">
+                            <dl>
+                                <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                                    <dt class="text-sm font-medium text-gray-500">
+                                        Bank Name:
+                                    </dt>
+                                    <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+                                        NMB Bank
+                                    </dd>
+                                </div>
+                                <div class="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                                    <dt class="text-sm font-medium text-gray-500">
+                                        Branch:
+                                    </dt>
+                                    <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+                                        Putalisadak Branch
+                                    </dd>
+                                </div>
+                                <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                                    <dt class="text-sm font-medium text-gray-500">
+                                        Account No:
+                                    </dt>
+                                    <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+                                        0040143027000018
+                                    </dd>
+                                </div>
+                                <div class="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                                    <dt class="text-sm font-medium text-gray-500">
+                                        Account Holder Name:
+                                    </dt>
+                                    <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+                                        Biodiversity Research and Conservation Society
+                                    </dd>
+                                </div>
+                                <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6" style="display: flex; justify-content: center">
+                                    <img src="https://www.imgonline.com.ua/examples/qr-code.png" alt="" style="width: 250px;height: 250px">
+                                </div>
+                            </dl>
                         </div>
                     </div>
-                </div>
-                <div class="flex flex-wrap  ">
-                @foreach($projects as $project)
-                        <div class="w-full px-4 md:w-1/2 lg:w-1/3">
-                            <div class="w-full mb-10">
-                                <div class="mb-8 overflow-hidden rounded">
-                                    <img
-                                        src="{{$project->image}}"
-                                        alt="image"
-                                        class="w-full"
-                                    />
-                                </div>
-                                <div>
-                          <span
-                             class="inline-block px-4 py-1 mb-5 text-xs font-semibold leading-loose text-center  rounded bg-primary"
-                          >
-                          {{\Carbon\Carbon::make($project->created_at)->toDateString()}}
-                        </span>
-                                    <h3>
-                                        <a
-                                            href="{{'/projects/'.$project->id}}"
-                                            class="inline-block mb-4 text-xl font-semibold text-dark  hover:text-primary sm:text-2xl lg:text-xl xl:text-2xl"
-                                        >
-                                           {{$project->title}}
-                                        </a>
-                                    </h3>
-                                </div>
-                            </div>
-                        </div>
 
-                @endforeach
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 @endsection
