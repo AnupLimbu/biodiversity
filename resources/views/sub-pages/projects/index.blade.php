@@ -8,7 +8,7 @@
 @php($projects=$projects??$ongoing??$completed)
         <section class="pt-20 py-6 sm:py-8 lg:py-12 pb-10 lg:pb-20">
             <div class="container mx-auto">
-                <div class="flex flex-wrap justify-center ">
+                <div class="flex flex-wrap justify-center "style="min-height: 100vh">
                     <div class="w-full ">
                         <div class="mx-auto max-w-[510px] text-center ">
                          <span class="block mb-2 text-lg font-semibold text-primary">
