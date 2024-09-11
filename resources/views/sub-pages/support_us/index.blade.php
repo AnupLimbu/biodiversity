@@ -57,59 +57,5 @@
                 </div>
             </div>
         </div>
-
-        <div class="container">
-            <div class="row d-flex">
-                <div class="col-12 ">
-                    <h4 class="text-center mt-3 py-3">
-                        OUR GALLERY
-                    </h4>
-                </div>
-                <div class="gallery_image d-flex align-items-center col-md-4 my-2 bg-body-secondary border aos-init aos-animate" data-aos="zoom-in">
-                    <a href="https://walingfulbari.com.np/storage/upload/gallery/gallery_1.jpg" data-lightbox="models" data-title="awards and certificates">
-                        <img src="https://walingfulbari.com.np/storage/upload/gallery/gallery_1.jpg" alt="awards and certificates" class="img-fluid object-fill-contain">
-                    </a>
-                </div>
-                <div class="gallery_image d-flex align-items-center col-md-4 my-2 bg-body-secondary border aos-init aos-animate" data-aos="zoom-in">
-                    <a href="https://walingfulbari.com.np/storage/upload/gallery/gallery_9.jpg" data-lightbox="models" data-title="Bed Room">
-                        <img src="https://walingfulbari.com.np/storage/upload/gallery/gallery_9.jpg" alt="Bed Room" class="img-fluid object-fill-contain">
-                    </a>
-                </div>
-                <div class="gallery_image d-flex align-items-center col-md-4 my-2 bg-body-secondary border aos-init aos-animate" data-aos="zoom-in">
-                    <a href="https://walingfulbari.com.np/storage/upload/gallery/gallery_4.jpg" data-lightbox="models" data-title="Front Desk">
-                        <img src="https://walingfulbari.com.np/storage/upload/gallery/gallery_4.jpg" alt="Front Desk" class="img-fluid object-fill-contain">
-                    </a>
-                </div>
-                <div class="gallery_image d-flex align-items-center col-md-4 my-2 bg-body-secondary border aos-init" data-aos="zoom-in">
-                    <a href="https://walingfulbari.com.np/storage/upload/gallery/gallery_5.jpg" data-lightbox="models" data-title="Toilet &amp; Bathroom">
-                        <img src="https://walingfulbari.com.np/storage/upload/gallery/gallery_5.jpg" alt="Toilet &amp; Bathroom" class="img-fluid object-fill-contain">
-                    </a>
-                    <p class="img_overlay_text">Toilet &amp; Bathroom</p>
-                </div>
-                <div class="gallery_image d-flex align-items-center col-md-4 my-2 bg-body-secondary border aos-init" data-aos="zoom-in">
-                    <a href="https://walingfulbari.com.np/storage/upload/gallery/gallery_6.jpg" data-lightbox="models" data-title="Dining Hall">
-                        <img src="https://walingfulbari.com.np/storage/upload/gallery/gallery_6.jpg" alt="Dining Hall" class="img-fluid object-fill-contain">
-                    </a>
-                </div>
-                <div class="gallery_image d-flex align-items-center col-md-4 my-2 bg-body-secondary border aos-init" data-aos="zoom-in">
-                    <a href="https://walingfulbari.com.np/storage/upload/gallery/gallery_8.jpg" data-lightbox="models" data-title="Waiting Room">
-                        <img src="https://walingfulbari.com.np/storage/upload/gallery/gallery_8.jpg" alt="Waiting Room" class="img-fluid object-fill-contain">
-                    </a>
-                </div>
-                <div class="gallery_image d-flex align-items-center col-md-4 my-2 bg-body-secondary border aos-init" data-aos="zoom-in">
-                    <a href="https://walingfulbari.com.np/storage/upload/gallery/gallery_10.jpg" data-lightbox="models" data-title="Guest House Building">
-                        <img src="https://walingfulbari.com.np/storage/upload/gallery/gallery_10.jpg" alt="Guest House Building" class="img-fluid object-fill-contain">
-                    </a>
-                </div>
-                <div class="gallery_image d-flex align-items-center col-md-4 my-2 bg-body-secondary border aos-init" data-aos="zoom-in">
-                    <a href="https://walingfulbari.com.np/storage/upload/gallery/gallery_7.jpg" data-lightbox="models" data-title="Hotel Building">
-                        <img src="https://walingfulbari.com.np/storage/upload/gallery/gallery_7.jpg" alt="Hotel Building" class="img-fluid object-fill-contain">
-                    </a>
-                </div>
-            </div>
-        </div>
     </section>
-
-
-
 @endsection
