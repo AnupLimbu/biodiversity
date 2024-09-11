@@ -3,7 +3,7 @@
         <section class="container mx-auto  max-w-screen-xl bg-white ">
             <section class="bg-white ">
                 @if($teams->count()>0)
-                    <div class="px-2 mx-auto max-w-screen-xl text-center pt-16 px-6" >
+                    <div class="px-2 mx-auto max-w-screen-xl text-center pt-16 {{$advisor->count()>0||$staff->count()>0||$volunteer->count()>0?'':'min-h-[100vh]'}}">
                         <div class="mx-auto mb-1 max-w-screen-sm lg:mb-16">
                             <h2 class="text-4xl font-extrabold text-center text-green-800 mt-12">Our team</h2>
                         </div>
@@ -37,7 +37,7 @@
                     </div>
                 @endif
                 @if($advisor->count()>0)
-                        <div class="px-2 mx-auto max-w-screen-xl text-center lg:px-6" >
+                        <div class="px-2 mx-auto max-w-screen-xl text-center lg:px-6 {{$team->count()>0||$staff->count()>0||$volunteer->count()>0?'':"min-h-[100vh]"}}" >
                             <div class="mx-auto mb-1 max-w-screen-sm lg:mb-16">
                                 <h2 class="text-4xl font-extrabold text-center text-green-800">Our Advisors</h2>
                             </div>
@@ -71,7 +71,7 @@
                         </div>
                 @endif
                     @if($staff->count()>0)
-                        <div class="px-2 mx-auto max-w-screen-xl text-center lg:px-6" >
+                        <div class="px-2 mx-auto max-w-screen-xl text-center lg:px-6 {{$team->count()>0||$advisor->count()>0||$volunteer->count()>0?'':"min-h-[100vh]"}}" >
                             <div class="mx-auto mb-1 max-w-screen-sm lg:mb-16">
                                 <h2 class="text-4xl font-extrabold text-center text-green-800">Our Staffs</h2>
                             </div>
@@ -106,7 +106,7 @@
 
                     @endif
                @if($volunteer->count()>0)
-                        <div class="px-2 mx-auto max-w-screen-xl text-center lg:px-6" >
+                        <div class="px-2 mx-auto max-w-screen-xl text-center lg:px-6 {{$team->count()>0||$staff->count()>0||$advisor->count()>0?'':"min-h-[100vh]"}}" >
                             <div class="mx-auto mb-1 max-w-screen-sm lg:mb-16">
                                 <h2 class="text-4xl font-extrabold text-center text-green-800">Our Volunteers</h2>
                             </div>
