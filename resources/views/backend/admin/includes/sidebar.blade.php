@@ -5,7 +5,7 @@
     <!-- Brand Logo -->
     <a href="/admin" class="brand-link">
         <img src="{{ asset('/admin_resources/image/dummy_logo.jpg') }}" alt="Logo" class="brand-image img-circle elevation-3" style="height: 33px;width: 33px;opacity: 1">
-        <span class="brand-text font-weight-light">Daraaz</span>
+        <span class="brand-text font-weight-light">BioDiversity</span>
     </a>
 
     <!-- Sidebar -->
@@ -35,7 +35,7 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item ">
-                            <a href="/admin/dashboard" class="nav-link {{$active}}">
+                            <a href="/admin" class="nav-link {{$active}}">
                                 <i class="fa-solid fa-star ml-3"></i>
                                 <p>Main</p>
                             </a>

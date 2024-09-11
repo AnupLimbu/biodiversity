@@ -19,6 +19,7 @@ class TeamController extends Controller
     protected $view_path="backend.admin.team.";
     protected $model;
     protected $user_permissions;
+    public  $route_prefix='teams';
 
 
     public function __construct()
@@ -53,32 +54,29 @@ class TeamController extends Controller
                     ->addColumn('action', function($team){
                         return $this->actionButtons($team);
                     })
+                 ->editColumn("image",function ($item){
+                     return asset($item->image);
+                 })
                     ->rawColumns(['action','social_links'])
                     ->make(true);
     }
         public function actionButtons($team){
-             $is_auth_id=(Auth::id()==$team->id)?true:false;
-            $actionBtns='';
-                 $show_btn = '<a href="'.route("teams.show", $team->id).'" class="actions btn btn-sm btn-info" data-tooltip="true" title="Show">
-                    <i class="far fa-eye" aria-hidden="true"></i></a>';
-               //   if(!$is_auth_id)  }}
-                 // {
-                      $delete_btn= '<a class="btn btn-danger btn-sm delete-asset" title="delete" onclick="return false;">
-                    <i class="fas fa-trash"></i></a>';
-                      $edit_btn= '<a href="'.route('teams.edit', $team->id).'" class="actions btn btn-sm btn-warning" data-tooltip="true" title="Edit">
-                    <i class="fas fa-pencil-alt" aria-hidden="true"></i></a>';
-                  //}else{
-                    //  $delete_btn ='';
-                    //  $edit_btn='';
-                  //}
-                $actionBtns = '
-                    <nobr>
-                        '.$show_btn.' '.$edit_btn.' '.$delete_btn.'
-                    </nobr>
-                    ';
-                return $actionBtns;
+            return $this->generateActionButtons($team);
         }
+    public function generateActionButtons($model){
+        $show_btn = '<a href="'.route($this->route_prefix.".show", $model->id).'" class="actions btn btn-sm btn-info" data-tooltip="true" title="Show">
+                    <i class="far fa-eye" aria-hidden="true"></i></a>';
+        $delete_btn= '<form style="display:inline" action="'. route($this->route_prefix.'.destroy' , $model->id ).'" method="POST">
+                                    '.csrf_field(). method_field("DELETE").'
+                                    <button class="btn btn-danger btn-sm delete-asset" title="delete" onclick="deleteModel()">
+                                    <i class="fas fa-trash" aria-hidden="true"></i>
+                                </button>
 
+                                    </form>';
+        $edit_btn= '<a href="'.route($this->route_prefix.'.edit', $model->id).'" class="actions btn btn-sm btn-warning" data-tooltip="true" title="Edit">
+                    <i class="fas fa-pencil-alt" aria-hidden="true"></i></a>';
+        return   '<nobr>'.$show_btn.' '.$edit_btn.' '.$delete_btn.'</nobr>';
+    }
     public function show($id)
     {
          $team=$this->repository->getById($id);
@@ -106,7 +104,7 @@ class TeamController extends Controller
             $attributes= $request->only($this->model->getFillable());
             if ($request->file('image')){
               $imageName = time().'.'.$request->image->getClientOriginalExtension();
-              $attributes['image']=asset('/storage/images')."/".$imageName;
+              $attributes['image']="storage/images/".$imageName;
               $image = $request->file('image');
               $imageName = time() . '.' . $image->getClientOriginalExtension();
               $image->storeAs('images', $imageName, 'public');
@@ -134,7 +132,7 @@ class TeamController extends Controller
             $team=$this->repository->getById($id);
             if ($request->file('image')){
                 $imageName = time().'.'.$request->image->getClientOriginalExtension();
-                $attributes['image']=asset('/storage/images')."/".$imageName;
+                $attributes['image']="storage/images/".$imageName;
                 $image = $request->file('image');
                 $imageName = time() . '.' . $image->getClientOriginalExtension();
                 $image->storeAs('images', $imageName, 'public');
@@ -162,13 +160,18 @@ class TeamController extends Controller
     public function destroy($id)
     {
       try {
-            DB::beginTransaction();
-            $this->repository->delete($id);
+          DB::beginTransaction();
+          $this_model= $this->repository->getById($id);
+          $image= $this_model->image;
+          $this->repository->delete($id);
+          if ($image && file_exists( base_path("public/".$image))){
+              unlink($image);
+          }
             DB::commit();
-            if($request->expectsJson()){
+            if(\request()->expectsJson()){
               return response()->json([]);
             }
-            return redirect()->route('')->with('success','Team deleted successfully.');
+            return redirect()->back()->with('success','Team deleted successfully.');
           } catch (\Exception $e) {
              DB::rollback();
              return redirect()->back()->withInput()->with('failed', 'Failed to delete Team : '.$e->getMessage());

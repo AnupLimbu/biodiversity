@@ -1,7 +1,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Ecommerce |@yield('header_title') </title>
+  <title>BioDiversity </title>
   <link rel="icon" type="image/x-icon" href="{{ asset('/admin_resources/image/dummy_logo.jpg') }}">
   <!-- Google Font: Source Sans Pro -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -33,7 +33,6 @@
     <script type="text/javascript"  src="{{ asset('admin_resources/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js') }}"></script>
     <script type="text/javascript"  src="{{ asset('admin_resources/dist/js/adminlte.js') }}"></script>
     <script type="text/javascript"  src="{{ asset('admin_resources/plugins/jquery-mousewheel/jquery.mousewheel.js') }}"></script>
-
     <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
       <style>
