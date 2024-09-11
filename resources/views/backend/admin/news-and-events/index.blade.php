@@ -12,7 +12,7 @@
             <a href="{{ route('news-and-events.create') }}" class="btn btn-primary" >Add News and Events</a>
         </div>
         <div class="col-12">
-            <table class="table table-bordered datatable">
+            <table class="table table-bordered datatable w-full">
                 <thead>
                 <tr>
                     <th width="10px">S.N</th>

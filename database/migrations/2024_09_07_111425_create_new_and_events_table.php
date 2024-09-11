@@ -14,13 +14,10 @@ return new class extends Migration
         Schema::create('news_and_events', function (Blueprint $table) {
             $table->id();
             $table->string('title',255)->nullable(false);
-            $table->unique('title');
-            $table->text('description')->nullable();
             $table->enum('type',['news','event'])->nullable(false);
-            $table->string('banner_img',255)->nullable(false);
-            $table->string('original_file_name',255)->nullable(false);
-            $table->string('file',255)->nullable(false);
-            $table->string('file_size',255)->nullable(false);
+            $table->text('thumbnail')->nullable();
+            $table->text('description');
+            $table->longText('news_and_event_body')->nullable(false);
             $table->date('published_date')->nullable(false);
             $table->date('event_start_date')->nullable();
             $table->date('event_end_date')->nullable();

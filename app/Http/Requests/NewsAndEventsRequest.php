@@ -25,24 +25,23 @@ class NewsAndEventsRequest extends FormRequest
     public function rules()
     {
         $rules= [
-            'title'=>'required|string|max:255|unique:news_and_events,title,'.$this->news_and_event,
-            'description'=>'nullable|string',
+            'title'=>'required|string|max:255',
+            'description'=>'nullable|string|max:255',
+            'news_and_event_body'=>'required',
             'type'=>['required',Rule::in('news','event')],
         ];
+        if($this->news_and_event)
+        {
+            $rules['thumbnail']='nullable|file|mimes:jpg,jpeg,png|max:5120';
+        }else{
+            $rules['thumbnail']='required|file|mimes:jpg,jpeg,png|max:5120';
+        }
         if($this->type=='event')
         {
             $rules['event_start_date']='required|date';
             $rules['event_end_date']='required|date|after_or_equal:event_start_date';
         }
 
-        if($this->news_and_event)
-        {
-            $rules['banner_img']='nullable|file|mimes:jpg,jpeg,png|max:5120';
-            $rules['file']='nullable|file|mimes:pdf,docx|max:5120';
-        }else{
-            $rules['banner_img']='required|file|mimes:jpg,jpeg,png|max:5120';
-            $rules['file']='required|file|mimes:pdf,docx|max:5120';
-        }
         return $rules;
     }
 }

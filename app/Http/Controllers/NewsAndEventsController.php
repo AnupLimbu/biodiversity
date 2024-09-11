@@ -63,6 +63,7 @@ class NewsAndEventsController extends Controller
         }catch (\Exception $exception)
         {
             DB::rollback();
+            dd($exception);
             return redirect()->route('news-and-events.index')->with('failed','News and Events could not be saved successfully.');
         }
     }
@@ -83,8 +84,15 @@ class NewsAndEventsController extends Controller
 
     public function webView(Request $request)
     {
-        $newsAndEvents=$this->repository->getAll();
+        $newsAndEvents=$this->model->orderBy('published_date', 'DESC')->get();
         return view('sub-pages/news-and-events/index',compact('newsAndEvents'));
+    }
+
+    public function webViewIndividual($id)
+    {
+        $newsAndEvent=$this->repository->getById($id);
+        $newsAndEvents =  $this->model->where('id','!=',$id)->orderBy('published_date', 'DESC')->limit(4)->get();
+        return view('sub-pages/news-and-events/show',compact('newsAndEvent','newsAndEvents'));
     }
 
     public function getList(Request $request)
@@ -126,8 +134,7 @@ class NewsAndEventsController extends Controller
         try {
             $newsAndEvent = $this->repository->getById($id);
 
-            Storage::disk('local')->delete($newsAndEvent->banner_img);
-            Storage::disk('local')->delete($newsAndEvent->file);
+            Storage::disk('local')->delete($newsAndEvent->thumbnail);
             $newsAndEvent->delete();
             return redirect()->route('news-and-events.index')->with('success', 'News and Events deleted successfully.');
         }catch (\Exception $exception)

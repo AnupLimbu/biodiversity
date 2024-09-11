@@ -1,20 +1,6 @@
 @extends('master')
 
 @section('content')
-    <style>
-        .image-container {
-            position: relative; /* Ensure container positioning */
-            overflow: hidden; /* Hide overflow to keep image contained */
-        }
-        .zoom-image-container img {
-            transition: transform 0.6s ease; /* Smooth transition for zoom effect */
-            transform-origin: center center; /* Center the zoom effect */
-            display: block; /* Remove any extra space below the image */
-        }
-        .zoom-image-container:hover img {
-            transform: scale(1.05); /* Zoom effect on hover without enlarging container */
-        }
-    </style>
     <div class="navbar-filler  ">
     </div>
     <div class="min-h-screen mb-10">
@@ -24,10 +10,9 @@
             </h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 @foreach($newsAndEvents->take(2) as $k=>$entity)
-                    <div class="bg-white shadow-lg rounded-lg overflow-hidden p-3 zoom-image-container">
-                        <a href="{{asset('storage/'.$entity->file)}}" target="_blank">
+                    <div class="bg-white shadow-4 rounded-lg overflow-hidden p-3 zoom-image-container">
                             <div class=" image-container rounded-lg">
-                                <img src="{{asset('storage/'.$entity->banner_img)}}" alt="{{$entity->title}}" class="w-full h-80 object-cover">
+                                <img src="{{asset('storage/'.$entity->thumbnail)}}" alt="{{$entity->title}}" class="w-full h-80 object-cover">
                             </div>
                             <div class="pt-6">
                                 <h1 class="text-2xl mb-2">{{$entity->title}}</h1>
@@ -38,7 +23,10 @@
                                     <p class="text-gray-500 text-sm">Published on: {{\Carbon\Carbon::create($entity->published_date)->format('F j, Y')}}</p>
                                 @endif
                             </div>
-                        </a>
+                            <br>
+                            <a href="/news-and-events/{{$entity->id}}" class="mt-auto hover:underline">
+                                Learn More
+                            </a>
                     </div>
                 @endforeach
             </div>
@@ -70,7 +58,7 @@
 
                                 <h1 class="text-xl mb-2">{{$entity->title}}</h1>
                                  <p class="text-gray-700 mb-2 text-sm">{{$entity->description}}</p>
-                                 <a href="{{asset('storage/'.$entity->file)}}" target="_blank" class="mt-auto hover:underline">
+                                 <a href="/news-and-events/{{$entity->id}}" target="_blank" class="mt-auto hover:underline">
                                      Learn More
                                 </a>
                             </div>
