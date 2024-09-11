@@ -63,6 +63,7 @@
                         </li>
                     </ul>
                     <a href="/teams" class="text-gray-800 text-lg navbar-link">Team Member</a>
+                    <a href="/gallery" class="text-gray-800 text-lg navbar-link ">Gallery</a>
                     <a href="/news-and-events" class="text-gray-800 text-lg navbar-link">News & Events</a>
                     <a href="/contact-us" class="text-gray-800 text-lg navbar-link">Contact Us</a>
                     <a href="/support_us" class="text-gray-800 text-lg navbar-link " style="background-color: #3d90da">Support Us</a>
