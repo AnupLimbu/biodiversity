@@ -16,7 +16,7 @@
                         </div>
                         <div class="pt-6 flex-grow">
                             <h1 class="text-2xl mb-2">{{$entity->title}}</h1>
-                            <p class="text-gray-700 mb-2">{{$entity->description}}</p>
+                            <p class="text-gray-700 mb-2 line-clamp-3">{{$entity->description}}</p>
                         </div>
                         <div class="mt-auto">
                             @if($entity->type=='event')
@@ -58,7 +58,7 @@
                                     @endif
 
                                     <h1 class="text-xl mb-2">{{$entity->title}}</h1>
-                                    <p class="text-gray-700 mb-2 text-sm">{{$entity->description}}</p>
+                                    <p class="text-gray-700 mb-2 text-sm line-clamp-2">{{$entity->description}}</p>
                                     <a href="/news-and-events/{{$entity->id}}" target="_blank" class="mt-auto hover:underline">
                                         Learn More
                                     </a>

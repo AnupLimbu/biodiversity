@@ -15,7 +15,7 @@
             <section class="flex flex-col md:flex-row items-center justify-center">
                 <!-- Image Section -->
                 <div class="md:w-1/2 my-6 md:mb-0">
-                    <img src="https://via.placeholder.com/500x300" alt="About Us Image" class="w-full h-auto rounded-lg">
+                    <img src="{{asset('images/about-us/brcs.jpg')}}" alt="About Us Image" class="w-full h-auto rounded-lg">
                 </div>
 
                 <!-- About Us Details -->
@@ -23,12 +23,12 @@
                     <h2 class="text-4xl font-bold mb-4 text-center text-gray-800">Our Story</h2>
 
                     <p class="text-gray-700 mb-4 text-justify text-lg">
-                        Founded in 2XXX, BRC Society emerged from a shared passion for the environment and a commitment to reversing the tide of biodiversity loss. What began as a small group of dedicated individuals has grown into a vibrant organization with a global impact.
-                        Our journey is driven by the belief that every species plays a crucial role in maintaining the balance of our ecosystems, and that collective action is essential for meaningful change.
+                        Biodiversity Research and Conservation Society, BRCS is a non-governmental local organization registered with Government of Nepal under Social council act, 1992. The Biodiversity Research and Conservation Society
+                        (BRCS) of Nepal is a non-profit organization focused on research, conservation, and education related to biodiversity and natural resources management actively working since 2018 in Nepal. The society aims to conserve the rich biodiversity of Nepal through scientific research and community-based conservation programs. BRCS has been conducting various research projects related to biodiversity conservation, climate change, and sustainable natural resources management.
                     </p>
                     <p class="text-gray-700 text-justify text-lg">
-                        Over the years, our initiatives have led to [specific achievements, e.g., "the protection of 100,000 hectares of critical habitat" or "the successful reintroduction of endangered species into their natural habitats"]. Our work has not only contributed to the conservation of numerous
-                        species but has also empowered communities to become active stewards of their natural surroundings.                    </p>
+                        The organization has been working to create awareness among local communities about the importance of biodiversity and the need for its conservation. BRCS also provides technical and financial assistance to local communities for the conservation of natural resources and the promotion of sustainable livelihoods. BRCS has been implementing several programs and services for biodiversity conservation,
+                        such as wildlife research and monitoring, community-based conservation, ecotourism development, capacity building, and awareness-raising campaigns. The organization also offers technical support to government agencies and other stakeholders for biodiversity conservation planning and policy development. One of the major programs of BRCS is community-based conservation, where the organization works closely with local communities to conserve biodiversity and promote sustainable resource management practices. The society also promotes ecotourism development as a means to provide economic benefits to local communities while conserving natural resources.   </p>
                 </div>
             </section>
         </div>
@@ -46,30 +46,30 @@
                 <!-- Initiative 1 -->
                 <div class="w-full md:w-1/2 lg:w-1/3 px-4 mb-8">
                     <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                        <img src="https://via.placeholder.com/400x300" alt="Conservation Efforts" class="w-full h-48 object-cover">
+                        <img src="{{asset('images/about-us/research-1.jpg')}}" alt="Conservation Efforts" class="w-full h-48 object-cover">
                         <div class="p-6">
-                            <h3 class="text-xl font-semibold text-green-800 mb-2">Conservation Efforts</h3>
-                            <p class="text-gray-600">We work to protect endangered species and their habitats through dedicated conservation programs and community engagement.</p>
+                            <h3 class="text-xl font-semibold text-green-800 mb-2">Research and Conservation Initiatives</h3>
+                            <p class="text-gray-600">BRCS conducts scientific research and community-based programs to conserve Nepal's biodiversity, focusing on wildlife, climate change, and sustainable resource management.</p>
                         </div>
                     </div>
                 </div>
                 <!-- Initiative 2 -->
                 <div class="w-full md:w-1/2 lg:w-1/3 px-4 mb-8">
                     <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                        <img src="https://via.placeholder.com/400x300" alt="Education and Awareness" class="w-full h-48 object-cover">
+                        <img src="{{asset('images/about-us/community-1.jpg')}}" alt="Education and Awareness" class="w-full h-48 object-cover">
                         <div class="p-6">
-                            <h3 class="text-xl font-semibold text-green-800 mb-2">Education and Awareness</h3>
-                            <p class="text-gray-600">We educate local communities and stakeholders about the importance of biodiversity and sustainable practices through workshops and outreach programs.</p>
+                            <h3 class="text-xl font-semibold text-green-800 mb-2">Community Engagement</h3>
+                            <p class="text-gray-600">The organization raises awareness among local communities and provides technical and financial support for conservation efforts and sustainable livelihoods, also promoting ecotourism.</p>
                         </div>
                     </div>
                 </div>
                 <!-- Initiative 3 -->
                 <div class="w-full md:w-1/2 lg:w-1/3 px-4 mb-8">
                     <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                        <img src="https://via.placeholder.com/400x300" alt="Research and Advocacy" class="w-full h-48 object-cover">
+                        <img src="{{asset('images/about-us/support-1.jpg')}}" alt="Research and Advocacy" class="w-full h-48 object-cover">
                         <div class="p-6">
-                            <h3 class="text-xl font-semibold text-green-800 mb-2">Research and Advocacy</h3>
-                            <p class="text-gray-600">We conduct research to understand biodiversity trends and advocate for policies that support the preservation of Nepal’s natural heritage.</p>
+                            <h3 class="text-xl font-semibold text-green-800 mb-2">Support & Aid</h3>
+                            <p class="text-gray-600">BRCS aids government agencies and stakeholders with conservation planning, policy development, and capacity building through technical assistance and awareness campaigns.</p>
                         </div>
                     </div>
                 </div>

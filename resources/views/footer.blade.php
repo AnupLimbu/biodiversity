@@ -19,12 +19,12 @@
             </div>
             <div class="flex">
                 <p class="mr-1 text-gray-800">Email:</p>
-                <a href="mailto:info@lorem.mail" aria-label="Our email" title="Our email" class="transition-colors duration-300 text-deep-purple-accent-400 hover:text-deep-purple-800">brcs@brcs.org</a>
+                <a href="mailto:info@brcsociety.org" aria-label="Our email" title="Our email" class="transition-colors duration-300 text-deep-purple-accent-400 hover:text-deep-purple-800">info@brcsociety.org</a>
             </div>
             <div class="flex">
                 <p class="mr-1 text-gray-800">Address:</p>
                 <a href="https://www.google.com/maps" target="_blank" rel="noopener noreferrer" aria-label="Our address" title="Our address" class="transition-colors duration-300 text-deep-purple-accent-400 hover:text-deep-purple-800">
-                    Kathmandu, Nepal
+                    Manamaiju-11, Kathmandu, Nepal
                 </a>
             </div>
         </div>
