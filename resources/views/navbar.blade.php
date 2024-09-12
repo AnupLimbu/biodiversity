@@ -32,6 +32,7 @@
             </div>
             <a href="/gallery" class="text-gray-800 px-4 py-2 navbar-link ">Gallery</a>
             <a href="/news-and-events" class="text-gray-800 px-4 py-2 navbar-link ">News & Events</a>
+            <a href="/downloads" class="text-gray-800 px-4 py-2 navbar-link ">Downloads</a>
             <a href="/contact-us" class="text-gray-800 px-4 py-2 navbar-link ">Contact Us</a>
             <a href="/support_us" class=" secondary-button text-center text-xl rounded-lg p-1 px-3   navbar-link" style="">Support Us</a>
         </div>
@@ -69,6 +70,7 @@
                     </ul>
                     <a href="/gallery" class="text-gray-800 text-lg navbar-link ">Gallery</a>
                     <a href="/news-and-events" class="text-gray-800 text-lg navbar-link">News & Events</a>
+                    <a href="/downloads" class="text-gray-800 text-lg navbar-link">Downloads</a>
                     <a href="/contact-us" class="text-gray-800 text-lg navbar-link">Contact Us</a>
                     <a href="/support_us" class=" secondary-button text-center text-xl rounded-lg p-2 px-3   navbar-link" style="">Support Us</a>
 

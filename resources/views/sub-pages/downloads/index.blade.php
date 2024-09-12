@@ -16,7 +16,7 @@
                 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
                 @foreach($downloads as $download)
                     <div class="p-3 border border-gray-200 rounded-lg " >
-                        <div class="max-w-sm bg-white  dark:bg-gray-800  zoom-image-container">
+                        <div class="max-w-sm bg-white    zoom-image-container">
                             <a href="{{asset($download->file)}}">
                                 <img class="rounded-t-lg" src="{{asset($download->thumbnail)}}" alt="" style="max-width: 475px; height: 475px;object-fit: cover"/>
                             </a>
