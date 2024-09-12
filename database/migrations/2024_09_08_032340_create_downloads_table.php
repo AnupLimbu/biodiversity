@@ -16,9 +16,9 @@ class CreateDownloadsTable extends Migration
         Schema::create('downloads', function (Blueprint $table) {
             $table->id();
             $table->string("name");
-			$table->string("thumbnail");
+			$table->string("thumbnail")->nullable();
 			$table->string("description")->nullable();
-			$table->string("file");
+			$table->string("file")->nullable();
             $table->string('original_file_name',255)->nullable(true);
             $table->string('file_size',255)->nullable(true);
             $table->timestamps();

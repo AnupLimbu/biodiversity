@@ -168,5 +168,7 @@ Route::group(['middleware'=>"auth",'prefix' => 'admin/downloads', 'as' => 'downl
     Route::post('/', [DownloadController::class, 'store'])->name('store');
     Route::get  ('{id}/delete', [DownloadController::class, 'destroy'])->name('destroy');
     Route::put('{id}', [DownloadController::class, 'update'])->name('update');
+    Route::delete('{id}/delete', [DownloadController::class, 'destroy'])->name('destroy');
+
 });
 require __DIR__.'/auth.php';

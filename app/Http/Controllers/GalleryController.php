@@ -127,8 +127,8 @@ class GalleryController extends Controller
                       unlink(public_path('storage/gallery')."/".$array[$last_key]);
                   }
                   }
-               }
-          $this->repository->update($id,$attributes);
+            }
+                $this->repository->update($id,$attributes);
 
             DB::commit();
             if($request->expectsJson()){

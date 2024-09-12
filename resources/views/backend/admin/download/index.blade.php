@@ -16,7 +16,9 @@
                 <thead>
                 <tr>
                     <th width="10px">S.N</th>
-                    
+                    <th width="10px">Name</th>
+                    <th width="10px">Description</th>
+                    <th width="10px">Thumbnail</th>
                     <th width="10%">Action</th>
                 </tr>
                 </thead>
@@ -44,7 +46,9 @@
             },
             columns: [
                 {data: 'DT_RowIndex', name: 'DT_RowIndex'},
-                
+                {data: 'name', name: 'name'},
+                {data: 'description', name: 'description'},
+                {data: 'thumbnail', name: 'thumbnail'},
                 {data: 'action', name: 'action'},
             ]
         });

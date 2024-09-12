@@ -49,7 +49,10 @@ class DownloadController extends Controller
                     ->addColumn('action', function($download){
                         return $this->actionButtons($download);
                     })
-                    ->rawColumns(['action'])
+                     ->editColumn("thumbnail",function ($item){
+                     return "<img src=".asset($item->thumbnail)." width='150' height='150'>";
+                    })
+                    ->rawColumns(['action','thumbnail'])
                     ->make(true);
     }
         public function actionButtons($download){
@@ -101,12 +104,11 @@ class DownloadController extends Controller
             if($request->expectsJson()){
               return response()->json([]);
             }
-            return redirect()->back()->with('success', 'Download created successfully.');
+            return redirect()->route("downloads.index")->with('success', 'Download created successfully.');
           } catch (\Exception $e) {
             DB::rollback();
             return redirect()->back()->withInput()->with('failed', "Failed to update Download : ".$e->getMessage());
           }
-
     }
 
 
@@ -116,6 +118,35 @@ class DownloadController extends Controller
       try {
             DB::beginTransaction();
             $attributes= $request->only($this->model->getFillable());
+            $pro=$this->repository->getById($id);
+          if ($request->file('thumbnail')){
+              $imageName = time().'.'.$request->thumbnail->getClientOriginalExtension();
+              $attributes['thumbnail']="storage/downloads/thumbnail/".$imageName;
+              $image = $request->file('thumbnail');
+              $imageName = time() . '.' . $image->getClientOriginalExtension();
+              $image->storeAs('downloads/thumbnail', $imageName, 'public');
+              if ($pro->thumbnail){
+                  $array=explode("/",$pro->thumbnail);
+                  $last_key=array_key_last($array);
+                  if (file_exists(public_path('storage/downloads/thumbnail')."/".$array[$last_key])){
+                      unlink(public_path('storage/downloads/thumbnail')."/".$array[$last_key]);
+                  }
+              }
+          }
+          if ($request->file('file')){
+              $imageName = time().'.'.$request->file->getClientOriginalExtension();
+              $attributes['file']="storage/downloads/files/".$imageName;
+              $image = $request->file('file');
+              $imageName = time() . '.' . $image->getClientOriginalExtension();
+              $image->storeAs('downloads/files', $imageName, 'public');
+              if ($pro->file){
+                  $array=explode("/",$pro->file);
+                  $last_key=array_key_last($array);
+                  if (file_exists(public_path('storage/downloads/files')."/".$array[$last_key])){
+                      unlink(public_path('storage/downloads/files')."/".$array[$last_key]);
+                  }
+              }
+          }
             $this->repository->update($id,$attributes);
             DB::commit();
             if($request->expectsJson()){
@@ -132,7 +163,12 @@ class DownloadController extends Controller
     {
       try {
             DB::beginTransaction();
-            $this->repository->delete($id);
+          $this_model= $this->repository->getById($id);
+          $image= $this_model->thumbnail;
+          $file= $this_model->file;
+          $this->repository->delete($id);
+          if ($image){unlink($image);}
+          if ($file){unlink($file);}
             DB::commit();
             if(\request()->expectsJson()){
               return response()->json([]);
@@ -155,6 +191,6 @@ class DownloadController extends Controller
                                         </form>';
             $edit_btn= '<a href="'.route($this->route_prefix.'.edit', $model->id).'" class="actions btn btn-sm btn-warning" data-tooltip="true" title="Edit">
                         <i class="fas fa-pencil-alt" aria-hidden="true"></i></a>';
-          return   '<nobr>'.$show_btn.' '.$edit_btn.' '.$delete_btn.'</nobr>';
+          return   '<nobr> '.$edit_btn.' '.$delete_btn.'</nobr>';
         }
 }

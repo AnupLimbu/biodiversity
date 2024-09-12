@@ -27,8 +27,8 @@ class CreateDownloadRequest extends FormRequest
 
 			'name' => 'required|string',
 			'description' => 'nullable|string',
-			'thumbnail' => 'required|file|mimes:gif,jpeg,jpg,png',
-			'file' => 'required|file|mimes:pdf,doc,docx,ppt,pptx,jpeg,jpg,png,gif',
+			'thumbnail' => 'file|mimes:gif,jpeg,jpg,png,',
+			'file' => 'file|mimes:pdf,doc,docx,ppt,pptx,jpeg,jpg,png,gif,',
 			];
     }
 }
