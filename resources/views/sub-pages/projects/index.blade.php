@@ -28,7 +28,9 @@
                             </div>
                             <div class="pt-6 flex-grow">
                                 <h1 class="text-2xl mb-2 line-clamp-2">{{$project->title}}</h1>
-                                <p class="text-gray-700 mb-2 line-clamp-2">{!! $project->description !!}</p>
+                                <p class="text-gray-700 mb-2 ">
+                                    {!! \Illuminate\Support\Str::limit(strip_tags($project->description))!!}
+                                </p>
                             </div>
                             <div class="mt-auto">
                                 <p class="text-gray-500 text-sm">Published on: {{\Carbon\Carbon::create($project->$project)->format('F j, Y')}}</p>
