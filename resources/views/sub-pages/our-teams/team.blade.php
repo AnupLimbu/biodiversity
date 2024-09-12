@@ -11,7 +11,7 @@
                     </div>
                 @if($teams->count()>0)
                     <div class="px-2 mx-auto max-w-screen-xl text-center lg:px-6 {{$staff->count()>0||$volunteer->count()>0?'':"min-h-[100vh]"}}" >
-                        <div class="mx-auto mb-1 max-w-screen-sm lg:mb-16">
+                        <div class="mx-auto mb-1 max-w-screen-sm lg:mb-6">
                             <h2 class="text-2xl py-5 font-extrabold text-center text-green-800">Executive Members</h2>
                         </div>
                         <div class="grid gap-8 lg:gap-16 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3">
@@ -22,7 +22,7 @@
                                         <a class="underline" href="#" style="color: rgb(55 175 101)">{{$team->name}}</a>
                                     </h3>
                                     <h3 style="color: #414548">{{$team->designation}}</h3>
-                                    <ul class="flex justify-center mt-4 space-x-4" style="font-size: 21px;">
+                                    <ul class="flex justify-center mt-0 space-x-4" style="font-size: 21px;">
                                         @if($team->facebook_link)
                                             <li>
                                                 <a href="{{$team->facebook_link}}" class="text-[#39569c] ">
@@ -45,7 +45,7 @@
                 @endif
                 @if($advisor->count()>0)
                         <div class="px-2 mx-auto max-w-screen-xl text-center lg:px-6 {{$teams->count()>0||$staff->count()>0||$volunteer->count()>0?'':"min-h-[100vh]"}}" >
-                            <div class="mx-auto mb-1 max-w-screen-sm lg:mb-16">
+                            <div class="mx-auto mb-1 max-w-screen-sm lg:mb-6">
                                 <h2 class="text-2xl py-5 font-extrabold text-center text-green-800">Our Advisors</h2>
                             </div>
                             <div class="grid gap-8 lg:gap-16 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3">
@@ -56,7 +56,7 @@
                                             <a class="underline" href="#" style="color: rgb(55 175 101)">{{$team->name}}</a>
                                         </h3>
                                         <h3 style="color: #414548">{{$team->designation}}</h3>
-                                        <ul class="flex justify-center mt-4 space-x-4" style="font-size: 21px;">
+                                        <ul class="flex justify-center mt-0 space-x-4" style="font-size: 21px;">
                                             @if($team->facebook_link)
                                                 <li>
                                                     <a href="{{$team->facebook_link}}" class="text-[#39569c] ">
@@ -79,7 +79,7 @@
                 @endif
                     @if($staff->count()>0)
                         <div class="px-2 mx-auto max-w-screen-xl text-center lg:px-6 {{$teams->count()>0||$advisor->count()>0||$volunteer->count()>0?'':"min-h-[100vh]"}}" >
-                            <div class="mx-auto mb-1 max-w-screen-sm lg:mb-16">
+                            <div class="mx-auto mb-1 max-w-screen-sm lg:mb-6">
                                 <h2 class="text-2xl py-5 font-extrabold text-center text-green-800">Our Staffs</h2>
                             </div>
                             <div class="grid gap-8 lg:gap-16 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3">
@@ -90,7 +90,7 @@
                                             <a class="underline" href="#" style="color: rgb(55 175 101)">{{$team->name}}</a>
                                         </h3>
                                         <h3 style="color: #414548">{{$team->designation}}</h3>
-                                        <ul class="flex justify-center mt-4 space-x-4" style="font-size: 21px;">
+                                        <ul class="flex justify-center mt-0 space-x-4" style="font-size: 21px;">
                                             @if($team->facebook_link)
                                                 <li>
                                                     <a href="{{$team->facebook_link}}" class="text-[#39569c] ">
@@ -114,7 +114,7 @@
                     @endif
                @if($volunteer->count()>0)
                         <div class="px-2 mx-auto max-w-screen-xl text-center lg:px-6 {{$teams->count()>0||$staff->count()>0||$advisor->count()>0?'':"min-h-[100vh]"}}" >
-                            <div class="mx-auto mb-1 max-w-screen-sm lg:mb-16">
+                            <div class="mx-auto mb-1 max-w-screen-sm lg:mb-6">
                                 <h2 class="text-2xl py-5 font-extrabold text-center text-green-800">Our Volunteers</h2>
                             </div>
                             <div class="grid gap-8 lg:gap-16 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3">
@@ -125,7 +125,7 @@
                                             <a class="underline" href="#" style="color: rgb(55 175 101)">{{$team->name}}</a>
                                         </h3>
                                         <h3 style="color: #414548">{{$team->designation}}</h3>
-                                        <ul class="flex justify-center mt-4 space-x-4" style="font-size: 21px;">
+                                        <ul class="flex justify-center mt-0 space-x-4" style="font-size: 21px;">
                                             @if($team->facebook_link)
                                                 <li>
                                                     <a href="{{$team->facebook_link}}" class="text-[#39569c] ">
