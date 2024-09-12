@@ -82,8 +82,20 @@ class DownloadController extends Controller
       try {
             DB::beginTransaction();
             $attributes= $request->only($this->model->getFillable());
-            $this->upload($request, 'image','thumbnail','Downloads');
-            dd($request->file);
+            if ($request->file('thumbnail')){
+              $imageName = time().'.'.$request->thumbnail->getClientOriginalExtension();
+              $attributes['thumbnail']="storage/downloads/thumbnail/".$imageName;
+              $image = $request->file('thumbnail');
+              $imageName = time() . '.' . $image->getClientOriginalExtension();
+              $image->storeAs('downloads/thumbnail', $imageName, 'public');
+           }
+          if ($request->file('file')){
+              $imageName = time().'.'.$request->file->getClientOriginalExtension();
+              $attributes['file']="storage/downloads/files/".$imageName;
+              $image = $request->file('file');
+              $imageName = time() . '.' . $image->getClientOriginalExtension();
+              $image->storeAs('downloads/files', $imageName, 'public');
+          }
             $this->repository->create($attributes);
             DB::commit();
             if($request->expectsJson()){

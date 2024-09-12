@@ -99,7 +99,7 @@ return [
             'route' => '',
             'title' => 'Download',
             'class' => '',
-            'visibility' => false,
+            'visibility' => true,
             'permission' => true,
             'active' => false,
             'sub_link' =>

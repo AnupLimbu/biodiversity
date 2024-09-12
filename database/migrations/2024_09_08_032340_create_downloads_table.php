@@ -19,8 +19,8 @@ class CreateDownloadsTable extends Migration
 			$table->string("thumbnail");
 			$table->string("description")->nullable();
 			$table->string("file");
-            $table->string('original_file_name',255)->nullable(false);
-            $table->string('file_size',255)->nullable(false);
+            $table->string('original_file_name',255)->nullable(true);
+            $table->string('file_size',255)->nullable(true);
             $table->timestamps();
         });
     }

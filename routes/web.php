@@ -53,6 +53,10 @@ Route::group(['prefix' => '/', 'as' => ''],function(){
         $gallery =  (\App\Models\Gallery::orderBy('order', 'DESC')->get());
         return view('sub-pages/gallery/index', compact('gallery'));
     });
+    Route::get('/downloads', function () {
+        $downloads =  (\App\Models\Download::orderBy('created_at', 'DESC')->get());
+        return view('sub-pages/downloads/index', compact('downloads'));
+    });
     Route::get('/support_us', function () {
         return view('sub-pages/support_us/index');
     });
