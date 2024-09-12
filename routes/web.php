@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\DownloadController;
+use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\TeamController;
 use Illuminate\Support\Facades\Route;
@@ -47,6 +48,10 @@ Route::group(['prefix' => '/', 'as' => ''],function(){
     });
     Route::get('/advisors', function () {
         return view('sub-pages/our-teams/advisor');
+    });
+    Route::get('/gallery', function () {
+        $gallery =  (\App\Models\Gallery::orderBy('order', 'DESC')->get());
+        return view('sub-pages/gallery/index', compact('gallery'));
     });
     Route::get('/support_us', function () {
         return view('sub-pages/support_us/index');
@@ -95,6 +100,17 @@ Route::middleware('auth')->group(function () {
     Route::delete('{id}/delete', [ProjectController ::class, 'destroy'])->name('destroy');
 
     });
+Route::group(['middleware'=>"auth",'prefix' => 'admin/gallery', 'as' => 'gallery.'], function(){
+    $controller = GalleryController::class;
+    Route::get('/', [$controller, 'index'])->name('index');
+    Route::get('list', [$controller, 'getList'])->name('list');
+    Route::get('create', [$controller, 'create'])->name('create');
+    Route::get('{id}/edit', [$controller, 'edit'])->name('edit');
+    Route::get('{id}/show', [$controller, 'show'])->name('show');
+    Route::post('/', [$controller, 'store'])->name('store');
+    Route::patch('{id}', [$controller, 'update'])->name('update');
+    Route::delete('{id}/delete', [$controller, 'destroy'])->name('destroy');
+});
     Route::group(['middleware'=>"auth",'prefix' => 'admin/contact_us', 'as' => 'contact_us.'], function(){
     Route::get('/', [ContactUsController::class, 'index'])->name('index');
     Route::get('list', [ContactUsController::class, 'getList'])->name('list');
@@ -135,7 +151,7 @@ Route::group(['middleware'=>"auth",'prefix' => 'admin/teams', 'as' => 'teams.'],
     Route::get('{id}/edit', [TeamController::class, 'edit'])->name('edit');
     Route::get('{id}/show', [TeamController::class, 'show'])->name('show');
     Route::post('/', [TeamController::class, 'store'])->name('store');
-    Route::get  ('{id}/delete', [TeamController::class, 'destroy'])->name('destroy');
+    Route::delete  ('{id}/delete', [TeamController::class, 'destroy'])->name('destroy');
     Route::put('{id}', [TeamController::class, 'update'])->name('update');
 });
 

@@ -9,7 +9,7 @@
     <!-- Right navbar links -->
     <ul class="navbar-nav ml-auto">
         <li class="nav-item d-flex align-items-center">
-            <a class="badge badge-primary text-bold" href="{{env('APP_URL')}}" role="button" style="padding: 4px">
+            <a class="badge badge-primary text-bold" target="_blank" href="{{env('APP_URL')}}" role="button" style="padding: 4px">
                 <i class="fa-solid fa-arrow-right "><span class="p-2">Frontend</span></i>
             </a>
         </li>
@@ -34,10 +34,11 @@
                     </div>
                 </div>
                 <div class="dropdown-divider" style=""></div>
-                <a href="{{'/admin/users/'.\Illuminate\Support\Facades\Auth::id().'/edit'}}" class="dropdown-item">
-                    <i class="fa-regular fa-user mr-2"></i>
-                    Manage Account
-                </a>
+{{--                --}}
+{{--                <a href="{{'/admin/users/'.\Illuminate\Support\Facades\Auth::id().'/edit'}}" class="dropdown-item">--}}
+{{--                    <i class="fa-regular fa-user mr-2"></i>--}}
+{{--                    Manage Account--}}
+{{--                </a>--}}
                 <div class="dropdown-divider"></div>
                 <form action="/logout" method="POST">
                     @csrf

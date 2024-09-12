@@ -155,5 +155,36 @@ return [
                         ],
                 ],
         ],
+    'Gallery' =>
+        [
+            'icon' => 'fa-brands fa-product-hunt',
+            'route' => '',
+            'title' => 'Gallery',
+            'class' => '',
+            'visibility' => true,
+            'permission' => true,
+            'active' => false,
+            'sub_link' =>
+                [
+                    'create' =>
+                        [
+                            'icon' => 'fa-solid fa-plus',
+                            'route' => '/admin/gallery/create',
+                            'title' => 'Add Image',
+                            'visibility' => true,
+                            'permission' => true,
+                            'active' => '$current_route == "/admin/gallery/create"',
+                        ],
+                    'index' =>
+                        [
+                            'icon' => 'fa-solid fa-list',
+                            'route' => '/admin/gallery',
+                            'title' => 'List Images',
+                            'visibility' => true,
+                            'permission' => true,
+                            'active' => false,
+                        ],
+                ],
+        ],
   '[solid_auto_generated_sidebar]' => NULL,
 ];
