@@ -28,6 +28,7 @@
         <label for="facebook_link" class="col-2 text-left col-form-label text-red">Type:</label>
         <select name="type" id="type" class="form-control  col-10  {{$errors->has("type")?"is-invalid":""}}">
             <option value="" selected>Select Team type</option>
+            <option value="team" {{old("type")=='team' || (isset($team)&&$team->type =='team')?'selected':'' }}>Executive Member</option>
             <option value="advisor" {{old("type")=='advisor' ||(isset($team)&&$team->type =='advisor')?'selected':'' }}>Advisor</option>
             <option value="staff" {{old("type")=='staff' ||(isset($team)&&$team->type =='staff')?'selected':'' }}>Staff</option>
             <option value="volunteer" {{old("type")=='volunteer' ||(isset($team)&&$team->type =='volunteer')?'selected':'' }}>Volunteer</option>

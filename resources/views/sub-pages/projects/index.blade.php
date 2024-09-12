@@ -12,13 +12,10 @@
                     <div class="w-full ">
                         <div class="mx-auto max-w-[510px] text-center ">
                             <h2
-                                class="text-4xl font-extrabold text-center text-green-800 "
+                                class="text-4xl font-extrabold text-center text-green-800 mb-10"
                             >
-                                Our Projects
+                                {{$pro_type}} Projects
                             </h2>
-                         <span class="block mb-12  text-md font-semibold text-primary">
-                          {{$pro_type}} Projects
-                        </span>
                         </div>
                     </div>
                 </div>
@@ -43,13 +40,11 @@
                           {{\Carbon\Carbon::make($project->created_at)->toDateString()}}
                         </span>
                                     <h3>
-                                        <a
-                                            href="{{'/projects/'.$project->id}}"
-                                            class="inline-block mb-4 text-xl font-semibold text-dark  hover:text-primary sm:text-2xl lg:text-xl xl:text-2xl"
-                                        >
+                                        <a href="{{'/projects/'.$project->id}}" class="inline-block mb-2 text-xl font-semibold text-dark  hover:text-primary sm:text-2xl lg:text-xl xl:text-2xl">
                                            {{$project->title}}
                                         </a>
                                     </h3>
+                                    <p>{!! \Illuminate\Support\Str::limit($project->description,150) !!}</p>
                                 </div>
                             </div>
                         </div>
