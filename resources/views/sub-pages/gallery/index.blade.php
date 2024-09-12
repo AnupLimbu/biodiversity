@@ -1,4 +1,6 @@
 @extends('master')
+@section("scripts")
+@endsection
 @section('content')
     <div class="navbar-filler" style="background-color: #abcea0;">
     </div>

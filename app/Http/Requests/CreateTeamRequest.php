@@ -32,7 +32,7 @@ class CreateTeamRequest extends FormRequest
             'facebook_link'=>'nullable',
             'instagram_link'=>'nullable',
             'order'=>'required|integer|unique:teams,order,'.$this->id,
-            'image'=>'nullable|mimes:jpeg,png,jpg,gif,svg',
+            'image'=>'nullable|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ];
     }
 }

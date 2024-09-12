@@ -11,6 +11,7 @@
         <div class="hidden md:flex md:items-center">
             <a href="/" class="text-gray-800 px-2 py-2 navbar-link ">Home</a>
             <a href="/about-us" class="text-gray-800 px-2 py-2 navbar-link ">About Us</a>
+            <a href="/teams" class="text-gray-800 px-2 py-2 navbar-link ">Team</a>
             <div class="relative parent">
                 <a href="/projects" class="navbar-link flex justify-between md:inline-flex p-4 items-center space-x-2">
                     <span>Projects</span>
@@ -26,11 +27,10 @@
                     </li>
                 </ul>
             </div>
-            <a href="/teams" class="text-gray-800 px-2 py-2 navbar-link ">Team Member</a>
             <a href="/gallery" class="text-gray-800 px-2 py-2 navbar-link ">Gallery</a>
             <a href="/news-and-events" class="text-gray-800 px-2 py-2 navbar-link ">News & Events</a>
             <a href="/contact-us" class="text-gray-800 px-2 py-2 navbar-link ">Contact Us</a>
-            <a href="/support_us" class="text-gray-800 px-2 py-2 navbar-link" style="background-color: #3d90da">Support Us</a>
+            <a href="/support_us" class=" secondary-button text-center text-xl rounded-lg p-1 px-3   navbar-link" style="">Support Us</a>
         </div>
 
 
@@ -48,6 +48,8 @@
                         </button>
                     </div>
                     <a href="/about-us" class="text-gray-800 text-lg navbar-link">About Us</a>
+                    <a href="/teams" class="text-gray-800 text-lg navbar-link">Team</a>
+
                     <button class="text-gray-800 text-lg navbar-link dropdown-toggle text-left ">
                         Projects
                         <svg class="w-4 h-4 inline-block ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -62,11 +64,10 @@
                             <a href="/projects/completed" class="block px-2 pt-1 text-sm text-gray-700 dropdown-link2"><span class="p-1">Completed</span></a>
                         </li>
                     </ul>
-                    <a href="/teams" class="text-gray-800 text-lg navbar-link">Team Member</a>
                     <a href="/gallery" class="text-gray-800 text-lg navbar-link ">Gallery</a>
                     <a href="/news-and-events" class="text-gray-800 text-lg navbar-link">News & Events</a>
                     <a href="/contact-us" class="text-gray-800 text-lg navbar-link">Contact Us</a>
-                    <a href="/support_us" class="text-gray-800 text-lg navbar-link " style="background-color: #3d90da">Support Us</a>
+                    <a href="/support_us" class="secondary-button text-center text-xl rounded-lg  navbar-link " style="">Support Us</a>
 
                 </div>
         </div>

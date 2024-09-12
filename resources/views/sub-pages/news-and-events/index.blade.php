@@ -15,7 +15,7 @@
             transform: scale(1.05); /* Zoom effect on hover without enlarging container */
         }
     </style>
-    <div class="navbar-filler  ">
+    <div class="navbar-filler" style="background-color: #abcea0;">
     </div>
     <div class="min-h-screen mb-10">
         <div class="container mx-auto">

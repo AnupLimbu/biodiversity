@@ -11,14 +11,14 @@
                 <div class="flex flex-wrap justify-center " >
                     <div class="w-full ">
                         <div class="mx-auto max-w-[510px] text-center ">
-                         <span class="block mb-2 text-lg font-semibold text-primary">
-                         Our Projects
-                        </span>
                             <h2
-                                class="text-4xl font-extrabold text-center text-green-800 mb-12 "
+                                class="text-4xl font-extrabold text-center text-green-800 "
                             >
-                                Our {{$pro_type}} Projects
+                                Our Projects
                             </h2>
+                         <span class="block mb-12  text-md font-semibold text-primary">
+                          {{$pro_type}} Projects
+                        </span>
                         </div>
                     </div>
                 </div>
@@ -26,12 +26,15 @@
                 @foreach($projects as $project)
                         <div class="w-full px-4 md:w-1/2 lg:w-1/3">
                             <div class="w-full mb-10">
-                                <div class="mb-8 overflow-hidden rounded" style="max-width: 435px">
-                                    <img
-                                        src="{{asset($project->image)}}"
-                                        alt="image"
-                                        class="w-full"
-                                    />
+                                <div class="mb-8 overflow-hidden rounded" >
+                                    <a href="{{'/projects/'.$project->id}}">
+                                        <img
+                                            src="{{asset($project->image)}}"
+                                            alt="image"
+                                            class="w-full"
+                                            style="max-width: 435px;max-height:248px;object-fit:cover;"
+                                        />
+                                    </a>
                                 </div>
                                 <div>
                           <span
