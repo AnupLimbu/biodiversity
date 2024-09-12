@@ -2,7 +2,7 @@
 @section('content')
     <div class="navbar-filler" style="background-color: #abcea0;">
     </div>
-    <section class="container mx-auto mt-16  min-h-[600px]" >
+    <section class="container mx-auto mt-16  min-h-[600px]  mb-12">
             <div class="row d-flex">
                 <div class="flex flex-wrap justify-center " >
                     <div class="w-full ">
