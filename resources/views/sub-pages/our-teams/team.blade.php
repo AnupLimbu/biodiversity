@@ -3,12 +3,12 @@
     <div class="navbar-filler" style="background-color: #abcea0;">
     </div>
         <section class="container mx-auto  max-w-screen-xl bg-white ">
-            <section class="bg-white ">
-                    <div class="px-2 mx-auto max-w-screen-xl text-center pt-16 {{$teams->count()>0||$advisor->count()>0||$staff->count()>0||$volunteer->count()>0?'':'min-h-[100vh]'}}">
-                        <div class="mx-auto mb-1 max-w-screen-sm lg:mb-16">
-                            <h2 class="text-4xl font-extrabold text-center text-green-800 mt-0 underline">Our Team</h2>
-                        </div>
-                    </div>
+            <section class="bg-white {{$teams->count()==0?'min-h-screen':'h-full'}}">
+{{--                    <div class="px-2 mx-auto max-w-screen-xl text-center pt-16 {{$advisor->count()>0||$staff->count()>0||$volunteer->count()>0?'':'min-h-[100vh]'}}">--}}
+{{--                        <div class="mx-auto mb-1 max-w-screen-sm lg:mb-16">--}}
+{{--                            <h2 class="text-4xl font-extrabold text-center text-green-800 mt-0 underline">Our Team</h2>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
                 @if($teams->count()>0)
                     <div class="px-2 mx-auto max-w-screen-xl text-center lg:px-6 {{$staff->count()>0||$volunteer->count()>0?'':"min-h-[100vh]"}}" >
                         <div class="mx-auto mb-1 max-w-screen-sm lg:mb-6">

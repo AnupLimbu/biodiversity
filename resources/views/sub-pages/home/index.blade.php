@@ -40,9 +40,9 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M3 6h18M3 14h18m-6 6h6m-6-12h6M6 18H3m3-6H3m0-6h6m0 6h6" />
                         </svg>
                     </div>
-                    <h3 class="text-2xl font-bold text-green-700 mb-4 group-hover:text-green-800">Preserving Ecosystems</h3>
+                    <h3 class="text-2xl font-bold text-green-700 mb-4 group-hover:text-green-800">Advance Biodiversity Research</h3>
                     <p class="text-gray-600 group-hover:text-gray-800 text-justify">
-                        Protecting the delicate balance of nature by conserving habitats and ensuring the resilience of our planet’s diverse ecosystems.
+                        Conduct scientific research to enhance understanding of Nepal's biodiversity, focusing on wildlife, climate change, and sustainable natural resource management.
                     </p>
                 </div>
                 <div class="bg-white p-8 rounded-xl shadow-lg transform transition-transform duration-300 hover:scale-105 hover:bg-green-50 hover:text-green-800 cursor-pointer group">
@@ -51,9 +51,9 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7M12 2v20" />
                         </svg>
                     </div>
-                    <h3 class="text-2xl font-bold text-green-700 mb-4 group-hover:text-green-800">Empowering Communities</h3>
+                    <h3 class="text-2xl font-bold text-green-700 mb-4 group-hover:text-green-800">Promote Community-Based Conservation</h3>
                     <p class="text-gray-600 group-hover:text-gray-800 text-justify">
-                        Engaging with local communities to promote sustainable practices and environmental stewardship.
+                        Collaborate with local communities to implement conservation programs, raise awareness, and support sustainable resource management practices.
                     </p>
                 </div>
                 <div class="bg-white p-8 rounded-xl shadow-lg transform transition-transform duration-300 hover:scale-105 hover:bg-green-50 hover:text-green-800 cursor-pointer group">
@@ -62,9 +62,9 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v8m0 0l-4-4m4 4l4-4" />
                         </svg>
                     </div>
-                    <h3 class="text-2xl font-bold text-green-700 mb-4 group-hover:text-green-800">Advancing Knowledge</h3>
+                    <h3 class="text-2xl font-bold text-green-700 mb-4 group-hover:text-green-800">Support Sustainable Livelihoods</h3>
                     <p class="text-gray-600 group-hover:text-gray-800 text-justify">
-                        Supporting research and education to increase awareness and understanding of biodiversity’s critical importance.
+                        Provide technical and financial assistance to communities to foster sustainable livelihoods and promote ecotourism as a means to benefit both people and nature.
                     </p>
                 </div>
                 <div class="bg-white p-8 rounded-xl shadow-lg transform transition-transform duration-300 hover:scale-105 hover:bg-green-50 hover:text-green-800 cursor-pointer group">
@@ -73,9 +73,9 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 9l6 6 6-6M12 2v20" />
                         </svg>
                     </div>
-                    <h3 class="text-2xl font-bold text-green-700 mb-4 group-hover:text-green-800">Fostering Harmony</h3>
+                    <h3 class="text-2xl font-bold text-green-700 mb-4 group-hover:text-green-800">Enhance Policy and Capacity Building</h3>
                     <p class="text-gray-600 group-hover:text-gray-800 text-justify">
-                        Encouraging a harmonious coexistence between humanity and nature, where every life form is valued and protected.
+                        Offer technical support to government agencies and stakeholders for effective biodiversity conservation planning, policy development, and capacity building.
                     </p>
                 </div>
             </div>

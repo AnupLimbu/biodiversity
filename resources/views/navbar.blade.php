@@ -1,6 +1,9 @@
 <nav class="p-1 fixed w-full backdrop-blur-2xl bg-transparent" style="z-index: 25!important;">
     <div class="container mx-auto flex justify-between items-center">
-        <a href="#" class="text-gray-800 text-3xl font-semibold">BRCS</a>
+{{--        <a href="#" class="text-gray-800 text-3xl font-semibold">--}}
+            <img src="{{asset('images/logo.jpeg')}}" alt="Conservation Efforts" class="w-16 h-14 object-cover rounded-full">
+{{--        </a>--}}
+
         <button class="text-gray-800 md:hidden" id="hamburgerButton">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>

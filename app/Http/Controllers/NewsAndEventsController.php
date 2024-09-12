@@ -22,7 +22,7 @@ class NewsAndEventsController extends Controller
 
     public function __construct()
     {
-        $this->middleware('auth',['except'=>'webView']);
+        $this->middleware('auth',['except'=>'webView','webViewIndividual']);
         $this->middleware(['permission:news-and-events-view|news-and-events-create|news-and-events-edit|news-and-events-delete'], ['only' => ['show']]);
         $this->middleware(['permission:news-and-events-create'], ['only' => ['create', 'store', 'show']]);
         $this->middleware(['permission:news-and-events-edit'], ['only' => ['edit', 'update', 'show']]);
