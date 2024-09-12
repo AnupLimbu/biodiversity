@@ -4,7 +4,7 @@
     </div>
         <section class="container mx-auto  max-w-screen-xl bg-white ">
             <section class="bg-white ">
-                    <div class="px-2 mx-auto max-w-screen-xl text-center pt-16 {{$advisor->count()>0||$staff->count()>0||$volunteer->count()>0?'':'min-h-[100vh]'}}">
+                    <div class="px-2 mx-auto max-w-screen-xl text-center pt-16 {{$teams->count()>0||$advisor->count()>0||$staff->count()>0||$volunteer->count()>0?'':'min-h-[100vh]'}}">
                         <div class="mx-auto mb-1 max-w-screen-sm lg:mb-16">
                             <h2 class="text-4xl font-extrabold text-center text-green-800 mt-0 underline">Our Team</h2>
                         </div>
@@ -15,7 +15,7 @@
                             <h2 class="text-2xl py-1 font-extrabold text-center text-green-800">Executive Members</h2>
                         </div>
                         <div class="grid gap-8 lg:gap-16 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3">
-                            @foreach($advisor as $team)
+                            @foreach($teams as $team)
                                 <div class="text-center text-gray-500 dark:text-gray-400">
                                     <img class="mx-auto mb-4  rounded-full" src="{{$team->image}}" alt="{{$team->image}}" style="width: 15rem;height: 15rem">
                                     <h3 class="mb-1 text-2xl font-bold tracking-tight  dark:text-black">
