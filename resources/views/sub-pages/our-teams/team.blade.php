@@ -12,7 +12,7 @@
                 @if($teams->count()>0)
                     <div class="px-2 mx-auto max-w-screen-xl text-center lg:px-6 {{$staff->count()>0||$volunteer->count()>0?'':"min-h-[100vh]"}}" >
                         <div class="mx-auto mb-1 max-w-screen-sm lg:mb-6">
-                            <h2 class="text-2xl py-5 font-extrabold text-center text-green-800">Executive Members</h2>
+                            <h2 class="text-2xl py-1 font-extrabold text-center text-green-800">Executive Members</h2>
                         </div>
                         <div class="grid gap-8 lg:gap-16 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3">
                             @foreach($advisor as $team)
@@ -46,7 +46,7 @@
                 @if($advisor->count()>0)
                         <div class="px-2 mx-auto max-w-screen-xl text-center lg:px-6 {{$teams->count()>0||$staff->count()>0||$volunteer->count()>0?'':"min-h-[100vh]"}}" >
                             <div class="mx-auto mb-1 max-w-screen-sm lg:mb-6">
-                                <h2 class="text-2xl py-5 font-extrabold text-center text-green-800">Our Advisors</h2>
+                                <h2 class="text-2xl py-1 font-extrabold text-center text-green-800">Our Advisors</h2>
                             </div>
                             <div class="grid gap-8 lg:gap-16 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3">
                                 @foreach($advisor as $team)
@@ -80,7 +80,7 @@
                     @if($staff->count()>0)
                         <div class="px-2 mx-auto max-w-screen-xl text-center lg:px-6 {{$teams->count()>0||$advisor->count()>0||$volunteer->count()>0?'':"min-h-[100vh]"}}" >
                             <div class="mx-auto mb-1 max-w-screen-sm lg:mb-6">
-                                <h2 class="text-2xl py-5 font-extrabold text-center text-green-800">Our Staffs</h2>
+                                <h2 class="text-2xl py-1 font-extrabold text-center text-green-800">Our Staffs</h2>
                             </div>
                             <div class="grid gap-8 lg:gap-16 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3">
                                 @foreach($staff as $team)
@@ -115,7 +115,7 @@
                @if($volunteer->count()>0)
                         <div class="px-2 mx-auto max-w-screen-xl text-center lg:px-6 {{$teams->count()>0||$staff->count()>0||$advisor->count()>0?'':"min-h-[100vh]"}}" >
                             <div class="mx-auto mb-1 max-w-screen-sm lg:mb-6">
-                                <h2 class="text-2xl py-5 font-extrabold text-center text-green-800">Our Volunteers</h2>
+                                <h2 class="text-2xl py-1 font-extrabold text-center text-green-800">Our Volunteers</h2>
                             </div>
                             <div class="grid gap-8 lg:gap-16 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3">
                                 @foreach($volunteer as $team)

@@ -26,15 +26,15 @@
         </div>
     </main>
     @if($projects->count()>0)
-        <aside aria-label="Related articles" class="py-8 lg:py-24 bg-gray-50 ">
+        <aside aria-label="Related articles" class="pt-2 mb-10 bg-gray-50 ">
             <div class="px-4 mx-auto max-w-screen-xl">
-                <h2 class="mb-8 text-2xl font-bold text-gray-900 ">Other Projects</h2>
+                <h2 class="mb-8 text-2xl font-bold text-green-800">Other Projects</h2>
                 <div class="grid gap-12 sm:grid-cols-2 lg:grid-cols-4">
                     @foreach($projects as $project_1)
                         @php($link="/projects/".$project_1->id)
-                        <article class="max-w-xs">
+                        <article class="max-w-xs zoom-image-container">
                             <a href="{{$link}}">
-                                <img src="{{asset($project_1->image)}}" class="mb-3 rounded-lg" alt="Image 1" style="width: 275px;height: 195px;object-fit: cover">
+                                <img src="{{asset($project_1->image)}}" class="mb-3 rounded-lg" alt="Image 1" style="width: 275px;height: 195px;object-fit: cover   ">
                             </a>
                             <h2 class="mb-2 text-xl font-bold leading-tight text-gray-900 ">
                                 <a href="{{$link}}">{{$project_1->title}}</a>
