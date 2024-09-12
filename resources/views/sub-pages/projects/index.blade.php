@@ -26,7 +26,7 @@
                 @foreach($projects as $project)
                         <div class="w-full px-4 md:w-1/2 lg:w-1/3">
                             <div class="w-full mb-10">
-                                <div class="mb-8 overflow-hidden rounded" >
+                                <div class="mb-6 overflow-hidden rounded">
                                     <a href="{{'/projects/'.$project->id}}">
                                         <img
                                             src="{{asset($project->image)}}"
@@ -38,7 +38,7 @@
                                 </div>
                                 <div>
                           <span
-                             class="inline-block px-4 py-1 mb-5 text-xs font-semibold leading-loose text-center  rounded bg-primary"
+                             class="inline-block px-4 py-1 mb-3 text-xs font-semibold leading-loose text-center secondary-button rounded-lg"
                           >
                           {{\Carbon\Carbon::make($project->created_at)->toDateString()}}
                         </span>
