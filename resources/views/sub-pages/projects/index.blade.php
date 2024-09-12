@@ -11,10 +11,13 @@
                 <div class="flex flex-wrap justify-center " >
                     <div class="w-full ">
                         <div class="mx-auto max-w-[510px] text-center ">
+                         <span class="block mb-2 text-lg font-semibold text-primary">
+                         Our Projects
+                        </span>
                             <h2
-                                class="text-4xl font-extrabold text-center text-green-800 mb-10"
+                                class="text-4xl font-extrabold text-center text-green-800 mb-12 "
                             >
-                                {{$pro_type}} Projects
+                                Our {{$pro_type}} Projects
                             </h2>
                         </div>
                     </div>
@@ -23,15 +26,12 @@
                 @foreach($projects as $project)
                         <div class="w-full px-4 md:w-1/2 lg:w-1/3">
                             <div class="w-full mb-10">
-                                <div class="mb-6 overflow-hidden rounded">
-                                    <a href="{{'/projects/'.$project->id}}">
-                                        <img
-                                            src="{{asset($project->image)}}"
-                                            alt="image"
-                                            class="w-full"
-                                            style="max-width: 435px;max-height:248px;object-fit:cover;"
-                                        />
-                                    </a>
+                                <div class="mb-8 overflow-hidden rounded" style="max-width: 435px">
+                                    <img
+                                        src="{{asset($project->image)}}"
+                                        alt="image"
+                                        class="w-full"
+                                    />
                                 </div>
                                 <div>
                           <span
@@ -40,11 +40,13 @@
                           {{\Carbon\Carbon::make($project->created_at)->toDateString()}}
                         </span>
                                     <h3>
-                                        <a href="{{'/projects/'.$project->id}}" class="inline-block mb-2 text-xl font-semibold text-dark  hover:text-primary sm:text-2xl lg:text-xl xl:text-2xl">
+                                        <a
+                                            href="{{'/projects/'.$project->id}}"
+                                            class="inline-block mb-4 text-xl font-semibold text-dark  hover:text-primary sm:text-2xl lg:text-xl xl:text-2xl"
+                                        >
                                            {{$project->title}}
                                         </a>
                                     </h3>
-                                    <p>{!! \Illuminate\Support\Str::limit($project->description,150) !!}</p>
                                 </div>
                             </div>
                         </div>
