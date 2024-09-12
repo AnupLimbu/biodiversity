@@ -20,19 +20,17 @@
         <label for="event_start_date" class="col-2 text-left col-form-label">End Date:</label>
         <input type="date" value="{{old("event_end_date")??($is_edit?$newsAndEvent->event_end_date:'')}}" name="event_end_date" class="form-control  col-10  name {{$errors->has("event_end_date")?"is-invalid":""}}" id="event_end_date" placeholder="Date">
     </div>
+    <div class="col-md-6 d-flex mb-3">
+        <label for="thumbnail" class="col-2 text-left col-form-label">Thumbnail:</label>
+        <input  type="file" value name="thumbnail" id="thumbnail"   {{$errors->has("thumbnail")?"is-invalid":""}}">
+    </div>
     <div class="col-md-12 d-flex mb-3">
         <label for="description" class="col-1 text-left col-form-label">Description:</label>
         <textarea type="text"  name="description" class="form-control  col-11  name {{$errors->has("description")?"is-invalid":""}}" id="description" placeholder="Description">{{old("description")??($is_edit?$newsAndEvent->description:'')}}</textarea>
     </div>
-
-    <div class="col-md-6 d-flex mb-3">
-        <label for="banner_img" class="col-2 text-left col-form-label">Banner Image:</label>
-        <input  type="file" value="{{old('banner_img')}}" name="banner_img" id="banner_image"   {{$errors->has("banner_img")?"is-invalid":""}}">
-    </div>
-
-    <div class="col-md-6 d-flex mb-3">
-        <label for="file" class="col-2 text-left col-form-label">File:</label>
-        <input  type="file" value="{{old('file')}}" name="file" id="file"   {{$errors->has("file")?"is-invalid":""}}">
+    <div class="col-md-12 d-flex mb-3">
+        <label for="news_and_event_body" class="col-1 text-left col-form-label">Body:</label>
+        <textarea id="summernote" name="news_and_event_body"  class="summernote form-control {{$errors->has("news_and_event_body")?"is-invalid":""}}" > {!! old('news_and_event_body')??$newsAndEvent->news_and_event_body??'' !!} </textarea>
     </div>
 </div>
 
@@ -62,7 +60,6 @@
                         element.classList.remove('hidden');
                     });
                 }
-                console.log(`You selected: ${selectedValue}`);
             });
         });
     </script>

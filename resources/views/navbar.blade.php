@@ -9,9 +9,9 @@
 
 
         <div class="hidden md:flex md:items-center">
-            <a href="/" class="text-gray-800 px-2 py-2 navbar-link ">Home</a>
-            <a href="/about-us" class="text-gray-800 px-2 py-2 navbar-link ">About Us</a>
-            <a href="/teams" class="text-gray-800 px-2 py-2 navbar-link ">Team</a>
+            <a href="/" class="text-gray-800 px-4 py-2 navbar-link ">Home</a>
+            <a href="/about-us" class="text-gray-800 px-4 py-2 navbar-link ">About Us</a>
+            <a href="/teams" class="text-gray-800 px-4 py-2 navbar-link ">Team</a>
             <div class="relative parent">
                 <a href="/projects" class="navbar-link flex justify-between md:inline-flex p-4 items-center space-x-2">
                     <span>Projects</span>
@@ -19,18 +19,18 @@
                 </a>
                 <ul class="child transition duration-300 md:absolute top-full right-0 md:w-48 bg-white md:shadow-lg md:rounded-b ">
                     <li>
-                        <a href="/projects/ongoing" class="block px-2 py-2 text-gray-700 dropdown-link"><span class="p-1">Ongoing</span></a>
+                        <a href="/projects/ongoing" class="block px-4 py-2 text-gray-700 dropdown-link"><span class="p-1">Ongoing</span></a>
 
                     </li>
                     <li>
-                        <a href="/projects/completed" class="block px-2 py-2 text-gray-700 dropdown-link "><span class="p-1">Completed</span></a>
+                        <a href="/projects/completed" class="block px-4 py-2 text-gray-700 dropdown-link "><span class="p-1">Completed</span></a>
                     </li>
                 </ul>
             </div>
-            <a href="/gallery" class="text-gray-800 px-2 py-2 navbar-link ">Gallery</a>
-            <a href="/news-and-events" class="text-gray-800 px-2 py-2 navbar-link ">News & Events</a>
-            <a href="/contact-us" class="text-gray-800 px-2 py-2 navbar-link ">Contact Us</a>
-            <a href="/support_us" class=" secondary-button text-center text-xl rounded-lg p-2 px-3   navbar-link" style="">Support Us</a>
+            <a href="/gallery" class="text-gray-800 px-4 py-2 navbar-link ">Gallery</a>
+            <a href="/news-and-events" class="text-gray-800 px-4 py-2 navbar-link ">News & Events</a>
+            <a href="/contact-us" class="text-gray-800 px-4 py-2 navbar-link ">Contact Us</a>
+            <a href="/support_us" class=" secondary-button text-center text-xl rounded-lg p-1 px-3   navbar-link" style="">Support Us</a>
         </div>
 
 
@@ -58,10 +58,10 @@
                     </button>
                     <ul class="dropdown-menu hidden">
                         <li>
-                            <a href="/projects/ongoing" class="block px-2 pt-1 text-sm text-gray-700 dropdown-link2"><span class="p-1">Ongoing</span></a>
+                            <a href="/projects/ongoing" class="block px-4 pt-1 text-sm text-gray-700 dropdown-link2"><span class="p-1">Ongoing</span></a>
                         </li>
                         <li>
-                            <a href="/projects/completed" class="block px-2 pt-1 text-sm text-gray-700 dropdown-link2"><span class="p-1">Completed</span></a>
+                            <a href="/projects/completed" class="block px-4 pt-1 text-sm text-gray-700 dropdown-link2"><span class="p-1">Completed</span></a>
                         </li>
                     </ul>
                     <a href="/gallery" class="text-gray-800 text-lg navbar-link ">Gallery</a>

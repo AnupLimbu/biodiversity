@@ -10,7 +10,6 @@ class NewsAndEvents extends Model
     use HasFactory;
 
     public $table='news_and_events';
-    public $fillable=['title','type','description','banner_img','file','original_file_name','file_size',
-        'published_date','event_start_date','event_end_date'];
+    public $fillable=['title','type','description','news_and_event_body','published_date','event_start_date','event_end_date','thumbnail'];
     public $timestamps=false;
 }

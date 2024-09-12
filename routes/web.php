@@ -25,6 +25,7 @@ Route::group(['prefix' => '/', 'as' => ''],function(){
     Route::get('/', function () {return view('sub-pages/home/index');});
     Route::get('/contact-us', function () { return view('sub-pages/contact-us/index');});
     Route::get('/news-and-events', [\App\Http\Controllers\NewsAndEventsController::class, 'webView']);
+    Route::get('/news-and-events/{id}', [\App\Http\Controllers\NewsAndEventsController::class, 'webViewIndividual']);
     Route::get('/contact_us', function (\Illuminate\Http\Request $request) {
         try {
             $request->validate(['name' => 'required', 'message' => 'required']);
