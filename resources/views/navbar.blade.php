@@ -32,7 +32,20 @@
             </div>
             <a href="/gallery" class="text-gray-800 px-4 py-2 navbar-link ">Gallery</a>
             <a href="/news-and-events" class="text-gray-800 px-4 py-2 navbar-link ">News & Events</a>
-            <a href="/downloads" class="text-gray-800 px-4 py-2 navbar-link ">Downloads</a>
+            <div class="relative parent">
+                <a href="#" class="navbar-link flex justify-between md:inline-flex p-4 items-center space-x-2">
+                    <span>Downloads</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 fill-current pt-1" viewBox="0 0 24 24"><path d="M0 7.33l2.829-2.83 9.175 9.339 9.167-9.339 2.829 2.83-11.996 12.17z"/></svg>
+                </a>
+                <ul class="child transition duration-300 md:absolute top-full right-0 md:w-48 bg-white md:shadow-lg md:rounded-b ">
+                    <li>
+                        <a href="/downloads/publications" class="block px-4 py-2 text-gray-700 dropdown-link"><span class="p-1">Publications</span></a>
+                    </li>
+                    <li>
+                        <a href="/downloads/reports" class="block px-4 py-2 text-gray-700 dropdown-link "><span class="p-1">Reports</span></a>
+                    </li>
+                </ul>
+            </div>
             <a href="/contact-us" class="text-gray-800 px-4 py-2 navbar-link ">Contact Us</a>
             <a href="/support_us" class=" secondary-button text-center text-xl rounded-lg p-1 px-3   navbar-link" style="">Support Us</a>
         </div>
@@ -70,7 +83,20 @@
                     </ul>
                     <a href="/gallery" class="text-gray-800 text-lg navbar-link ">Gallery</a>
                     <a href="/news-and-events" class="text-gray-800 text-lg navbar-link">News & Events</a>
-                    <a href="/downloads" class="text-gray-800 text-lg navbar-link">Downloads</a>
+                    <button class="text-gray-800 text-lg navbar-link dropdown-toggle text-left ">
+                        Downloads
+                        <svg class="w-4 h-4 inline-block ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <ul class="dropdown-menu hidden">
+                        <li>
+                            <a href="/downloads/publications" class="block px-4 pt-1 text-sm text-gray-700 dropdown-link2"><span class="p-1">Publications</span></a>
+                        </li>
+                        <li>
+                            <a href="/downloads/reports" class="block px-4 pt-1 text-sm text-gray-700 dropdown-link2"><span class="p-1">Reports</span></a>
+                        </li>
+                    </ul>
                     <a href="/contact-us" class="text-gray-800 text-lg navbar-link">Contact Us</a>
                     <a href="/support_us" class="navbar-link bg-[#abcea0] !text-white p-[10px] text-center text-xl rounded-lg px-3" style="">Support Us</a>
 

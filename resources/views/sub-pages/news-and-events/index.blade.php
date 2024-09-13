@@ -15,7 +15,7 @@
                             <img src="{{asset('storage/'.$entity->thumbnail)}}" alt="{{$entity->title}}" class="w-full h-80 object-cover">
                         </div>
                         <div class="pt-6 flex-grow">
-                            <h1 class="text-2xl mb-2">{{$entity->title}}</h1>
+                            <h1 class="text-2xl mb-2 line-clamp-2">{{$entity->title}}</h1>
                             <p class="text-gray-700 mb-2 line-clamp-3">{{$entity->description}}</p>
                         </div>
                         <div class="mt-auto">
@@ -57,7 +57,7 @@
                                         <p class="text-gray-500 text-xs pb-3">Published on: {{\Carbon\Carbon::create($entity->published_date)->format('F j, Y')}}</p> <!-- Reduced text size -->
                                     @endif
 
-                                    <h1 class="text-xl mb-2">{{$entity->title}}</h1>
+                                    <h1 class="text-xl mb-2 line-clamp-2">{{$entity->title}}</h1>
                                     <p class="text-gray-700 mb-2 text-sm line-clamp-2">{{$entity->description}}</p>
                                     <a href="/news-and-events/{{$entity->id}}" target="_blank" class="mt-auto hover:underline">
                                         Learn More
