@@ -9,7 +9,7 @@
                 <!-- Text Content -->
                 <div class="md:w-1/2 py-4 flex flex-col justify-center text-center md:text-left h-[500px]">
                     <h1 class="text-[50px] font-weight-bolder font-bold mb-4 leading-[1]">
-                        Environmental Conservation Organization</h1>
+                        Biodiversity Research and Conservation Society</h1>
                     <br>
                     <p class="text-lg">BRCS is a non-governmental organization based on Nepal.
                         We are focused on research and conservation of biodiversity.</p>
