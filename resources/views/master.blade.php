@@ -8,20 +8,20 @@
 {{--    SEO DATA--}}
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="" />
-    <meta name="keywords" content="" />
+    <meta name="description" content="BRC Society is a non-governmental organization based on Nepal. We are focused on research and conservation of biodiversity."/>
+    <meta name="keywords" content="BRC Society,biodiversity conservation brsc, brsc nepal, environmental conservation"/>
     <meta name="author" content="" />
     <meta name="robots" content="index, follow" />
     <meta name="COUNTRY" content="global" />
     <meta name="LANGUAGE" content="en" />
-    <meta name="REGION" content="global" />
-    <meta property="og:url" content="" />
+    <meta name="REGION" content="global"/>
+    <meta property="og:url" content=""/>
     <meta property="og:locale" content="en" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="" />
     <meta property="og:description" content="" />
-    <link rel="shortcut icon" href="" />
-    <link rel="canonical" href="" />
+    <link rel="shortcut icon" href="{{asset('images/logo.jpeg')}}">
+    <link rel="canonical" href=""/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
@@ -37,63 +37,7 @@
     </main>
     @include('footer')
 </body>
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        // Toggle dropdown visibility
-        function toggleDropdown(event) {
-            event.stopPropagation(); // Prevent the click from closing the menu immediately
-            const dropdownMenu = this.nextElementSibling;
 
-            dropdownMenu.toggle('hidden');
-
-        }
-
-        // Toggle mobile menu visibility
-        document.getElementById('hamburgerButton').addEventListener('click', function() {
-            document.getElementById('mobileMenu').classList.toggle('hidden');
-        });
-
-        // Close mobile menu
-        document.getElementById('closeMobileMenu').addEventListener('click', function() {
-            document.getElementById('mobileMenu').classList.add('hidden');
-        });
-
-        // Handle mobile dropdowns
-        document.querySelectorAll('.dropdown-toggle').forEach(button => {
-            button.addEventListener('click', function(event) {
-                event.stopPropagation(); // Prevent the click from closing the menu immediately
-                const dropdownMenu = this.nextElementSibling;
-                if (dropdownMenu) {
-                    dropdownMenu.classList.toggle('hidden');
-                }
-            });
-        });
-
-        // Close all dropdowns and mobile menu when clicking outside
-        document.addEventListener('click', function(event) {
-            document.querySelectorAll('.dropdown-menu').forEach(menu => {
-                if (!menu.previousElementSibling.contains(event.target) && !menu.contains(event.target)) {
-                    menu.classList.add('hidden');
-                }
-            });
-            // Close mobile menu if clicking outside of it
-            if (!document.getElementById('hamburgerButton').contains(event.target) &&
-                !document.getElementById('mobileMenu').contains(event.target)) {
-                document.getElementById('mobileMenu').classList.add('hidden');
-            }
-        });
-    });
-   let contactus_message= document.getElementById('contactus_message');
-    setTimeout(function () {
-        contactus_message.style.display='none'
-    }, 5000)
-    function deleteModel(){
-        if(confirm("Do you want to delete it?")) {
-            this.form.submit();
-        } else { return false; }
-    }
-
-</script>
 @yield('script')
 </html>
 

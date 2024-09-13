@@ -18,7 +18,7 @@
                     <div class="p-3 border border-gray-200 rounded-lg " >
                         <div class="max-w-sm bg-white    zoom-image-container">
                             <a href="{{asset($download->file)}}">
-                                <img class="rounded-t-lg" src="{{asset($download->thumbnail)}}" alt="" style="max-width: 475px; height: 475px;object-fit: cover"/>
+                                <img class="rounded-t-lg object-cover" src="{{asset($download->thumbnail)}}" alt="download_img"/>
                             </a>
                             <div class="p-5">
                                 <a href="{{asset($download->file)}}">

@@ -12,8 +12,8 @@
 
 
         <div class="hidden md:flex md:items-center">
-            <a href="/" class="text-gray-800 px-4 py-2 navbar-link ">Home</a>
-            <a href="/about-us" class="text-gray-800 px-4 py-2 navbar-link ">About Us</a>
+            <a href="/" class="text-gray-800 px-4 py-2 navbar-link">Home</a>
+            <a href="/about-us" class="text-gray-800 px-4 py-2 navbar-link">About Us</a>
             <a href="/teams" class="text-gray-800 px-4 py-2 navbar-link ">Team</a>
             <div class="relative parent">
                 <a href="/projects" class="navbar-link flex justify-between md:inline-flex p-4 items-center space-x-2">
@@ -72,7 +72,7 @@
                     <a href="/news-and-events" class="text-gray-800 text-lg navbar-link">News & Events</a>
                     <a href="/downloads" class="text-gray-800 text-lg navbar-link">Downloads</a>
                     <a href="/contact-us" class="text-gray-800 text-lg navbar-link">Contact Us</a>
-                    <a href="/support_us" class=" secondary-button text-center text-xl rounded-lg p-2 px-3   navbar-link" style="">Support Us</a>
+                    <a href="/support_us" class="navbar-link bg-[#abcea0] !text-white p-[10px] text-center text-xl rounded-lg px-3" style="">Support Us</a>
 
                 </div>
         </div>
