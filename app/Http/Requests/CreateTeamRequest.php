@@ -31,6 +31,9 @@ class CreateTeamRequest extends FormRequest
             'contact'=>'nullable',
             'facebook_link'=>'nullable',
             'instagram_link'=>'nullable',
+            'research_gate_link'=>'nullable',
+            'google_scholar_link'=>'nullable',
+            'linkedin_link'=>'nullable',
             'order'=>'required|integer|unique:teams,order,'.$this->id,
             'image'=>'nullable|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ];

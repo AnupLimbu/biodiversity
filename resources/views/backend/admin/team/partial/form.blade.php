@@ -35,14 +35,17 @@
         </select>
     </div>
     <div class="col-md-6 d-flex mb-3">
-        <label for="facebook_link" class="col-2 text-left col-form-label">Facebook Link:</label>
-        <input type="text"  value="{{old("facebook_link") ??$team->facebook_link ??""   }}" name="facebook_link" class="form-control  col-10  {{$errors->has("facebook_link")?"is-invalid":""}}" id="facebook_link" placeholder="https://facebook.com/username">
+        <label for="linkedin_link" class="col-2 text-left col-form-label">Linkedin Link:</label>
+        <input type="text"  value="{{old("linkedin_link") ??$team->linkedin_link ??""   }}" name="linkedin_link" class="form-control  col-10  {{$errors->has("linkedin_link")?"is-invalid":""}}" id="linkedin_link" placeholder="https://linkedin.com/">
     </div>
     <div class="col-md-6 d-flex mb-3">
-        <label for="instagram_link" class="col-2 text-left col-form-label">Instagram Link:</label>
-        <input type="text"  value="{{old("instagram_link") ??$team->instagram_link ??""   }}" name="instagram_link" class="form-control  col-10  {{$errors->has("instagram_link")?"is-invalid":""}}" id="instagram_link" placeholder="https://instagram.com/username">
+        <label for="google_scholar_link" class="col-2 text-left col-form-label">Google Scholar Link:</label>
+        <input type="text"  value="{{old("google_scholar_link") ??$team->google_scholar_link ??""   }}" name="google_scholar_link" class="form-control  col-10  {{$errors->has("google_scholar_link")?"is-invalid":""}}" id="google_scholar_link" placeholder="https://">
     </div>
-
+    <div class="col-md-6 d-flex mb-3">
+        <label for="research_gate_link" class="col-2 text-left col-form-label">Research Gate Link:</label>
+        <input type="text"  value="{{old("research_gate_link") ??$team->research_gate_link ??""   }}" name="research_gate_link" class="form-control  col-10  {{$errors->has("research_gate_link")?"is-invalid":""}}" id="research_gate_link" placeholder="https://">
+    </div>
     <div class="col-md-6 d-flex mb-3">
         <label for="image" class="col-2 text-left col-form-label">Image:</label>
         <input  type="file" name="image" id="image formFileMultiple"   class=" col-10  {{$errors->has("name")?"is-invalid":""}}">

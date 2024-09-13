@@ -18,16 +18,16 @@
                         </div>
                     </div>
                 </div>
-                <div class="flex flex-wrap  ">
+                <div class="flex flex-wrap  md:gap-0 lg:gap-6">
                 @foreach($projects as $project)
-                        <div class="bg-white shadow-4 rounded-lg overflow-hidden p-3 flex flex-col h-full zoom-image-container w-full px-4 md:w-1/2 lg:w-1/3">
+                        <div class="bg-white shadow-4 rounded-lg overflow-hidden p-3 mt-3 flex flex-col h-full zoom-image-container w-full  md:w-[50%] lg:w-[32%]">
                             <div class="image-container rounded-lg flex-shrink-0">
                                 <a href="{{'/projects/'.$project->id}}">
                                 <img src="{{asset($project->image)}}" alt="{{$project->title}}" class="w-full h-80 object-cover">
                                 </a>
                             </div>
                             <div class="pt-6 flex-grow">
-                                <h1 class="text-2xl mb-2 line-clamp-2">{{$project->title}}</h1>
+                                <h1 class="text-2xl mb-2 line-clamp-2">{{ \Illuminate\Support\Str::limit($project->title,40)}}</h1>
                                 <p class="text-gray-700 mb-2 ">
                                     {!! \Illuminate\Support\Str::limit(strip_tags($project->description))!!}
                                 </p>

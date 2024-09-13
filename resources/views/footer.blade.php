@@ -1,5 +1,5 @@
 <footer class="bg-[#abcea0] relative">
-<div class="pt-16 container mx-auto">
+<div class="pt-16 container mx-auto p-2 ">
     <div class="grid gap-10 row-gap-6 mb-8 sm:grid-cols-2 lg:grid-cols-4">
         <div class="sm:col-span-2">
             <a href="/" aria-label="Go home" title="BRCS" class="inline-flex items-center">

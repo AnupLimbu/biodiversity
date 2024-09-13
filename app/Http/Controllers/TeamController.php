@@ -47,9 +47,10 @@ class TeamController extends Controller
              return Datatables::of($teams)
                     ->addIndexColumn()
                  ->addColumn('social_links',function ($item){
-                     $facebook=$item->facebook_link?'<a style="font-size: 50px;" href="'.($item->facebook_link??'').'"><i class="fa-brands fa-facebook"></i></a>':'';
-                     $insta=$item->instagram_link?' <a style="font-size: 50px;color:red" href="'.($item->instagram_link??'').'"><i class="fa-brands fa-instagram"></i></a>':'';
-                     return $facebook.$insta;
+                     $linkedin_link=$item->linkedin_link?'<a style="font-size: 40px;" href="'.($item->linkedin_link??'').'" title="Linkedin"> <i class="fa-brands fa-linkedin-in"></i></a>':'';
+                     $google_scholar_link=$item->google_scholar_link?'<a style="font-size: 40px;" href="'.($item->google_scholar_link??'').'" title="Google Scholar"><i class="fa-brands fa-researchgate"></i></a>':'';
+                     $research_gate_link=$item->research_gate_link?' <a style="font-size: 40px; margin-right:5px" href="'.($item->research_gate_link??'').'" title="Reasearchgate">G</a>':'';
+                     return $linkedin_link.$research_gate_link.$google_scholar_link;
                  })
                     ->addColumn('action', function($team){
                         return $this->actionButtons($team);
