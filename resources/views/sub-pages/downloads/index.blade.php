@@ -17,7 +17,7 @@
                     @foreach($downloads as $download)
                         <div class="bg-white shadow-4 rounded-lg overflow-hidden p-1 flex flex-col h-[550px] zoom-image-container">
                             <a href="/{{$download->file}}" class="" target="_blank">
-                                <div class="relative w-72 h-[450px] overflow-hidden">
+                                <div class="relative w-full h-[430px] overflow-hidden">
                                     <img src="{{asset($download->thumbnail)}}" alt="Description of image" class="absolute top-0 left-0 w-full h-auto">
                                 </div>
                                 <div class="pt-6 px-3 mt-auto">
