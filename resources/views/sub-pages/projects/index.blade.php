@@ -27,7 +27,7 @@
                                 </a>
                             </div>
                             <div class="pt-6 flex-grow">
-                                <h1 class="text-2xl mb-2 line-clamp-2">{{ \Illuminate\Support\Str::limit($project->title,40)}}</h1>
+                                <h1 class="text-2xl mb-2 line-clamp-2">{{ \Illuminate\Support\Str::limit($project->title,35)}}</h1>
                                 <p class="text-gray-700 mb-2 ">
                                     {!! \Illuminate\Support\Str::limit(strip_tags($project->description))!!}
                                 </p>
