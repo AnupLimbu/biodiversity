@@ -47,9 +47,9 @@
                                         Biodiversity Research and Conservation Society
                                     </dd>
                                 </div>
-                                <div class="bg-gray-50 px-4 py-3 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6" style="display: flex; justify-content: center">
-                                    <img src="https://www.imgonline.com.ua/examples/qr-code.png" alt="" style="width: 250px;height: 250px">
-                                </div>
+{{--                                <div class="bg-gray-50 px-4 py-3 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6" style="display: flex; justify-content: center">--}}
+{{--                                    <img src="https://www.imgonline.com.ua/examples/qr-code.png" alt="" style="width: 250px;height: 250px">--}}
+{{--                                </div>--}}
                             </dl>
                         </div>
                     </div>
