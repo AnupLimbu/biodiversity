@@ -15,7 +15,7 @@
             <p class="text-base font-bold tracking-wide text-gray-900">Contacts</p>
             <div class="flex">
                 <p class="mr-1 text-gray-800">Phone:</p>
-                <a href="tel:+977-9845204681" aria-label="Our phone" title="Our phone" class="transition-colors duration-300 text-deep-purple-accent-400 hover:text-deep-purple-800">+977-9845204681</a>
+                <a href="tel:+977-9808840746" aria-label="Our phone" title="Our phone" class="transition-colors duration-300 text-deep-purple-accent-400 hover:text-deep-purple-800">+977-9808840746</a>
             </div>
             <div class="flex">
                 <p class="mr-1 text-gray-800">Email:</p>
