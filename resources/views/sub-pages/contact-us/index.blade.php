@@ -30,15 +30,14 @@
                             <path d="M24 12H8a1 1 0 1 1 0-2h16a1 1 0 1 1 0 2zm-8 4H8a1 1 0 1 1 0-2h8a1 1 0 1 1 0 2z" data-original="#000000"></path>
                         </svg>
                         <h4 class="text-gray-800 text-base font-bold mt-4">Mail us</h4>
-                        <p class="text-sm text-gray-600 mt-2">
-                            brcs@brcs.org</p>
+                        <p class="text-sm text-gray-600 mt-2">info@brcsociety.org</p>
                     </div>
                     <div class="flex flex-col items-center justify-center rounded-lg w-full h-44 p-4 text-center bg-white shadow-[0_2px_10px_-3px_rgba(6,81,237,0.3)]">
                         <svg xmlns="http://www.w3.org/2000/svg" class="w-7 fill-blue-600" viewBox="0 0 100 100">
                             <path d="M83 23h-3V11c0-3.309-2.692-6-6-6H26c-3.308 0-6 2.691-6 6v12h-3C8.729 23 2 29.729 2 38v30c0 4.963 4.037 9 9 9h9v12c0 3.309 2.692 6 6 6h48c3.308 0 6-2.691 6-6V77h9c4.963 0 9-4.037 9-9V38c0-8.271-6.729-15-15-15zM26 11h48v12H26zm0 78V59h48v30zm66-21c0 1.654-1.345 3-3 3h-9V59h3a3 3 0 1 0 0-6H17a3 3 0 1 0 0 6h3v12h-9c-1.655 0-3-1.346-3-3V38c0-4.963 4.037-9 9-9h66c4.963 0 9 4.037 9 9zm-27 0a3 3 0 0 1-3 3H38a3 3 0 1 1 0-6h24a3 3 0 0 1 3 3zm0 12a3 3 0 0 1-3 3H38a3 3 0 1 1 0-6h24a3 3 0 0 1 3 3zm21-42a3 3 0 0 1-3 3h-6a3 3 0 1 1 0-6h6a3 3 0 0 1 3 3z" data-original="#000000"></path>
                         </svg>
                         <h4 class="text-gray-800 text-base font-bold mt-4">Fax</h4>
-                        <p class="text-sm text-gray-600 mt-2">+1-548-2588</p>
+                        <p class="text-sm text-gray-600 mt-2">+0-0000-0000</p>
                     </div>
                 </div>
 
