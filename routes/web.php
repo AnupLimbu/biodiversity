@@ -40,17 +40,17 @@ Route::group(['prefix' => '/', 'as' => ''],function(){
     Route::get('/about-us', function () {return view('sub-pages/about-us/index');});
 
     Route::get('/teams', function () {
-        $teams =  (\App\Models\Team::where('type','team')->orderBy('order', 'DESC')->get());
-        $advisor =  (\App\Models\Team::where('type','advisor')->orderBy('order', 'DESC')->get());
-        $staff =  (\App\Models\Team::where('type','staff')->orderBy('order', 'DESC')->get());
-        $volunteer =  (\App\Models\Team::where('type','volunteer')->orderBy('order', 'DESC')->get());
+        $teams =  (\App\Models\Team::where('type','team')->get()->sortBy('order'));
+        $advisor =  (\App\Models\Team::where('type','advisor')->get()->sortBy('order'));
+        $staff =  (\App\Models\Team::where('type','staff')->get()->sortBy('order'));
+        $volunteer =  (\App\Models\Team::where('type','volunteer')->get()->sortBy('order'));
         return view('sub-pages/our-teams/team', compact('teams','volunteer','advisor','staff'));
     });
     Route::get('/advisors', function () {
         return view('sub-pages/our-teams/advisor');
     });
     Route::get('/gallery', function () {
-        $gallery =  (\App\Models\Gallery::orderBy('order', 'DESC')->get());
+        $gallery =  (\App\Models\Gallery::all()->sortByDesc('order'));
         return view('sub-pages/gallery/index', compact('gallery'));
     });
     Route::get('/downloads/{download_type}', function ($download_type) {

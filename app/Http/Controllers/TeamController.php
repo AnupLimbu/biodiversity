@@ -43,7 +43,7 @@ class TeamController extends Controller
 
     public function getList(Request $request)
     {
-        $teams=$this->repository->getAll();
+        $teams=Team::all()->sortByDesc('order')->sortByDesc('type');
              return Datatables::of($teams)
                     ->addIndexColumn()
                  ->addColumn('social_links',function ($item){
