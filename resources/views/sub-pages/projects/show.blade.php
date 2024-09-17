@@ -4,7 +4,7 @@
     <div class="navbar-filler  bg-[#abcea0]">
     </div>
     <main class="pt-8 pb-16 lg:pt-16 lg:pb-24 bg-white  antialiased">
-        <h2 class="text-center mb-5 text-2xl font-bold text-gray-900 ">{{$project->title}}</h2>
+        <h2 class="text-center mb-5 text-2xl font-bold text-gray-900 px-4 mx-auto max-w-screen-xl ">{{$project->title}}</h2>
         <div class="flex justify-between px-4 mx-auto max-w-screen-xl ">
             <article class="mx-auto w-full  format format-sm sm:format-base lg:format-lg format-blue dark:format-invert">
                 <div style="display: flex;justify-content: center;margin-bottom: 10px">
