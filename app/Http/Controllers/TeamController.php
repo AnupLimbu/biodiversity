@@ -56,7 +56,7 @@ class TeamController extends Controller
                         return $this->actionButtons($team);
                     })
                  ->editColumn("image",function ($item){
-                     if (!$item->image=="/images/teams/default.png")
+                     if ($item->image=="/images/teams/default.png")
                          return asset('/admin_resources/image/user_dummy.png');
                      return asset($item->image);
                  })
