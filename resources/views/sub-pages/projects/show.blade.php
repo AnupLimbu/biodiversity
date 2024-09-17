@@ -36,10 +36,10 @@
                             <a href="{{$link}}">
                                 <img src="{{asset($project_1->image)}}" class="mb-3 rounded-lg" alt="Image 1" style="width: 275px;height: 195px;object-fit: cover   ">
                             </a>
-                            <h2 class="mb-2 text-xl font-bold leading-tight text-gray-900 ">
+                            <h2 class="mb-2 font-bold leading-tight text-gray-900 line-clamp-1">
                                 <a href="{{$link}}">{{$project_1->title}}</a>
                             </h2>
-                            <p>{!! \Illuminate\Support\Str::limit($project->description) !!}</p>
+                            <p class="line-clamp-2">{!! \Illuminate\Support\Str::limit($project->description) !!}</p>
                             <a href="{{$link}}" class="inline-flex items-center font-medium underline underline-offset-4 text-primary-600 dark:text-primary-500 hover:no-underline">
                                 Read More
                             </a>
