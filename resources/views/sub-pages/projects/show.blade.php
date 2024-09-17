@@ -39,7 +39,7 @@
                             <h2 class="mb-2 font-bold leading-tight text-gray-900 line-clamp-1">
                                 <a href="{{$link}}">{{$project_1->title}}</a>
                             </h2>
-                            <p class="line-clamp-2">{!! \Illuminate\Support\Str::limit($project_1->description) !!}</p>
+                            <p class="line-clamp-2">{!! $project_1->description !!}</p>
                             <a href="{{$link}}" class="inline-flex items-center font-medium underline underline-offset-4 text-primary-600 dark:text-primary-500 hover:no-underline">
                                 Read More
                             </a>
