@@ -58,7 +58,7 @@
                                         @endif
                                         @if($team->google_scholar_link)
                                             <li>
-                                                <a href="{{$team->research_gate_link}}" class="text-[#39569c] " title="Google Scholar">
+                                                <a href="{{$team->google_scholar_link}}" class="text-[#39569c] " title="Google Scholar">
                                                     <i class="fa-brands fa-google-scholar"></i>
                                                 </a>
                                             </li>
@@ -103,7 +103,7 @@
                                             @endif
                                             @if($team->google_scholar_link)
                                                 <li>
-                                                    <a href="{{$team->research_gate_link}}" class="text-[#39569c] " title="Google Scholar">
+                                                    <a href="{{$team->google_scholar_link}}" class="text-[#39569c] " title="Google Scholar">
                                                         <i class="fa-brands fa-google-scholar"></i>
                                                     </a>
                                                 </li>
@@ -146,7 +146,7 @@
                                             @endif
                                             @if($team->google_scholar_link)
                                                 <li>
-                                                    <a href="{{$team->research_gate_link}}" class="text-[#39569c] " title="Google Scholar">
+                                                    <a href="{{$team->google_scholar_link}}" class="text-[#39569c] " title="Google Scholar">
                                                         <i class="fa-brands fa-google-scholar"></i>
                                                     </a>
                                                 </li>
@@ -191,7 +191,7 @@
                                             @endif
                                             @if($team->google_scholar_link)
                                                 <li>
-                                                    <a href="{{$team->research_gate_link}}" class="text-[#39569c] " title="Google Scholar">
+                                                    <a href="{{$team->google_scholar_link}}" class="text-[#39569c] " title="Google Scholar">
                                                         <i class="fa-brands fa-google-scholar"></i>
                                                     </a>
                                                 </li>
@@ -236,7 +236,7 @@
                                         @endif
                                         @if($team->google_scholar_link)
                                             <li>
-                                                <a href="{{$team->research_gate_link}}" class="text-[#39569c] " title="Google Scholar">
+                                                <a href="{{$team->google_scholar_link}}" class="text-[#39569c] " title="Google Scholar">
                                                     <i class="fa-brands fa-google-scholar"></i>
                                                 </a>
                                             </li>
