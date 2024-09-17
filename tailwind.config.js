@@ -7,7 +7,11 @@ export default {
       "./node_modules/tw-elements/js/**/*.js"
   ],
   theme: {
-    extend: {},
+    extend: {
+        screens: {
+            'nav-break': '1285px',
+        },
+    },
   },
   plugins: [
       require("tw-elements/plugin.cjs")

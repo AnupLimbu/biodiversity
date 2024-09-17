@@ -72,6 +72,12 @@ body{
     color: #282727;
 }
 
+@media only screen and (max-width: 1285px) {
+    .navbar-link{
+        font-size: 14px ;
+    }
+}
+
 .dropdown-link2:hover{
     background-color: #8cccc1;
 }
