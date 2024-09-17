@@ -16,7 +16,10 @@
                             <div>
                                 <p class="text-base text-gray-500 dark:text-gray-400">Posted on: {{\Carbon\Carbon::make($project->created_at)->toDateString()}}</p>
                                 <br>
-                                <p style="margin-top: -20px" class="text-sm text-gray-500 dark:text-gray-400">Project Started on: {{\Carbon\Carbon::make($project->start_date)->toDateString()}}</p>
+                                <p style="margin-top: -20px" class="text-sm text-gray-500 dark:text-gray-400">Started on: {{\Carbon\Carbon::make($project->start_date)->toDateString()}}</p>
+                                @if($project->end_date)
+                                    <p style="margin-top: 1px" class="text-sm text-gray-500 dark:text-gray-400">Ended on : {{\Carbon\Carbon::make($project->start_date)->toDateString()}}</p>
+                                @endif
                             </div>
                         </div>
                     </address>

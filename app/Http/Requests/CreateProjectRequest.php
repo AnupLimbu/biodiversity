@@ -26,11 +26,10 @@ class CreateProjectRequest extends FormRequest
         return [
             'title'=>'required',
             'start_date'=>'required|date',
-            'end_date'=>'nullable|date',
+            'end_date'=>['nullable','required_if:status,completed','date'],
             'image'=>'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             'status'=>'required|in:pending,completed,on-going,halted',
             'description'=>'required'
         ];
-
     }
 }
