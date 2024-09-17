@@ -31,7 +31,7 @@
                         </div>
                         <div class="grid gap-8 lg:gap-16 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 mb-12">
                             @foreach($teams as $team)
-                                <div class="text-center text-gray-500 dark:text-gray-400 team_member_css" >
+                                <div class="text-center text-gray-500 dark:text-gray-400 team_member_css zoom-image-container" >
                                     <img class="mx-auto mb-4  rounded-full" src="{{$team->image}}" alt="{{$team->image}}" style="width: 15rem;height: 15rem">
                                     <h3 class="mb-1 text-2xl font-bold tracking-tight  dark:text-black">
                                         <a class="underline" href="#" style="color: rgb(55 175 101)">{{$team->name}}</a>
@@ -79,7 +79,7 @@
                             </div>
                             <div class="grid gap-8 lg:gap-16 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 mb-12">
                                 @foreach($advisor as $team)
-                                    <div class="text-center text-gray-500 dark:text-gray-400 team_member_css">
+                                    <div class="text-center text-gray-500 dark:text-gray-400 team_member_css zoom-image-container">
                                         <img class="mx-auto mb-4  rounded-full" src="{{$team->image}}" alt="{{$team->image}}" style="width: 15rem;height: 15rem">
                                         <h3 class="mb-1 text-2xl font-bold tracking-tight  dark:text-black">
                                             <a class="underline" href="#" style="color: rgb(55 175 101)">{{$team->name}}</a>
@@ -122,7 +122,7 @@
                             </div>
                             <div class="grid gap-8 lg:gap-16 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 mb-12">
                                 @foreach($staff as $team)
-                                    <div class="text-center text-gray-500 dark:text-gray-400 team_member_css">
+                                    <div class="text-center text-gray-500 dark:text-gray-400 team_member_css zoom-image-container">
                                         <img class="mx-auto mb-4  rounded-full" src="{{$team->image}}" alt="{{$team->image}}" style="width: 15rem;height: 15rem">
                                         <h3 class="mb-1 text-2xl font-bold tracking-tight  dark:text-black">
                                             <a class="underline" href="#" style="color: rgb(55 175 101)">{{$team->name}}</a>
@@ -167,7 +167,7 @@
                             </div>
                             <div class="grid gap-8 lg:gap-16 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 mb-12">
                                 @foreach($volunteer as $team)
-                                    <div class="text-center text-gray-500 dark:text-gray-400 team_member_css">
+                                    <div class="text-center text-gray-500 dark:text-gray-400 team_member_css zoom-image-container">
                                         <img class="mx-auto mb-4  rounded-full" src="{{$team->image}}" alt="{{$team->image}}" style="width: 15rem;height: 15rem">
                                         <h3 class="mb-1 text-2xl font-bold tracking-tight  dark:text-black">
                                             <a class="underline" href="#" style="color: rgb(55 175 101)">{{$team->name}}</a>
@@ -212,7 +212,7 @@
                         </div>
                         <div class="grid gap-8 lg:gap-16 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 mb-12">
                             @foreach($our_labs as $team)
-                                <div class="text-center text-gray-500 dark:text-gray-400 team_member_css">
+                                <div class="text-center text-gray-500 dark:text-gray-400 team_member_css zoom-image-container">
                                     <img class="mx-auto mb-4  rounded-full" src="{{$team->image}}" alt="{{$team->image}}" style="width: 15rem;height: 15rem">
                                     <h3 class="mb-1 text-2xl font-bold tracking-tight  dark:text-black">
                                         <a class="underline" href="#" style="color: rgb(55 175 101)">{{$team->name}}</a>
