@@ -26,12 +26,13 @@
     </div>
     <div class="col-md-6 d-flex mb-3">
         <label for="facebook_link" class="col-2 text-left col-form-label text-red">Type:</label>
-        <select name="type" id="type" class="form-control  col-10  {{$errors->has("type")?"is-invalid":""}}">
+        <select name="t_type" id="t_type" class="form-control  col-10  {{$errors->has("t_type")?"is-invalid":""}}">
             <option value="" selected>Select Team type</option>
-            <option value="team" {{old("type")=='team' || (isset($team)&&$team->type =='team')?'selected':'' }}>Executive Member</option>
-            <option value="advisor" {{old("type")=='advisor' ||(isset($team)&&$team->type =='advisor')?'selected':'' }}>Advisor</option>
-            <option value="staff" {{old("type")=='staff' ||(isset($team)&&$team->type =='staff')?'selected':'' }}>Staff</option>
-            <option value="volunteer" {{old("type")=='volunteer' ||(isset($team)&&$team->type =='volunteer')?'selected':'' }}>Volunteer</option>
+            <option value="team" {{old("t_type")=='team' || (isset($team)&&$team->t_type =='team')?'selected':'' }}>Executive Member</option>
+            <option value="advisor" {{old("t_type")=='advisor' ||(isset($team)&&$team->t_type =='advisor')?'selected':'' }}>Advisor</option>
+            <option value="staff" {{old("t_type")=='staff' ||(isset($team)&&$team->t_type =='staff')?'selected':'' }}>Staff</option>
+            <option value="volunteer" {{old("t_type")=='volunteer' ||(isset($team)&&$team->t_type =='volunteer')?'selected':'' }}>Volunteer</option>
+            <option value="our-labs" {{old("t_type")=='our-labs' ||(isset($team)&&$team->t_type =='our-labs')?'selected':'' }}>Our Labs</option>
         </select>
     </div>
     <div class="col-md-6 d-flex mb-3">

@@ -26,7 +26,7 @@ class CreateTeamRequest extends FormRequest
         return [
             'name'=>'required',
             'description'=>'nullable',
-            'type'=>'required|in:team,advisor,staff,volunteer',
+            't_type'=>'required|in:team,advisor,staff,volunteer,our-labs',
             'designation'=>'required',
             'contact'=>'nullable',
             'facebook_link'=>'nullable',

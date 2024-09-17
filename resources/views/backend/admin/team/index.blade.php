@@ -55,7 +55,7 @@
                 {data: 'name', name: 'DT_RowIndex'},
                 {data: 'description', name: 'description'},
                 {data: 'designation', name: 'designation'},
-                {data: 'type', name: 'type', render:function(data, row){
+                {data: 't_type', name: 'type', render:function(data, row){
                         return data=="team"?"Executive Member":data;
                 }},
                 {data: 'social_links', name: 'social_links'},

@@ -40,11 +40,12 @@ Route::group(['prefix' => '/', 'as' => ''],function(){
     Route::get('/about-us', function () {return view('sub-pages/about-us/index');});
 
     Route::get('/teams', function () {
-        $teams =  (\App\Models\Team::where('type','team')->get()->sortBy('order'));
-        $advisor =  (\App\Models\Team::where('type','advisor')->get()->sortBy('order'));
-        $staff =  (\App\Models\Team::where('type','staff')->get()->sortBy('order'));
-        $volunteer =  (\App\Models\Team::where('type','volunteer')->get()->sortBy('order'));
-        return view('sub-pages/our-teams/team', compact('teams','volunteer','advisor','staff'));
+        $teams =  (\App\Models\Team::where('t_type','team')->get()->sortBy('order'));
+        $advisor =  (\App\Models\Team::where('t_type','advisor')->get()->sortBy('order'));
+        $staff =  (\App\Models\Team::where('t_type','staff')->get()->sortBy('order'));
+        $volunteer =  (\App\Models\Team::where('t_type','volunteer')->get()->sortBy('order'));
+        $our_labs =  (\App\Models\Team::where('t_type','our-labs')->get()->sortBy('order'));
+        return view('sub-pages/our-teams/team', compact('our_labs','teams','volunteer','advisor','staff'));
     });
     Route::get('/advisors', function () {
         return view('sub-pages/our-teams/advisor');

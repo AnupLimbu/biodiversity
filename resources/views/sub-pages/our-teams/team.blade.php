@@ -23,7 +23,7 @@
 {{--                        </div>--}}
 {{--                    </div>--}}
                 @if($teams->count()>0)
-                    <div class="px-2 mx-auto max-w-screen-xl text-center lg:px-6 {{$staff->count()>0||$advisor->count()>0||$volunteer->count()>0?'':"min-h-[100vh]"}}" >
+                    <div class="px-2 mx-auto max-w-screen-xl text-center lg:px-6 {{$our_labs->count()>0||$staff->count()>0||$advisor->count()>0||$volunteer->count()>0?'':"min-h-[100vh]"}}" >
                         <div class="mx-auto mb-1 max-w-screen-sm lg:mb-6">
                             <hr>
                             <h2 class="text-2xl py-1 font-extrabold text-center text-green-800">Executive Members</h2>
@@ -71,7 +71,7 @@
                     </div>
                 @endif
                 @if($advisor->count()>0)
-                        <div class="px-2 mx-auto max-w-screen-xl text-center lg:px-6 {{$teams->count()>0||$staff->count()>0||$volunteer->count()>0?'':"min-h-[100vh]"}}" >
+                        <div class="px-2 mx-auto max-w-screen-xl text-center lg:px-6 {{$our_labs->count()>0||$teams->count()>0||$staff->count()>0||$volunteer->count()>0?'':"min-h-[100vh]"}}" >
                             <div class="mx-auto mb-1 max-w-screen-sm lg:mb-6">
                                 <hr>
                                 <h2 class="text-2xl py-1 font-extrabold text-center text-green-800">Our Advisors</h2>
@@ -115,7 +115,7 @@
                         </div>
                 @endif
                     @if($staff->count()>0)
-                        <div class="px-2 mx-auto max-w-screen-xl text-center lg:px-6 {{$teams->count()>0||$advisor->count()>0||$volunteer->count()>0?'':"min-h-[100vh]"}}" >
+                        <div class="px-2 mx-auto max-w-screen-xl text-center lg:px-6 {{$our_labs->count()>0||$teams->count()>0||$advisor->count()>0||$volunteer->count()>0?'':"min-h-[100vh]"}}" >
                             <div class="mx-auto mb-1 max-w-screen-sm lg:mb-6">
                                 <hr>
                                 <h2 class="text-2xl py-1 font-extrabold text-center text-green-800">Our Staffs</h2><hr>
@@ -159,7 +159,7 @@
 
                     @endif
                @if($volunteer->count()>0)
-                        <div class="px-2 mx-auto max-w-screen-xl text-center lg:px-6 {{$teams->count()>0||$staff->count()>0||$advisor->count()>0?'':"min-h-[100vh]"}}" >
+                        <div class="px-2 mx-auto max-w-screen-xl text-center lg:px-6 {{$our_labs->count()>0||$teams->count()>0||$staff->count()>0||$advisor->count()>0?'':"min-h-[100vh]"}}" >
                             <div class="mx-auto mb-1 max-w-screen-sm lg:mb-6">
                                 <hr>
                                 <h2 class="text-2xl py-1 font-extrabold text-center text-green-800">Our Volunteers</h2>
@@ -203,6 +203,50 @@
                         </div>
 
                     @endif
+                @if($our_labs->count()>0)
+                    <div class="px-2 mx-auto max-w-screen-xl text-center lg:px-6 {{$teams->count()>0||$staff->count()>0||$volunteer->count()>0||$advisor->count()>0?'':"min-h-[100vh]"}}" >
+                        <div class="mx-auto mb-1 max-w-screen-sm lg:mb-6">
+                            <hr>
+                            <h2 class="text-2xl py-1 font-extrabold text-center text-green-800">Our Labs</h2>
+                            <hr>
+                        </div>
+                        <div class="grid gap-8 lg:gap-16 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 mb-12">
+                            @foreach($our_labs as $team)
+                                <div class="text-center text-gray-500 dark:text-gray-400 team_member_css">
+                                    <img class="mx-auto mb-4  rounded-full" src="{{$team->image}}" alt="{{$team->image}}" style="width: 15rem;height: 15rem">
+                                    <h3 class="mb-1 text-2xl font-bold tracking-tight  dark:text-black">
+                                        <a class="underline" href="#" style="color: rgb(55 175 101)">{{$team->name}}</a>
+                                    </h3>
+                                    <h3 style="color: #414548">{{$team->designation}}</h3>
+                                    <ul class="flex justify-center mt-0 space-x-4" style="font-size: 21px;">
+                                        @if($team->linkedin_link)
+                                            <li>
+                                                <a href="{{$team->research_gate_link}}" class="text-[#39569c] " title="Linkedin">
+                                                    <i class="fa-brands fa-linkedin-in"></i>
+                                                </a>
+                                            </li>
+                                        @endif
+                                        @if($team->research_gate_link)
+                                            <li>
+                                                <a href="{{$team->research_gate_link}}" class="text-[#39569c] " title="Researchgate">
+
+                                                    <i class="fa-brands fa-researchgate"></i>
+                                                </a>
+                                            </li>
+                                        @endif
+                                        @if($team->google_scholar_link)
+                                            <li>
+                                                <a href="{{$team->research_gate_link}}" class="text-[#39569c] " title="Google Scholar">
+                                                    <i class="fa-brands fa-google-scholar"></i>
+                                                </a>
+                                            </li>
+                                        @endif
+                                    </ul>
+                                </div>
+                            @endforeach
+                        </div>
+                    </div>
+                @endif
             </section>
         </section>
 @endsection
