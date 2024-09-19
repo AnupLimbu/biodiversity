@@ -4,12 +4,12 @@
     "src": "public/images/bg/banner.jpg"
   },
   "resources/css/app.css": {
-    "file": "assets/app-ClndSZqO.css",
+    "file": "assets/app-D1z2ul3l.css",
     "src": "resources/css/app.css",
     "isEntry": true
   },
   "resources/js/app.js": {
-    "file": "assets/app-D6-i6ZqG.js",
+    "file": "assets/app-BsMOcn-I.js",
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true
