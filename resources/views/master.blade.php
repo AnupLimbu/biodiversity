@@ -9,7 +9,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="BRC Society is a non-governmental organization based on Nepal. We are focused on research and conservation of biodiversity."/>
-    <meta name="keywords" content="BRC Society,biodiversity conservation brsc, brsc nepal, environmental conservation"/>
+    <meta name="keywords" content="brcs, brcs nepal,BRCS NEPAL,BRCS Nepal, BRC Society,biodiversity conservation, environmental conservation"/>
     <meta name="author" content="" />
     <meta name="robots" content="index, follow" />
     <meta name="COUNTRY" content="global" />
