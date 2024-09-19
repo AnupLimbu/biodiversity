@@ -1,11 +1,11 @@
 import './bootstrap';
 import 'flowbite';
 import {
-    Carousel,
+    Carousel,initTWE
 } from "tw-elements";
 import $ from "jquery";
 
-
+initTWE({ Carousel });
 
 document.addEventListener('DOMContentLoaded', function() {
     // Toggle dropdown visibility

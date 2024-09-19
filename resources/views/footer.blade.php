@@ -5,7 +5,7 @@
             <a href="/" aria-label="Go home" title="BRCS" class="inline-flex items-center">
                 <span class="text-2xl font-bold tracking-wide text-gray-800 uppercase">BRCS</span>
             </a>
-            <div class="mt-6 lg:max-w-sm">
+            <div class="lg:max-w-sm">
                 <p class="text-xl text-gray-800">
                    Biodiversity Research and Conservation Society
                 </p>

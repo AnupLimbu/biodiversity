@@ -1,7 +1,8 @@
-<nav class="p-1 fixed w-full backdrop-blur-2xl bg-transparent" style="z-index: 25!important;">
+<nav class="p-1 fixed w-full backdrop-blur-2xl bg-transparent" style="z-index: 50!important;">
     <div class="container mx-auto flex justify-between items-center">
 {{--        <a href="#" class="text-gray-800 text-3xl font-semibold">--}}
-            <img src="{{asset('images/logo.jpeg')}}" alt="Conservation Efforts" class="w-16 h-14 object-cover rounded-full">
+{{--            <img src="{{asset('images/logo.jpeg')}}" alt="Conservation Efforts" class="w-16 h-14 object-cover rounded-full">--}}
+        <span class="text-2xl font-bold tracking-wide text-gray-800 uppercase">BRCS</span>
 {{--        </a>--}}
 
         <button class="text-gray-800 md:hidden" id="hamburgerButton">
