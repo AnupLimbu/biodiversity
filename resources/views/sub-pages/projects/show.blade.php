@@ -14,12 +14,10 @@
                     <address class="flex items-center mb-6 not-italic">
                         <div class="inline-flex items-center mr-3 text-sm text-gray-900 ">
                             <div>
-                                <p class="text-base text-gray-500 dark:text-gray-400">Posted on: {{\Carbon\Carbon::make($project->created_at)->toDateString()}}</p>
+                                <p class="text-gray-500 text-sm">Posted on: {{\Carbon\Carbon::make($project->created_at)->toDateString()}}</p>
                                 <br>
-                                <p style="margin-top: -20px" class="text-sm text-gray-500 dark:text-gray-400">Started on: {{\Carbon\Carbon::make($project->start_date)->toDateString()}}</p>
-                                @if($project->end_date)
-                                    <p style="margin-top: 1px" class="text-sm text-gray-500 dark:text-gray-400">Ended on : {{\Carbon\Carbon::make($project->start_date)->toDateString()}}</p>
-                                @endif
+                                <p style="margin-top: -20px" class="text-gray-500 text-sm">Started {{ ($project->end_date?'from : ':'on : ') .  (\Carbon\Carbon::create($project->start_date)->format('F j, Y')) . ( $project->end_date?' - '.(\Carbon\Carbon::create($project->end_date)->format('F j, Y')):'')  }}</p>
+
                             </div>
                         </div>
                     </address>

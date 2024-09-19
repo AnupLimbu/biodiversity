@@ -33,13 +33,16 @@
                                 </p>
                             </div>
                             <div class="mt-auto">
-                                <p class="text-gray-500 text-sm">Published on: {{\Carbon\Carbon::create($project->$project)->format('F j, Y')}}</p>
+                                <p class="text-gray-500 text-sm">Started {{ ($project->end_date?'from : ':'on : ') .  (\Carbon\Carbon::create($project->start_date)->format('F j, Y')) . ( $project->end_date?' - '.(\Carbon\Carbon::create($project->end_date)->format('F j, Y')):'')  }}</p>
                                 <a href="{{'/projects/'.$project->id}}" class="mt-auto hover:underline">
                                     Learn More
                                 </a>
                             </div>
                         </div>
                 @endforeach
+                </div>
+                <div  class="pagination">
+                    {{ $projects->links() }}
                 </div>
             </div>
         </section>

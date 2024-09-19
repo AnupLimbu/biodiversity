@@ -68,7 +68,7 @@ Route::group(['prefix' => '/', 'as' => ''],function(){
     });
     Route::group(['prefix' => 'projects', 'as' => 'project.'], function (){
         Route::get('/', function () {
-            $projects =  (\App\Models\Project::orderBy('created_at', 'DESC')->get());
+            $projects =  (\App\Models\Project::orderBy('created_at', 'DESC')->paginate(9));
             return view('sub-pages/projects/index', compact('projects'));
         });
         Route::get('/ongoing', function () {
