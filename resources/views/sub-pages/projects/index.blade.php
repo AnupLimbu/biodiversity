@@ -41,9 +41,11 @@
                         </div>
                 @endforeach
                 </div>
-                <div  class="pagination">
-                    {{ $projects->links() }}
-                </div>
+                @if($pro_type =='All')
+                    <div  class="pagination">
+                        {{ $projects->links() }}
+                    </div>
+                @endif
             </div>
         </section>
 @endsection
