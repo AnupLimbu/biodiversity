@@ -53,7 +53,7 @@
                             return '<a target="_blank"    href="'+"{{env('APP_URL')}}"+'/projects/'+row.id+'"> '+data+' </a>';
                         }},
                     {data: 'image', name: 'image',render:function (data,row) {
-                            return '<img src="'+data+'" alt="image" class="w-full" style="width: 150px;height: 150px"/>';
+                            return '<img src="'+data+'" alt="image" class="w-full" style="width: 150px;height: 150px;object-fit:cover"/>';
                     }},
                     {data: 'description', name: 'description', render:function (data,row) {
                             return data.substring(0,10);
