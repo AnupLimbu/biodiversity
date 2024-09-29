@@ -50,7 +50,7 @@
                 {data: 'name', name: 'name'},
                 {data: 'description', name: 'description'},
                 {data: 'thumbnail', name: 'thumbnail',render:function (data,row) {
-                        return '<img src="'+data+'" alt="image" class="w-full" style="width: 150px;height: 150px"/>';
+                        return '<img src="'+data+'" alt="image" class="w-full" style="width: 150px;height: 150px;object-fit:cover"/>';
                     }},
                 {data: 'order', name: 'order'},
                 {data: 'action', name: 'action'},

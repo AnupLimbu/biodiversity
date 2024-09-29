@@ -61,7 +61,7 @@
                 {data: 'social_links', name: 'social_links'},
                 {data: 'order', name: 'order'},
                 {data: 'image', name: 'image', render:function(data, row){
-                    return data?'<img src='+data+' alt="" style=" height: 100px; width: 100px; ">':'';
+                    return data?'<img src='+data+' alt="" style=" height: 100px; width: 100px;object-fit:cover ">':'';
                     }},
                 {data: 'action', name: 'action'},
             ]
